@@ -2,8 +2,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #FFF;
+    color: #ff00ff;
     background-image: linear-gradient(to bottom, #000000, #179b90);
+    min-height: 1000px;
 }
 
 .conteneur-jeu {
@@ -103,7 +104,7 @@ button:hover {
     justify-content: center;
 }
 
-.game-over-text, .retry-text, .score-text {
+.game-over-text, .retry-text, .score-text,li {
     font-family: 'Press Start 2P', cursive;
     /*text-shadow: 0 0 2px #ff00ff, 0 0 20px #ff00ff;*/
     background: -webkit-linear-gradient(#ff00ff, #00ff00);
@@ -126,7 +127,7 @@ button:hover {
     animation: flashing 1s infinite alternate;
 }
 
-.score-text {
+.score-text,h1 {
     font-size: 30px;
    
     background: -webkit-linear-gradient(#ff00ff, #00ff00);
