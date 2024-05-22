@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders Simplifié</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <audio id="sonTir1" src="audio/TL-BIG-A.WAV" preload="auto"></audio>
+    <audio id="sonTir2" src="audio/TL-BIG-B.WAV" preload="auto"></audio>
+    <audio id="sonTir3" src="audio/TL-SHT-1.WAV" preload="auto"></audio>
+
+    <audio id="sonExplosion1" src="audio/EX-BIG-2.WAV" preload="auto"></audio>
+    <audio id="sonExplosion2" src="audio/EX-FL-2.WAV" preload="auto"></audio>
+    <audio id="sonExplosion3" src="audio/EX-MED-4.WAV" preload="auto"></audio>
+
+    <audio id="musique1" src="audio/HUnting high and low.mp3" preload="auto"></audio>
+    <audio id="musique2" src="audio/Skyrim Metal.mp3" preload="auto"></audio>
+
+
+    <div class="conteneur-jeu">
+        <div class="entete-jeu">
+            <button id="demarrerPartie">Démarrer partie</button>
+
+            <div class="conteneur-info">
+                <span id="nbEnvahisseurs">#Envahisseurs: 0</span>
+                <span id="numeroVague">Vague: 1</span>
+                <span id="scoreJoueur">Score: 0</span>
+            </div>
+        </div>
+        <div class="zone-jeu" id="ZoneDeJeu">
+            <canvas id="zoneJeu" width="1024" height="700"></canvas>
+            <img src="images/jouer.png" alt="" id="rokket" style="display: none;">
+            <!-- Game Over Overlay -->
+            <div class="game-over-overlay">
+                <div class="game-over-text">GAME OVER!</div>
+                <div class="retry-text">Appuyer sur R pour recommencer.</div>
+                <div class="score-text">SCORE: <span id="finalScore">0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="generalVolumen">
+        <h3 id="volumenMusique">Ajuster  volume de la musique: - <input type="range" id="controlVolumen" min="0" max="1" step="0.01" value="0.5" oninput="ajusterVolumenMusique()"> + </h3>
+        <h3 id="volumenTir">Ajuster volume de les tirs: - <input type="range" id="controlVolumen" min="0" max="1" step="0.01" value="0.5" oninput="ajusterVolumenTir()"> + </h3>
+        <h3 id="volumenExplosion">Ajuster volume de les explosions: - <input type="range" id="controlVolumen" min="0" max="1" step="0.01" value="0.5" oninput="ajusterVolumenExplosion()"> + </h3>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/touches.js"></script>
+    <script src="js/effetsParticules.js"></script>
+    <script src="js/vague.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
