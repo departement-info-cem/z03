@@ -1,0 +1,4 @@
+Les documents leaderboard.js et leaderboard2.js étaient des tentatives de créer un leaderboard, mais rien de ce que j'ai essayé n'a fonctionné. Le code de ma dernière tentative est encore dans le fichier script (ainsi que dans le HTML et dans le CSS).
+Les modifications pour le MOD 1 se trouvent dans le document vague.js et dans le document script.js (pour les variables). 
+Les modifications pour le MOD 2 se trouvent dans le document powerUp.js et dans le document touches.js (pour les écouters d'événements).
+Les modifications pour le MOD 3 se trouvent dans le document styles.css. 

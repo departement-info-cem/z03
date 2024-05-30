@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders Simplifié</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <audio id="sonTir1" src="audio/TL-BIG-A.WAV" preload="auto"></audio>
+    <audio id="sonTir2" src="audio/TL-BIG-B.WAV" preload="auto"></audio>
+    <audio id="sonTir3" src="audio/TL-SHT-1.WAV" preload="auto"></audio>
+
+    <audio id="sonExplosion1" src="audio/EX-BIG-2.WAV" preload="auto"></audio>
+    <audio id="sonExplosion2" src="audio/EX-FL-2.WAV" preload="auto"></audio>
+    <audio id="sonExplosion3" src="audio/EX-MED-4.WAV" preload="auto"></audio>
+
+    <audio id="musique1" src="audio/HUnting high and low.mp3" preload="auto"></audio>
+    <audio id="musique2" src="audio/Skyrim Metal.mp3" preload="auto"></audio>
+
+    <!--MODS-->
+    <div id="ecranAccueuil">
+        <div id="backgroundDemarrer">
+            <p id="demarrer">SPACE INVADER <br> <br>DÉMARRER PARTIE</p>
+        </div>
+    </div>
+
+
+    <div id = "jeu" class="conteneur-jeu">
+        <div class="entete-jeu">
+            <button id="demarrerPartie">Démarrer partie</button>
+
+            <div class="conteneur-info">
+                <span id="nbEnvahisseurs">#Envahisseurs: 0</span>
+                <span id="numeroVague">Vague: 1</span>
+                <span id="scoreJoueur">Score: 0</span>
+            </div>
+        </div>
+        <div class="zone-jeu" id="ZoneDeJeu">
+            <canvas id="zoneJeu" width="1024" height="700"></canvas>
+            <!-- Game Over Overlay -->
+            <div class="game-over-overlay">
+                <div class="game-over-text">GAME OVER!</div>
+                <div class="retry-text">Appuyer sur R pour recommencer.</div>
+                <div class="score-text">SCORE: <span id="finalScore">0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Mes MODS-->
+
+    <div id="aide">
+        <button id="texteAide">💡 Contrôles 💡</button>
+        <div id="grilleAide">
+            <div class="grid-item"><span id="touchesAide">➡</span> <br><br> Droite</div>
+            <div class="grid-item"><span id="touchesAide">⬅</span> <br><br> Gauche</div>
+            <div class="grid-item"><br><span id="toucheEspace">Espace</span> <br><br><br> Tir</div>
+            <div class="grid-item"><span id="touchesAide">P</span> <br><br> Pause</div>
+            <div class="grid-item"><span id="touchesAide">S</span> <br><br> Couper les effets sonores</div>
+            <div class="grid-item"><span id="touchesAide">⇧</span> <br><br> Ralentir</div>
+            <div class="grid-item"><span id="touchesAide">R</span> <br><br> Redémarrer</div>
+            <div class="grid-item"><span id="touchesAide">M</span> <br><br> Magasin</div>
+
+
+        </div>
+    </div>
+
+    <span id="viesJoueur">Vies: 1</span>
+
+    <div id="magasin">
+        <button id="boutonMagasin">💲 Magasin 💲</button>
+        <span id="argentJoueur">Argent: 0💲</span>
+    </div>
+    <div id=magasinOverlay>
+        <h1 id="titreMagasin">💲 Magasin 💲</h1>
+        <button id="fermerMagasin">Retour</button>
+
+        <div id="magasinChoix">
+            <div class="achat" id="choixVitesseDeTir">VITESSE DE TIR</div>
+            <div class="achat" id="choixVies">VIES SUPPLÉMENTAIRES</div>
+            <div class="achat" id="choixSkin">SKINS</div>
+            <div class="achat" id="choixTheme">THÈMES</div>
+        </div>
+
+    </div>
+
+    <div id="vitesseDeTir">
+        <div class="descriptionAchat">Augmenter la vitesse de tir de 5%
+            <br> <br>
+            PRIX: 100$
+        </div>
+        <button id="acheterVitesseTir" class="boutonAcheter">ACHETER</button>
+    </div>
+
+
+    <div id="vies">
+        <div class="descriptionAchat">Obtenir une vie supplémentaire
+            <br> <br>
+            PRIX: 200$
+        </div>
+        <button id="acheterVie" class="boutonAcheter">ACHETER</button>
+    </div>
+
+    <div id="theme">
+        <div class="descriptionAchat">NOËL
+            <br> <br>
+            PRIX: 50$
+        </div>
+        <button id="acheterNoel"class="boutonAcheter">ACHETER</button>
+
+        <div class="descriptionAchat">ÉTÉ
+            <br> <br>
+            PRIX: 50$
+        </div>
+        <button id="acheterEte" class="boutonAcheter">ACHETER</button>
+
+        <div class="descriptionAchat">HIVER
+            <br> <br>
+            PRIX: 50$
+        </div>
+        <button id="acheterHiver" class="boutonAcheter">ACHETER</button>
+
+        <div class="descriptionAchat">AUTOMNE
+            <br> <br>
+            PRIX: 50$
+        </div>
+        <button id="acheterAutomne" class="boutonAcheter">ACHETER</button>
+
+        <div class="descriptionAchat">RETOUR NORMAL
+        </div>
+        <button id="retourNormal" class="boutonAcheter">RETOUR</button>
+
+    </div>
+
+    <div id="skin">
+        <div class="descriptionAchat">CHANGER DE COULEUR DE SKIN
+            <br> <br>
+            PRIX: 25$
+        </div>
+        <button id="red" class="boutonAcheter">ROUGE</button>
+        <button id="orange" class="boutonAcheter">ORANGE</button>
+        <button id="yellow" class="boutonAcheter">JAUNE</button>
+        <button id="green" class="boutonAcheter">VERT</button>
+        <button id="blue" class="boutonAcheter">BLEU</button>
+        <button id="violet" class="boutonAcheter">VIOLET</button>
+        <button id="purple" class="boutonAcheter">MAUVE</button>
+        <button id="aqua" class="boutonAcheter">TURQUOISE</button>
+        <button id="white" class="boutonAcheter">BLANC</button>
+        <button id="gray" class="boutonAcheter">GRIS</button>
+
+
+    </div>
+
+    <button id="retourMagasin">Retour</button>
+
+
+
+    <script src="js/config.js"></script>
+    <script src="js/touches.js"></script>
+    <script src="js/effetsParticules.js"></script>
+    <script src="js/vague.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

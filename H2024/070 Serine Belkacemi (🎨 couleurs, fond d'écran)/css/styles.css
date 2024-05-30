@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    color: #FFF;
+    background-image: url("../images/papier-peint-ou-murale-en-marbre-blanc-et-or-avec-textures.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.topnav {
+    background-color: #0c0b0b;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  h1 {
+    text-decoration-line: overline;
+  }
+  
+  h2 {
+    text-decoration-line: line-through;
+  }
+  
+  h3 {
+    text-decoration-line: underline;
+  }
+  
+  p {
+    text-decoration-line: overline underline;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #db1e76;
+    color: white;
+  }
+  
+.conteneur-jeu {
+    max-width: 1024px;
+    margin: 100px auto;
+    border: 5px solid #FFF;
+    padding: 20px;
+    background-color: #1b1922;
+    box-shadow: 0 0 30px #ff00ff, 0 0 10px #ff00ff; 
+
+    /*
+    background-color: #002db3;
+    background-color: #ffff00;
+    background-color: #00ff00;
+    background-color: #00ffff;
+    background-color: #b30000;
+    background-color: #ffaa00;
+    background-color: #ff00ff;
+    background-color: #5500ff;
+    */
+    
+  
+}
+
+.entete-jeu {
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #fa3296;
+    border: 4px solid #FFF;
+    border-radius: 50px;
+    color: #FFF;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px #ff008c; 
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #f8329f;
+}
+
+button:hover {
+    background-color: #f5156b;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7), 0 0 20px #f8056a; 
+}
+
+#numeroVague, #scoreJoueur,#nbEnvahisseurs {
+    padding: 15px 30px;
+    background-color: #fa0694;
+    border: 4px solid #FFF;
+    
+    color: #FFF;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 15px #1751bd;
+    outline: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#scoreJoueur:hover, #numeroVague:hover {
+    background-color: #fd2591;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.zone-jeu {
+    width: 100%;
+    background-color: #070707;
+    box-shadow: 0 0 20px #ff00ff; 
+}
+
+
+.game-over-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-over-text, .retry-text, .score-text {
+    font-family: 'Press Start 2P', cursive;
+    /*text-shadow: 0 0 2px #ff00ff, 0 0 20px #ff00ff;*/
+    background: -webkit-linear-gradient(#ff00ff, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.game-over-text {
+    font-size: 30px;
+    margin-bottom: 20px;
+    animation: flashing 0.5s infinite alternate;
+}
+
+.retry-text {
+    font-size: 20px;
+    background: -webkit-linear-gradient(#ff00ff, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+    animation: flashing 1s infinite alternate;
+}
+
+.score-text {
+    font-size: 30px;
+   
+    background: -webkit-linear-gradient(#ff00ff, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+@keyframes flashing {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
