@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders Simplifié</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body style = "background-image: url('images/Ipad.jpg');background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <audio id="sonTir1" src="audio/TL-BIG-A.WAV" preload="auto"></audio>
+    <audio id="sonTir2" src="audio/TL-BIG-B.WAV" preload="auto"></audio>
+    <audio id="sonTir3" src="audio/TL-SHT-1.WAV" preload="auto"></audio>
+
+    <audio id="sonExplosion1" src="audio/EX-BIG-2.WAV" preload="auto"></audio>
+    <audio id="sonExplosion2" src="audio/EX-FL-2.WAV" preload="auto"></audio>
+    <audio id="sonExplosion3" src="audio/EX-MED-4.WAV" preload="auto"></audio>
+
+    <audio id="musique1" src="audio/HUnting high and low.mp3" preload="auto"></audio>
+    <audio id="musique2" src="audio/Skyrim Metal.mp3" preload="auto"></audio>
+    <div class="button-container">
+<button id="aideBouton">?</button>
+</div>
+    <div class="conteneur-jeu">
+        <div class="entete-jeu">
+            <button id="demarrerPartie">Démarrer partie</button>
+            <button id="boutonMusique" onclick="toggleMusique()"> 
+            <img id="iconeMusique" src="images/mic on.png" alt="Micro on"> </button>
+            <div class="conteneur-info">
+                <span id="nbEnvahisseurs">Envahisseurs: 0</span>
+                <span id="numeroVague">Vague: 1</span>
+                <span id="scoreJoueur">Score: 0</span>
+              
+            </div>
+        </div>
+        <div class="zone-jeu" id="ZoneDeJeu" style = "background-image: url('images/stars-shooting-star.gif');background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <canvas id="zoneJeu" width="1100" height="700"></canvas>
+            <img src="images/player2.png" id="playerImage" style="display: none;">
+            <img src="images/player.png" id="player2Image" style="display: none;">
+            <!-- Game Over Overlay -->
+            <div class="game-over-overlay">
+                <div class="game-over-text">GAME OVER!</div>
+                <div class="retry-text">Appuyer sur R pour recommencer.</div>
+                <div class="score-text">SCORE: <span id="finalScore">0</span></div>
+                <img id ="barRecommencer" src = "images/space bar.png" alt="SpaceBar">
+                
+                
+
+            </div>
+              <!-- Aide Overlay -->
+            <div id="overlay" class="overlay" >
+             
+                    <div class="overlay-content" style="background-image: url(images/80f3d94416b57638aae3a637a14c0336.gif);background-size: cover; background-position: center; background-repeat: no-repeat; ">
+                        <h1 style ="font-size :30px; text-align : center;">Guide de contrôle du jeu</h1>
+                         <p>(Gauche) Joueur 1 : Flèche gauche / Joueur 2 : Touche "a"</p>
+                          <p>(Droite) Joueur 1 : Flèche droite / Joueur 2 : Touche "d"</p> 
+                          <p>(Tirer) Joueur 1 : Barre d'espace / Joueur 2 : Touche "g"</p>
+                          <div class="img-container">
+                            <img src="images/a.png" alt="Game Controls Image" class="img1">
+                            <img src="images/left.png" alt="Game Controls Image" class="img2">
+                            <img src="images/center.png" alt="Game Controls Image" class="img3">
+                            <img src="images/right.png" alt="Game Controls Image" class="img4">
+                            <img src="images/d.png" alt="Game Controls Image" class="img5">
+                            <img src="images/space bar.png" alt="Game Controls Image" class="img6">
+
+                            <img src="images/icons8-g-key-64.png" alt="Game Controls Image" class="img7 small-img"></div>
+                      
+                        
+                          <div class="closeBouton"><button id="closeOverlay">x</button></div>
+                    
+
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/config.js"></script>
+    <script src="js/touches.js"></script>
+    <script src="js/effetsParticules.js"></script>
+    <script src="js/vague.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
