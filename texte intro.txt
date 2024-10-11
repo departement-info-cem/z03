@@ -1,0 +1,45 @@
+Vous rêvez de maîtriser la création de sites web modernes et dynamiques ? Le cours Z03, Introduction à la programmation web, est l'occasion parfaite pour vous initier aux langages fondamentaux du web comme HTML, CSS, et JavaScript. À travers des exercices pratiques et des projets stimulants, vous apprendrez à construire des pages web interactives, à manipuler des données, et à appliquer des styles élégants. Que vous soyez débutant ou que vous souhaitiez approfondir vos compétences, ce cours vous permettra de développer une solide base en programmation web. N’attendez plus, rejoignez-nous et donnez vie à vos idées en ligne !
+
+
+Le cours Z03, "Introduction à la programmation web", propose un contenu structuré et progressif pour enseigner les bases du développement web. Voici un résumé des thèmes principaux abordés dans le cours à travers les différents modules fournis :
+
+HTML et CSS (Modules R01 et R02)​(R01 et R02 - Introducti…):
+
+Introduction aux langages HTML et CSS, essentiels pour structurer et styliser une page web.
+Concepts de balises HTML, de la structure d'une page web, de la syntaxe CSS, ainsi que des sélecteurs CSS pour appliquer des styles.
+Création d'éléments interactifs et cliquables tels que les liens (<a>), et insertion d'images et de listes.
+Introduction au modèle de boîte CSS, qui explique comment positionner et dimensionner les éléments sur une page web.
+Modèle en boîtes et Positionnement (R03)​(R03 - Modèle en boîtes …):
+
+Exploration du modèle de boîtes CSS, des propriétés margin, padding, et border.
+Différents types de positionnements : static, relative, absolute, et fixed pour organiser les éléments sur la page.
+JavaScript et Variables (R04)​(R04 Variables, expressi…):
+
+Introduction à JavaScript, langage de programmation côté client utilisé pour rendre les pages web interactives.
+Utilisation de variables, expressions arithmétiques et opérateurs.
+Importance des noms de variables, et des opérations de base telles que l'addition, la soustraction, la multiplication et la division.
+DOM et Fonctions (R05)​(R05 DOM, fonctions, con…):
+
+Manipulation du DOM (Document Object Model) pour interagir dynamiquement avec une page web.
+Introduction aux fonctions JavaScript, permettant de structurer et réutiliser du code.
+Utilisation de console.log() et alert() pour le débogage et la présentation des résultats en temps réel.
+Booléens, Opérateurs de Comparaison, Conditions (R09)​(R09 bool, opérateurs co…):
+
+Explication des booléens (vrai/faux), des opérateurs de comparaison et de logique (ex : ==, >, &&).
+Utilisation des blocs if, else, et else if pour structurer les conditions dans le code.
+DOM, Boucles et Attributs (R10)​(R10 DOM, boucles):
+
+Utilisation avancée du DOM pour ajouter, retirer, et modifier des classes et des attributs dans les éléments HTML.
+Introduction aux boucles (while et for) pour éviter les répétitions de code et automatiser les tâches.
+Tableaux et Boucles (R11)​(R11 Tableaux):
+
+Création et manipulation de tableaux en JavaScript pour stocker et accéder à plusieurs valeurs.
+Parcourir des tableaux à l'aide de boucles, une technique essentielle pour automatiser les tâches répétitives.
+
+TP1 – Création d’un site web sur un thème qui vous passionne​(420-Z03 TP1 A2024 Enonc…)
+Dans ce premier travail pratique, vous avez l'occasion de laisser libre cours à votre créativité en développant un site web sur le sujet de votre choix. Que vous soyez passionné par la musique, la mode, la technologie ou même les voyages, ce projet vous permettra d'explorer un thème qui vous tient à cœur tout en apprenant à maîtriser HTML et CSS. Vous concevrez une page d'accueil attrayante avec des liens vers des pages détaillées, le tout accompagné de visuels accrocheurs. C'est votre chance de mettre en pratique vos compétences en web design et de créer un site qui reflète vos intérêts personnels !
+
+TP3 – Créez votre propre simulateur de combat spatial​(Z03 TP3 Enoncé EM)
+Le TP3 vous propulse dans l'univers des envahisseurs spatiaux avec un simulateur de combat inspiré du célèbre jeu Space Invaders. En utilisant JavaScript, vous devrez protéger le Canadarm contre une invasion extraterrestre. Une fois les bases du jeu codées, vous aurez la liberté d'ajouter vos propres fonctionnalités : créer des nouveaux types d'ennemis, ajouter des bonus, ou même un mode multijoueur. Ce projet est une occasion unique de plonger dans le développement de jeux vidéo et de repousser les limites de votre créativité technique.
+
+Ces travaux pratiques sont non seulement stimulants mais aussi un excellent moyen de renforcer vos compétences en programmation web tout en vous amusant. Venez découvrir les possibilités infinies qu’offre ce cours !
