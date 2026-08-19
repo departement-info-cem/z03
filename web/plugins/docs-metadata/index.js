@@ -91,10 +91,13 @@ function generateSidebarDocs() {
     "../../src/components/MainDocsGrid/sidebarDocs.js"
   );
   const sidebars = require(sidebarPath);
-  // Ne prendre que la section 'docs'
+  // La grille d'accueil doit continuer d'afficher seulement les 15 rencontres,
+  // même lorsqu'une rencontre contient des documents supplémentaires dans la sidebar.
   let allEntries = [];
   if (Array.isArray(sidebars.docs)) {
-    allEntries = extractAllDocEntries(sidebars.docs);
+    allEntries = extractAllDocEntries(sidebars.docs).filter((entry) =>
+      /^cours\/rencontre\d+$/.test(entry.id)
+    );
   }
   const content =
     "// Ce fichier est généré automatiquement à partir de sidebars.js\n" +

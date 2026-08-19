@@ -1,6 +1,6 @@
 ---
 title: Cours 1 - Atelier
-description: Atelier sur l'environnement technologique en TIM
+description: Atelier sur l'environnement technologique du cours Z03
 ---
 
 # Cours 1 - Atelier
@@ -19,26 +19,9 @@ Chaque étudiant(e) doit pouvoir se connecter aux ordinateurs en classe.
 * 🚔 Illégal d'être avec une personne qu'on connait déjà (le but est que tout le monde soit mal à l'aise !)
 * 📝 Vous apprendrez à connaître votre partenaire de manière douteuse au travers les exercices qui suivent
 
-## 🏫 Introduction à Omnivox et Léa
-
-Léa est une plateforme accessible via Omnivox pour accéder aux notes de cours, aux travaux, aux Mios (messagerie) et aux remises de notes.
-
-⚗ Démo :
-
-* Mio (Il est important de lire ses Mios !)
-* Léa : Notes de cours, travaux et remises de notes
-
-<center>![Cours sur Léa](../../static/img/atelier/leaEtudiant.png)</center>
-
-🧪 Activité :
-
-* Récupérer des notes de cours
-* Récupérer, compléter, puis remettre un travail
-* Vérifier une remise de note (fausse note)
-
 ## 👥 Introduction à Teams
 
-Teams est une plateforme plus conviviale pour communiquer avec ses enseignants. (Comparé à Mio, qui ressemble plus à un système de courriels) En TIM, chaque cours est représenté par une **équipe Teams** où les notes de cours (et parfois les devoirs) seront disponibles.
+Teams est une plateforme plus conviviale pour communiquer avec ses enseignants. (Comparé à Mio, qui ressemble plus à un système de courriels) Dans le cours Z03, une **équipe Teams** peut être utilisée pour accéder aux notes de cours, aux communications et parfois aux devoirs.
 
 ⚗ Démo générale :
 
@@ -48,20 +31,6 @@ Teams est une plateforme plus conviviale pour communiquer avec ses enseignants. 
 
 🧪 Activité :
 
-* Récupérer des notes de cours
-* Récupérer, compléter, puis remettre un travail
-
-## 🧭 Introduction à Google Classrooms
-
-⚗ Démo : 
-* Accéder à des notes de cours.
-* Accéder à un travail.
-
-🧪 Activité :
-
-* Si vous n'avez pas de compte Google professionnel, en créer un. (ex : yolande.robidoux@gmail.com)
-* Se connecter à son compte Google professionnel.
-* Joindre un cours à l'aide de son code
 * Récupérer des notes de cours
 * Récupérer, compléter, puis remettre un travail
 
@@ -89,20 +58,3 @@ Mise en garde : les fichiers enregistrées sur un ordinateur au Cégep sont perd
 
 * Réaliser le formulaire : [https://forms.office.com/r/92xP7ewtYM](https://forms.office.com/r/92xP7ewtYM)
 * Vérifier ses résultats avec son enseignant(e) au besoin.
-
-## 🌐 Introduction à Moodle
-
-Moodle est une plateforme utilisée par certain(s) enseignant(e)s pour administrer un cours. (À la place de Léa et / ou de Teams)
-
-⚗ Démo avec le Moodle de la formation en informatique :
-
-* S'assurer que tous arrivent à se connecter. (Au besoin : [https://techno.cegepmontpetit.ca/compte-moodle/](https://techno.cegepmontpetit.ca/compte-moodle/))
-* Brève visite de la page de la formation en informatique. (Accès aux vidéos et aux exercices)
-
-Joindre le Moodle : [https://edm.moodle.decclic.qc.ca/course/view.php?id=7029](https://edm.moodle.decclic.qc.ca/course/view.php?id=7029)
-(Le code secret est `TIM`)
-
-🧪 Activité :
-
-* Télécharger l'épreuve du chapitre 1.
-* Si vous avez des chapitres à compléter, les commencer, sinon, quitter.

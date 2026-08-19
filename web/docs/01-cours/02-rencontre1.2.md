@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 
 <center>![Fichier avec l'extension js](../../static/img/cours2/js.png)</center>
 
-* Très utilisé pour la **programmation Web** 🌐, mais pas que pour ça ! C'est donc le **langage parfait** pour apprendre à coder en TIM. (Car vous ferez beaucoup de Web)
+* Très utilisé pour la **programmation Web** 🌐, mais pas que pour ça ! C'est donc un **excellent langage** pour apprendre à programmer dans Z03, puisque le cours est axé sur le Web.
 * Exemples d'applications / projets qui utilisent JavaScript :
 
 <center>![Fichier avec l'extension js](../../static/img/cours2/js_apps.png)</center>

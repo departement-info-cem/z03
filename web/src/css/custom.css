@@ -38,6 +38,20 @@
   --remise-tp-font-color: #d3f0e6;
 }
 
+/* Keep multiline code examples visually distinct in both site themes. */
+.theme-code-block {
+  overflow: hidden;
+  border: 1px solid #30363d;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(15, 23, 42, 0.16);
+}
+
+.theme-code-block pre {
+  margin: 0;
+  border-radius: 0;
+  background-color: #0d1117 !important;
+}
+
 .examen {
   background-color: var(--examen-bg);
   color: var(--examen-font-color);

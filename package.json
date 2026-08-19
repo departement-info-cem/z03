@@ -1,0 +1,16 @@
+{
+  "name": "z03-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Commandes de travail pour la refonte du cours Z03",
+  "scripts": {
+    "setup": "npm --prefix web ci",
+    "start": "npm --prefix web run start",
+    "build": "npm --prefix web run build",
+    "serve": "npm --prefix web run serve",
+    "clear": "npm --prefix web run clear"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

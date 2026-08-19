@@ -1,0 +1,2808 @@
+{
+  "source": "P:\\Projects\\_CEGEP\\Z03-Local\\R03\\R03 - Modèle en boîtes et positionnement.pptx",
+  "slideCount": 58,
+  "slides": [
+    {
+      "slide": 1,
+      "text": [
+        "Modèle en boîtes ",
+        "et positionnement",
+        "Rencontre #3"
+      ],
+      "media": [
+        "image15.png"
+      ]
+    },
+    {
+      "slide": 2,
+      "text": [
+        "Menu du jour",
+        "Les boîtes",
+        "Modèle de boîtes CSS",
+        "Types ",
+        "de boîtes",
+        "Le positionnement",
+        "Static / Relative",
+        "Absolute / Fixed",
+        "Quelques nouvelles règles CSS",
+        "Interlude sur les pseudo-classes et sélecteurs complexes",
+        "Quelques nouvelles règles CSS",
+        "Priorité en CSS ",
+        "(╯°□°）╯︵ ┻━┻",
+        "Pseudo-éléments",
+        "Attributs"
+      ],
+      "media": [
+        "image16.png"
+      ]
+    },
+    {
+      "slide": 3,
+      "text": [
+        "Les boîtes",
+        "Des boîtes ? Où ça ?",
+        "En mettant une couleur de fond aux éléments, on voit la « ",
+        "boîte",
+        " » dans laquelle ils se trouvent.",
+        "Notons que la boîte du ",
+        "div",
+        " est partiellement cachée par le ",
+        "h2",
+        " et les ",
+        "p",
+        "."
+      ],
+      "media": [
+        "image17.png",
+        "image18.png"
+      ]
+    },
+    {
+      "slide": 4,
+      "text": [
+        "Modèle de boîtes",
+        "Voici le modèle de boîte ",
+        "CSS",
+        " :",
+        "Margin",
+        ", ",
+        "Border",
+        ", ",
+        "Padding",
+        ", ",
+        "Height",
+        " et ",
+        "Width",
+        " sont des propriétés qui peuvent être manipulées pour toutes* les boîtes.",
+        "*Presque toutes"
+      ],
+      "media": [
+        "image19.png"
+      ]
+    },
+    {
+      "slide": 5,
+      "text": [
+        "Modèle de boîtes",
+        "Testons toutes ces propriétés !",
+        "Voici notre ",
+        "page de base",
+        ". Les boîtes prennent toute la ",
+        "largeur",
+        "",
+        "de la page et ne prennent que la ",
+        "hauteur",
+        " nécessaire pour afficher leur ",
+        "contenu",
+        ". (Du texte)"
+      ],
+      "media": [
+        "image20.png",
+        "image21.png",
+        "image22.png"
+      ]
+    },
+    {
+      "slide": 6,
+      "text": [
+        "Modèle de boîtes",
+        "",
+        "Width",
+        " et ",
+        "Height",
+        " :",
+        "Peuvent ",
+        "entre autre ",
+        "être définies en ",
+        "pourcentage",
+        " (%) et en ",
+        "pixels",
+        ". (px)",
+        "Si on utilise un pourcentage ",
+        "n",
+        ", la boîte prendra ",
+        "n%",
+        " de la largeur de la boîte ",
+        "parent",
+        " !"
+      ],
+      "media": [
+        "image23.png",
+        "image24.png"
+      ]
+    },
+    {
+      "slide": 7,
+      "text": [
+        "Modèle de boîtes",
+        "",
+        "Border",
+        " :",
+        "On doit préciser … son ",
+        "style",
+        ", sa ",
+        "couleur",
+        " et sa ",
+        "largeur",
+        ".",
+        "On peut également le faire avec une seule règle ",
+        "combinée",
+        " :",
+        "border-style",
+        " :",
+        "• none",
+        "• dotted",
+        "• dashed",
+        "• solid",
+        "• double",
+        "• …",
+        "border-color",
+        " :",
+        "• blue",
+        "• #54b22a",
+        "• rgba(4, 142, 331, 0.6)",
+        "• …",
+        "border-width",
+        " :",
+        "• 5px",
+        "• 1em",
+        "• thick",
+        "• thin",
+        "• …",
+        "border",
+        ": solid blue 5px; "
+      ],
+      "media": []
+    },
+    {
+      "slide": 8,
+      "text": [
+        "Modèle de boîtes",
+        "",
+        "Border",
+        " : ",
+        "On remarque qu’il ne reste plus d’espace entre les deux boîtes …"
+      ],
+      "media": [
+        "image25.png",
+        "image26.png"
+      ]
+    },
+    {
+      "slide": 9,
+      "text": [
+        "Modèle de boîtes",
+        "",
+        "Border",
+        " : ",
+        "On peut préciser les ",
+        "styles",
+        " / ",
+        "couleurs",
+        " / ",
+        "largeurs",
+        " de bordure pour chacun des 4 côtés !",
+        "On peut préciser les ",
+        "styles",
+        " / ",
+        "couleurs",
+        " / ",
+        "largeurs",
+        " des 4 côtés en même temps : ",
+        "border-top-style ",
+        ": solid;",
+        "border-bottom-style ",
+        ": dotted;",
+        "border-left-style ",
+        ": solid;",
+        "border-right-style ",
+        ": dashed;",
+        "border-width",
+        ":10px 5px 2px 20px;",
+        "border-color ",
+        ": blue;",
+        "border-top-color ",
+        ": red;",
+        "L’ordre est ",
+        ": Haut Droite Bas Gauche"
+      ],
+      "media": [
+        "image27.png",
+        "image28.png",
+        "image29.png"
+      ]
+    },
+    {
+      "slide": 10,
+      "text": [
+        "Modèle de boîtes",
+        "",
+        "Margin",
+        " :",
+        "Permet de créer des ",
+        "marges externes ",
+        "au-delà des bordures :",
+        "La largeur peut être en ",
+        "pixels",
+        ", ",
+        "em",
+        ", etc.",
+        "• La distance entre les boîtes est de ",
+        "40",
+        " pixels. C’est-à-dire ",
+        "10",
+        " + ",
+        "30",
+        " en raison des marges des 2 boîtes.",
+        "• La première boîte a des marges de tous les côtés, alors que la deuxième n’en a qu’une au-dessus."
+      ],
+      "media": [
+        "image30.png",
+        "image31.png"
+      ]
+    },
+    {
+      "slide": 11,
+      "text": [
+        "Modèle de boîtes",
+        "",
+        "Margin",
+        " :",
+        "Permet de créer des ",
+        "marges externes ",
+        "au-delà des bordures :",
+        "Encore une fois, on peut préciser la largeur de chaque côté :",
+        "Qui est l’équivalent de …",
+        "L’ordre est ",
+        ": Haut Droite Bas Gauche",
+        "On peut choisir une marge identique pour les 4 côtés :"
+      ],
+      "media": [
+        "image29.png",
+        "image32.png",
+        "image33.png"
+      ]
+    },
+    {
+      "slide": 12,
+      "text": [
+        "Modèle de boîtes",
+        "",
+        "Padding",
+        " :",
+        "Permet de créer des ",
+        "marges internes",
+        " pour espacer le ",
+        "contenu",
+        " des ",
+        "bordures",
+        ".",
+        "La largeur peut être en pixels, em, etc.",
+        "• Dans la première boîte, on a un padding de 30 pixels de ",
+        "chaque côté",
+        ".",
+        "• Dans la deuxième boîte, on a 30 pixels en ",
+        "haut",
+        ", 0 à ",
+        "gauche",
+        " et à ",
+        "droite",
+        ", 10 pixels en ",
+        "bas",
+        ".",
+        "• Les règles ",
+        "padding-top",
+        ",",
+        "padding-left",
+        ", ",
+        "padding-right",
+        " et ",
+        "padding-bottom",
+        " existent également.",
+        "L’ordre est ",
+        ": Haut Droite Bas Gauche"
+      ],
+      "media": [
+        "image29.png",
+        "image34.png",
+        "image35.png"
+      ]
+    },
+    {
+      "slide": 13,
+      "text": [
+        "Modèle de boîtes",
+        "Voici le modèle de boîte ",
+        "CSS",
+        " :",
+        "Attention ! ",
+        "La largeur totale ",
+        "occupée",
+        " par une boîte correspond à …",
+        "width + padding-left + padding-right + border-left + border-right + margin-left + margin-right"
+      ],
+      "media": [
+        "image19.png"
+      ]
+    },
+    {
+      "slide": 14,
+      "text": [
+        "Modèle de boîtes",
+        "Quelle est la ",
+        "hauteur",
+        " occupée par la boîte ?! (Aucun ",
+        "margin",
+        ")",
+        "L’ordre est ",
+        ": Haut Droite Bas Gauche"
+      ],
+      "media": [
+        "image29.png",
+        "image36.png",
+        "image37.png"
+      ]
+    },
+    {
+      "slide": 15,
+      "text": [
+        "Modèle de boîtes",
+        "Quelle est la ",
+        "hauteur",
+        " occupée par la boîte ?! (Aucun ",
+        "margin",
+        ")",
+        "→",
+        "",
+        "200",
+        " + ",
+        "30",
+        " * ",
+        "2",
+        " + ",
+        "10",
+        " + ",
+        "20",
+        " = ",
+        "290",
+        " pixels",
+        "L’ordre est ",
+        ": Haut Droite Bas Gauche",
+        "x 2 côtés"
+      ],
+      "media": [
+        "image29.png",
+        "image36.png",
+        "image37.png"
+      ]
+    },
+    {
+      "slide": 16,
+      "text": [
+        "Types de boîtes",
+        "Il y a plusieurs types de boîtes…",
+        "Inline",
+        "Block",
+        "Inline-block",
+        "None",
+        "…",
+        "En HTML / CSS, chaque élément correspond à un ",
+        "type de boîte ",
+        "précis",
+        "."
+      ],
+      "media": [
+        "image38.jpg",
+        "image39.png"
+      ]
+    },
+    {
+      "slide": 17,
+      "text": [
+        "Types de boîtes",
+        "",
+        "Inline",
+        "Éléments « Inline » par défaut : ",
+        "span",
+        ", ",
+        "a",
+        ", ",
+        "img",
+        ", ",
+        "strong",
+        ", ",
+        "em",
+        ", etc.",
+        "Ils ne génèrent pas de ",
+        "sauts de ligne",
+        "S’il y a suffisamment d’espace, ils resteront sur la même ligne que l’élément précédent.",
+        "On ",
+        "ne peut pas ",
+        "spécifier leur ",
+        "width",
+        " et leur ",
+        "height",
+        " : ils prennent uniquement l’espace nécessaire. (On ",
+        "peut",
+        ", mais ça ne fera rien)",
+        "Ci-dessous, l’exemple de ",
+        "<span>",
+        "La règle ",
+        "height",
+        " n’a pas d’effets …"
+      ],
+      "media": [
+        "image40.png",
+        "image41.png",
+        "image42.png"
+      ]
+    },
+    {
+      "slide": 18,
+      "text": [
+        "Types de boîtes",
+        "",
+        "Block",
+        "Éléments « Block » par défaut : ",
+        "div",
+        ", ",
+        "h1-h6",
+        ", ",
+        "p",
+        ", ",
+        "header",
+        ", ",
+        "main",
+        ", ",
+        "footer",
+        ", etc.",
+        "Ils génèrent un ",
+        "saut de ligne ",
+        "et seront ",
+        "seuls",
+        " sur leur ligne.",
+        "On ",
+        "peut ",
+        "spécifier leur ",
+        "width",
+        " et leur ",
+        "height",
+        " : ils prennent l’espace alloué.",
+        "Si on ne spécifie pas de taille : Ils prennent toute la ",
+        "largeur",
+        " disponible, mais seulement la ",
+        "hauteur",
+        " nécessaire.",
+        "Ici, on a l’exemple de ",
+        "<p>"
+      ],
+      "media": [
+        "image43.png",
+        "image44.png",
+        "image45.png"
+      ]
+    },
+    {
+      "slide": 19,
+      "text": [
+        "Types de boîtes",
+        "",
+        "Inline-Block",
+        "Éléments « Inline-Block » par défaut : ",
+        "Aucun…",
+        "Ils ne génèrent pas de ",
+        "sauts de ligne",
+        "S’il y a suffisamment d’espace, ils resteront sur la même ligne que l’élément précédent.",
+        "On ",
+        "peut ",
+        "spécifier leur ",
+        "width",
+        " et leur ",
+        "height",
+        " : ils prennent l’espace alloué.",
+        "Si on ne spécifie pas de taille : Ils prennent que la ",
+        "largeur",
+        " nécessaire et seulement la ",
+        "hauteur",
+        " nécessaire."
+      ],
+      "media": [
+        "image46.png",
+        "image47.png",
+        "image48.png"
+      ]
+    },
+    {
+      "slide": 20,
+      "text": [
+        "Types de boîtes",
+        "",
+        "None",
+        "Éléments « None » par défaut : ",
+        "Aucun…",
+        "Ils ne sont pas affichés."
+      ],
+      "media": [
+        "image49.png",
+        "image50.png",
+        "image51.png"
+      ]
+    },
+    {
+      "slide": 21,
+      "text": [
+        "Types de boîtes",
+        "",
+        "Propriété",
+        " display",
+        "Permet de changer le type de boîte d’un élément.",
+        "Options",
+        " : block, inline, inline-block, none, etc.",
+        "Ici, le ",
+        "span",
+        ", qui est ",
+        "inline",
+        " par défaut, est plutôt devenu ",
+        "block",
+        "."
+      ],
+      "media": [
+        "image52.png",
+        "image53.png",
+        "image54.png"
+      ]
+    },
+    {
+      "slide": 22,
+      "text": [
+        "Types de boîtes",
+        "Comment rendre ce menu de navigation horizontal avec CSS ?",
+        "??"
+      ],
+      "media": [
+        "image55.png",
+        "image56.png",
+        "image57.png",
+        "image58.png"
+      ]
+    },
+    {
+      "slide": 23,
+      "text": [
+        "Types de boîtes",
+        "Comment rendre ce menu de navigation horizontal avec CSS ?",
+        "Option 1",
+        " : inline-block",
+        "Option 2",
+        " : inline"
+      ],
+      "media": [
+        "image58.png",
+        "image59.png",
+        "image60.png",
+        "image61.png"
+      ]
+    },
+    {
+      "slide": 24,
+      "text": [
+        "Types de boîtes",
+        "Propriété ",
+        "overflow",
+        " :",
+        "Quand ça ne rentre",
+        "pas… qu’est-ce qu’on",
+        "fait ?",
+        "",
+        "scroll",
+        " :",
+        "Met 2 barres de défilement DANS la boîte.",
+        "",
+        "hidden",
+        " :",
+        "Cache le texte qui dépasse.",
+        "",
+        "auto",
+        " :",
+        "Met 1 ou 2 barres de défilement lorsque nécessaire.",
+        "",
+        "visible",
+        " : (défaut)",
+        "Ça DÉBORDE !"
+      ],
+      "media": [
+        "image62.png",
+        "image63.png"
+      ]
+    },
+    {
+      "slide": 25,
+      "text": [
+        "Types de boîtes",
+        "Propriété ",
+        "overflow",
+        " :",
+        "Les propriétés ",
+        "overflow-x",
+        " et ",
+        "overflow-y",
+        " existent également et peuvent avoir les mêmes valeurs. (",
+        "scroll",
+        ", ",
+        "hidden",
+        ", ",
+        "auto",
+        ", ",
+        "visible",
+        ") Cela dit, elles permettent de décrire le comportement séparément pour le contenu qui déborde ",
+        "horizontalement",
+        " (x) et ",
+        "verticalement",
+        ". (y)"
+      ],
+      "media": []
+    },
+    {
+      "slide": 26,
+      "text": [
+        "Le positionnement",
+        "Pour le moment… les éléments ",
+        "se positionnent ",
+        "en suivant le flot du code HTML.",
+        "Et quand un élément est ",
+        "inline",
+        " / ",
+        "inline",
+        "-block",
+        ", il se mettra sur la même ligne que l’élément précédent si c’est possible."
+      ],
+      "media": [
+        "image64.png",
+        "image65.png",
+        "image66.png"
+      ]
+    },
+    {
+      "slide": 27,
+      "text": [
+        "Le positionnement",
+        "Propriété ",
+        "position",
+        "Plusieurs valeurs sont possibles :",
+        "static",
+        "relative",
+        "fixed",
+        "absolute",
+        "…",
+        "Propriété ",
+        "z-index",
+        "Pour déterminer la priorité d’affichage / la profondeur si des éléments partagent le même espace."
+      ],
+      "media": []
+    },
+    {
+      "slide": 28,
+      "text": [
+        "Le positionnement",
+        " position : ",
+        "static",
+        "Par défaut",
+        ". Les éléments se positionnent en suivant le flot normal de la page.",
+        "Ici, on observe rien de particulier pour le positionnement",
+        "de la boîte rose, qui est « static ». (Comme c’est la valeur",
+        "par défaut… spécifier la règle est inutile)"
+      ],
+      "media": [
+        "image67.png",
+        "image68.png"
+      ]
+    },
+    {
+      "slide": 29,
+      "text": [
+        "Le positionnement",
+        " position : ",
+        "relative",
+        "L’élément est à sa position normale dans le flot de la page… mais on peut désormais lui appliquer les propriétés ",
+        "left",
+        ", ",
+        "right",
+        ", ",
+        "top ",
+        "et / ou ",
+        "bottom",
+        " pour le déplacer à partir de cette position normale.",
+        "On remarque que le carré rose a été déplacé à ",
+        "20 pixels",
+        " du ",
+        "haut",
+        " et de la ",
+        "gauche",
+        " de sa position normale.",
+        "Les éléments suivants dans le flot normal ne tenteront pas de prendre la place laissée par l’élément « ",
+        "relative",
+        " »."
+      ],
+      "media": [
+        "image69.png",
+        "image70.png",
+        "image71.png"
+      ]
+    },
+    {
+      "slide": 30,
+      "text": [
+        "Le positionnement",
+        " position : ",
+        "fixed",
+        "L’élément quitte le flot normal de la page. Il est toujours situé au même endroit dans le ",
+        "viewport",
+        ", ",
+        "même si on défile la page",
+        ". Par défaut, il sera dans le coin supérieur gauche. On peut le déplacer avec les règles ",
+        "top",
+        ", ",
+        "left",
+        ", ",
+        "right",
+        " et / ou ",
+        "bottom",
+        ".",
+        "Comme le carré rose ne fait pas partie du flot normal, les autres éléments peuvent « prendre » sa place en haut à gauche."
+      ],
+      "media": [
+        "image72.png",
+        "image73.png",
+        "image74.png"
+      ]
+    },
+    {
+      "slide": 31,
+      "text": [
+        "Le positionnement",
+        " position : ",
+        "fixed",
+        "L’élément quitte le flot normal de la page. Il est toujours situé au même endroit dans le ",
+        "viewport",
+        ", ",
+        "même si on défile la page",
+        ". Par défaut, il sera dans le coin supérieur gauche. On peut le déplacer avec les règles ",
+        "top",
+        ", ",
+        "left",
+        ", ",
+        "right",
+        " et / ou ",
+        "bottom",
+        ".",
+        "Si on place notre carré rose en haut à gauche, il va partager l’espace avec les autres carrés."
+      ],
+      "media": [
+        "image74.png",
+        "image75.png",
+        "image76.png"
+      ]
+    },
+    {
+      "slide": 32,
+      "text": [
+        "Le positionnement",
+        " position : ",
+        "absolute",
+        "Semblable à ",
+        "fixed",
+        ", mais plutôt que d’être positionné relativement au ",
+        "viewport",
+        ", l’élément se positionne relativement à son ",
+        "parent",
+        " (s’il en a un) à condition que ce parent ne soit pas « ",
+        "static",
+        " ».",
+        "S’il n’en a pas, il agira comme un élément « ",
+        "fixed",
+        " » et sera relatif au ",
+        "viewport",
+        ".",
+        "Ici, notre carré rose s’est mis à ",
+        "0 pixels ",
+        "du ",
+        "bas",
+        " et de la ",
+        "droite",
+        " de son parent… qui est le carré rouge."
+      ],
+      "media": [
+        "image77.png",
+        "image78.png",
+        "image79.png"
+      ]
+    },
+    {
+      "slide": 33,
+      "text": [
+        "Le positionnement",
+        " position : ",
+        "absolute",
+        "Semblable à ",
+        "fixed",
+        ", mais plutôt que d’être positionné relativement au ",
+        "viewport",
+        ", l’élément se positionne relativement à son ",
+        "parent",
+        " (s’il en a un) à condition que ce parent ne soit pas « ",
+        "static",
+        " ».",
+        "S’il n’en a pas, il agira comme un élément « ",
+        "fixed",
+        " » et sera relatif au ",
+        "viewport",
+        ".",
+        "Le carré rouge est redevenu « static » (car on a retiré la règle ",
+        "position : relative",
+        ")",
+        "Le carré rose est maintenant relatif au ",
+        "viewport",
+        " … même si dans le code HTML il est « dans » le ",
+        "div",
+        " rouge."
+      ],
+      "media": [
+        "image77.png",
+        "image80.png",
+        "image81.png"
+      ]
+    },
+    {
+      "slide": 34,
+      "text": [
+        "Le positionnement",
+        "Propriété ",
+        "z-index",
+        " :",
+        "Quand deux éléments partagent le même espace dans la page… lequel est affiché par-dessus l’autre ?",
+        "Par défaut un élément est à ",
+        "z-index: ",
+        "0",
+        "On peut le « reculer » avec ",
+        "z-index : -1",
+        "On peut « l’avancer » avec ",
+        "z-index : 1",
+        "",
+        "-1",
+        " et ",
+        "1",
+        " sont des exemples. On peut aller ",
+        "plus loin.",
+        "(ง︡'-'︠)ง"
+      ],
+      "media": [
+        "image82.png",
+        "image83.png",
+        "image84.png"
+      ]
+    },
+    {
+      "slide": 35,
+      "text": [
+        "Le positionnement",
+        "Associez à chaque bloc le type de ",
+        "position",
+        " qui explique le plus ",
+        "simplement",
+        " son positionnement. (static, fixed, absolute, relative)"
+      ],
+      "media": [
+        "image85.png"
+      ]
+    },
+    {
+      "slide": 36,
+      "text": [
+        "Le positionnement",
+        "Associez à chaque bloc le type de ",
+        "position",
+        " qui explique le plus ",
+        "simplement",
+        " son positionnement. (static, fixed, absolute, relative)"
+      ],
+      "media": [
+        "image85.png",
+        "image86.png",
+        "image87.png"
+      ]
+    },
+    {
+      "slide": 37,
+      "text": [
+        "Pseudo-classes",
+        "Ce sont des classes qui définissent l’",
+        "état",
+        " d’un ",
+        "élément",
+        ".",
+        "Nous allons en aborder deux :",
+        ":hover",
+        ":active",
+        "Pour utiliser une ",
+        "pseudo-classe",
+        ", on crée généralement un sélecteur de la forme :",
+        "",
+        "élément",
+        ":",
+        "pseudo-classe"
+      ],
+      "media": []
+    },
+    {
+      "slide": 38,
+      "text": [
+        "Pseudo-classes",
+        "Pseudo-classe ",
+        ":hover",
+        "Permet d’appliquer des règles à un élément ",
+        "survolé",
+        " par le curseur."
+      ],
+      "media": [
+        "image88.png",
+        "image89.png",
+        "image90.png",
+        "image91.png"
+      ]
+    },
+    {
+      "slide": 39,
+      "text": [
+        "Pseudo-classes",
+        "Pseudo-classe ",
+        ":active",
+        "Permet d’appliquer des règles à un élément sur lequel on est en train de ",
+        "cliquer",
+        ". (Clic enfoncé actuellement)"
+      ],
+      "media": [
+        "image92.png",
+        "image93.png",
+        "image94.png",
+        "image95.png"
+      ]
+    },
+    {
+      "slide": 40,
+      "text": [
+        "Sélecteurs complexes",
+        "Pour le moment, nous avons vu les sélecteurs suivants :",
+        "Élément (ex : ",
+        "p",
+        ")",
+        "Classe (ex : ",
+        ".ma_classe",
+        ")",
+        "ID (ex : ",
+        "#mon_id",
+        ")",
+        "Pseudo-classe (ex : ",
+        ":hover",
+        ")",
+        "Voyons maintenant de nouvelles techniques de sélection :",
+        "Sélecteur avec « ",
+        "espace",
+        " » (descendant)",
+        "Sélecteur avec ",
+        ">",
+        " (enfant)",
+        "Sélecteur avec ",
+        ",",
+        " (combinaison)"
+      ],
+      "media": []
+    },
+    {
+      "slide": 41,
+      "text": [
+        "Sélecteurs complexes",
+        "Sélecteur « ",
+        "espace",
+        " » (Descendant)",
+        "Exemple : ",
+        "div p",
+        "Ne sélectionne que les ",
+        "p",
+        " qui sont à l’intérieur d’un ",
+        "div",
+        ". (Que ce soit son parent direct ou indirect)",
+        "Ci-dessous, seul le ",
+        "p",
+        " dans le ",
+        "div",
+        " a une ",
+        "bordure",
+        "."
+      ],
+      "media": [
+        "image96.png",
+        "image97.png",
+        "image98.png"
+      ]
+    },
+    {
+      "slide": 42,
+      "text": [
+        "Sélecteurs complexes",
+        "Sélecteur > (Enfant)",
+        "Exemple : ",
+        "div > p",
+        "Ne sélectionne que les ",
+        "p",
+        " qui sont les enfants immédiats d’un ",
+        "div",
+        ". ",
+        "Ici, seul le ",
+        "p",
+        " directement ",
+        "enfant",
+        " du ",
+        "div",
+        " (donc pas celui dans le ",
+        "main",
+        ") a obtenu une ",
+        "bordure",
+        "."
+      ],
+      "media": [
+        "image100.png",
+        "image101.png",
+        "image99.png"
+      ]
+    },
+    {
+      "slide": 43,
+      "text": [
+        "Sélecteurs complexes",
+        "Sélecteur , (Combinaison)",
+        "Exemple : ",
+        "h1, h2, p",
+        "Sélectionne tous les éléments séparés par des virgules",
+        "Ici, tous les éléments ",
+        "h1",
+        ", ",
+        "h2",
+        " et ",
+        "p",
+        " de la page obtiennent le style."
+      ],
+      "media": [
+        "image102.png",
+        "image103.png",
+        "image104.png"
+      ]
+    },
+    {
+      "slide": 44,
+      "text": [
+        "Sélecteurs complexes",
+        "Essayez de prédire quels éléments seront affectés par ce style, puis testez dans Visual Studio Code pour avoir la réponse.",
+        "Insérez le style dans le ",
+        "head",
+        " (avec ",
+        "<style>",
+        ") et insérez le code HTML dans le ",
+        "body"
+      ],
+      "media": [
+        "image105.png",
+        "image106.png"
+      ]
+    },
+    {
+      "slide": 45,
+      "text": [
+        "Sélecteurs complexes",
+        "Essayez de prédire quels éléments seront affectés par ce style,      puis testez dans Visual Studio Code pour avoir la réponse.",
+        "(lorsque survolé seulement)"
+      ],
+      "media": [
+        "image105.png",
+        "image106.png",
+        "image107.png"
+      ]
+    },
+    {
+      "slide": 46,
+      "text": [
+        "Quelques règles CSS",
+        "Abordons quelques nouvelles règles CSS pour s’",
+        "a",
+        "m",
+        "u",
+        "s",
+        "e",
+        "r",
+        " un peu avec les boîtes.",
+        "max-width, min-width, min-height et max-height",
+        "cursor",
+        "opacity",
+        "box-shadow",
+        "transition"
+      ],
+      "media": []
+    },
+    {
+      "slide": 47,
+      "text": [
+        "Quelques règles CSS",
+        "Règles ",
+        "max-width",
+        ",",
+        "",
+        "min-width",
+        ",",
+        "",
+        "max-height",
+        "",
+        "et",
+        "",
+        "min-height ",
+        ":",
+        "",
+        "max-width",
+        " / ",
+        "max-height",
+        " : Permet de préciser une ",
+        "largeur",
+        "/",
+        "hauteur",
+        "",
+        "maximale",
+        " si une boîte a ",
+        "trop ",
+        "de contenu en ",
+        "largeur",
+        "/",
+        "hauteur",
+        ".",
+        "",
+        "min-width",
+        " / ",
+        "min-height",
+        " : Permet de préciser une ",
+        "largeur",
+        "/",
+        "hauteur",
+        "",
+        "minimale",
+        " si une boîte n’a ",
+        "pas assez ",
+        "de contenu en ",
+        "largeur",
+        "/",
+        "hauteur",
+        ".",
+        "Fonctionne mieux avec un élément ",
+        "inline-block",
+        ". Avec un élément ",
+        "block",
+        ", ",
+        "max-width",
+        " correspondront à la largeur ",
+        "effective",
+        "… mais ",
+        "max-height",
+        " / ",
+        "min-height",
+        " fonctionneront tel que mentionné ci-dessus.",
+        "Boîte jaune",
+        " : Contenu trop peu large / haut : ",
+        "min-width",
+        " et ",
+        "min-height",
+        " sont appliqués.",
+        "Boîte bleue ",
+        ": Contenu assez large / haut… mais pas assez pour appliquer max-width et max-height.",
+        "Boîte rouge ",
+        ": Contenu trop grand : ",
+        "max-width",
+        " et ",
+        "max-height",
+        " sont appliqués."
+      ],
+      "media": [
+        "image108.png",
+        "image109.png"
+      ]
+    },
+    {
+      "slide": 48,
+      "text": [
+        "Quelques règles CSS",
+        "Règle ",
+        "cursor",
+        " :",
+        "Permet de modifier l’apparence du curseur au survol d’un élément.",
+        "Liste des valeurs possibles ici : ",
+        "https://www.w3schools.com/cssref/pr_class_cursor.asp"
+      ],
+      "media": [
+        "image110.png",
+        "image111.png"
+      ]
+    },
+    {
+      "slide": 49,
+      "text": [
+        "Quelques règles CSS",
+        "Règle ",
+        "opacity",
+        " :",
+        "Change l’",
+        "opacité",
+        " d’un élément.",
+        "Par exemple, ici, au survol du ",
+        "div",
+        ", l’",
+        "opacité",
+        " de tout le ",
+        "div",
+        " et son contenu passe à ",
+        "50%",
+        ", ce qui laisse entrevoir l’image de fond."
+      ],
+      "media": [
+        "image112.png",
+        "image113.png",
+        "image114.png"
+      ]
+    },
+    {
+      "slide": 50,
+      "text": [
+        "Quelques règles CSS",
+        "Règle ",
+        "box-shadow",
+        " :",
+        "Permet d’ajouter une « ",
+        "ombre",
+        " » derrière un élément."
+      ],
+      "media": [
+        "image115.png",
+        "image116.png"
+      ]
+    },
+    {
+      "slide": 51,
+      "text": [
+        "Quelques règles CSS",
+        "Règle ",
+        "box-shadow",
+        " :",
+        "Permet d’ajouter une « ",
+        "ombre",
+        " » derrière un élément.",
+        "Les valeurs peuvent être plutôt sophistiquées…",
+        "box-shadow",
+        " : ",
+        "décalage-horizontal",
+        "",
+        "décalage-vertical",
+        "",
+        "flou",
+        "",
+        "diffusion",
+        "",
+        "couleur",
+        "Seuls le décalage horizontal et le décalage vertical sont obligatoires."
+      ],
+      "media": [
+        "image117.png",
+        "image118.png"
+      ]
+    },
+    {
+      "slide": 52,
+      "text": [
+        "Quelques règles CSS",
+        "Règle ",
+        "transition",
+        " :",
+        "Permet de créer des animations lors d’un changement de propriétés CSS.",
+        "Fonctionnement :",
+        "",
+        "transition",
+        " : ",
+        "propriété",
+        " temps, ",
+        "propriété",
+        " temps, ",
+        "propriété",
+        " temps, … ;"
+      ],
+      "media": [
+        "image119.png",
+        "image120.png",
+        "image121.png",
+        "image122.png",
+        "image123.png",
+        "image124.png",
+        "image125.png"
+      ]
+    },
+    {
+      "slide": 53,
+      "text": [
+        "Priorité en CSS",
+        "Au premier cours, nous avions vu la règle sommaire suivante pour la priorité des règles en CSS :",
+        "",
+        "CSS intraligne",
+        " > ",
+        "ID",
+        " > ",
+        "Classe",
+        " > ",
+        "Sélecteur élément",
+        "Le CSS intraligne ayant la plus grande priorité et les sélecteurs éléments ayant la plus faible.",
+        "La réalité… est bien plus ",
+        "effrayante",
+        ".",
+        "",
+        "CSS intraligne",
+        " > ",
+        "ID",
+        " > ",
+        "Classe, attributs, pseudo-classes",
+        " > ",
+        "Éléments, pseudo-éléments",
+        "Nous allons découvrir ce que « ",
+        "attributs",
+        " » et « ",
+        "pseudo-éléments",
+        " » veulent dire.",
+        "En cas d’égalité : la « ",
+        "dernière",
+        " » règle gagne.",
+        "CSS externe VS CSS interne (dans <style>) : le ",
+        "dernier ",
+        "gagne."
+      ],
+      "media": []
+    },
+    {
+      "slide": 54,
+      "text": [
+        "Priorité en CSS",
+        "",
+        "CSS intraligne",
+        " > ",
+        "ID",
+        " > ",
+        "Classe, ",
+        "attributs",
+        ", pseudo-classes",
+        " > ",
+        "Éléments, pseudo-éléments",
+        "C’est quoi un ",
+        "sélecteur attribut",
+        " ?",
+        "Syntaxe : sélecteur[attribut=\"valeur\"]",
+        "Exemple : ",
+        "a",
+        "[target=\"blank\"]",
+        "Sélectionne seulement les éléments ",
+        "<a>",
+        " s’ils ont l’attribut ",
+        "target",
+        " avec la valeur ",
+        "blank",
+        ".",
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ],
+      "media": [
+        "image126.png",
+        "image127.png",
+        "image128.png"
+      ]
+    },
+    {
+      "slide": 55,
+      "text": [
+        "Priorité en CSS",
+        "",
+        "CSS intraligne",
+        " > ",
+        "ID",
+        " > ",
+        "Classe, ",
+        "attributs",
+        ", pseudo-classes",
+        " > ",
+        "Éléments, pseudo-éléments",
+        "C’est quoi un ",
+        "sélecteur attribut",
+        " ?",
+        "Syntaxe : sélecteur[attribut] ",
+        "(Une autre forme possible !)",
+        "Exemple : ",
+        "a",
+        "[class]",
+        "Sélectionne seulement les éléments ",
+        "<a>",
+        " s’ils ont une ",
+        "classe",
+        ". On ne soucie pas de la valeur de l’attribut.",
+        "https://www.w3schools.com/css/css_attribute_selectors.asp"
+      ],
+      "media": [
+        "image128.png",
+        "image129.png",
+        "image130.png"
+      ]
+    },
+    {
+      "slide": 56,
+      "text": [
+        "Priorité en CSS",
+        "",
+        "CSS intraligne",
+        " > ",
+        "ID",
+        " > ",
+        "Classe, attributs, pseudo-classes",
+        " > ",
+        "Éléments, ",
+        "pseudo-éléments",
+        "C’est quoi un ",
+        "sélecteur pseudo-élément",
+        " ?",
+        "Syntaxe : sélecteur::pseudo-element",
+        "Exemple : ",
+        "p",
+        "::first-letter",
+        "https://www.w3schools.com/css/css_pseudo_elements.asp"
+      ],
+      "media": [
+        "image131.png",
+        "image132.png",
+        "image133.png"
+      ]
+    },
+    {
+      "slide": 57,
+      "text": [
+        "Priorité en CSS",
+        " « En cas d’égalité, la ",
+        "dernière règle",
+        " gagne »"
+      ],
+      "media": [
+        "image134.png",
+        "image135.png",
+        "image136.png",
+        "image137.png",
+        "image138.png",
+        "image139.png"
+      ]
+    },
+    {
+      "slide": 58,
+      "text": [
+        "Priorité en CSS",
+        " « CSS interne VS CSS externe : ",
+        "CSS dernier gagne",
+        " »",
+        "Cas 1 : interne avant externe",
+        "Cas 2 : externe avant interne"
+      ],
+      "media": [
+        "image140.png",
+        "image141.png",
+        "image142.png",
+        "image143.png",
+        "image144.png"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "name": "image1.png",
+      "bytes": 1542,
+      "width": 1280,
+      "height": 38,
+      "slides": []
+    },
+    {
+      "name": "image2.png",
+      "bytes": 9109,
+      "width": 1280,
+      "height": 256,
+      "slides": []
+    },
+    {
+      "name": "image3.gif",
+      "bytes": 59432,
+      "width": 162,
+      "height": 222,
+      "slides": []
+    },
+    {
+      "name": "image4.png",
+      "bytes": 40317,
+      "width": 2000,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image5.png",
+      "bytes": 73287,
+      "width": 2000,
+      "height": 137,
+      "slides": []
+    },
+    {
+      "name": "image6.png",
+      "bytes": 453,
+      "width": 38,
+      "height": 57,
+      "slides": []
+    },
+    {
+      "name": "image7.png",
+      "bytes": 3163,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image8.png",
+      "bytes": 4934,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image9.png",
+      "bytes": 4896,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image10.png",
+      "bytes": 3136,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image11.png",
+      "bytes": 3146,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image12.png",
+      "bytes": 4904,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image13.png",
+      "bytes": 3162,
+      "width": 1280,
+      "height": 57,
+      "slides": []
+    },
+    {
+      "name": "image14.png",
+      "bytes": 4916,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image15.png",
+      "bytes": 21204,
+      "width": 400,
+      "height": 259,
+      "slides": [
+        1
+      ]
+    },
+    {
+      "name": "image16.png",
+      "bytes": 429249,
+      "width": 519,
+      "height": 473,
+      "slides": [
+        2
+      ]
+    },
+    {
+      "name": "image17.png",
+      "bytes": 71405,
+      "width": 1472,
+      "height": 450,
+      "slides": [
+        3
+      ]
+    },
+    {
+      "name": "image18.png",
+      "bytes": 28142,
+      "width": 714,
+      "height": 381,
+      "slides": [
+        3
+      ]
+    },
+    {
+      "name": "image19.png",
+      "bytes": 13221,
+      "width": 597,
+      "height": 337,
+      "slides": [
+        4,
+        13
+      ]
+    },
+    {
+      "name": "image20.png",
+      "bytes": 104781,
+      "width": 1295,
+      "height": 690,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image21.png",
+      "bytes": 22600,
+      "width": 658,
+      "height": 336,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image22.png",
+      "bytes": 70639,
+      "width": 865,
+      "height": 282,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image23.png",
+      "bytes": 80090,
+      "width": 1091,
+      "height": 511,
+      "slides": [
+        6
+      ]
+    },
+    {
+      "name": "image24.png",
+      "bytes": 34149,
+      "width": 605,
+      "height": 413,
+      "slides": [
+        6
+      ]
+    },
+    {
+      "name": "image25.png",
+      "bytes": 86960,
+      "width": 906,
+      "height": 463,
+      "slides": [
+        8
+      ]
+    },
+    {
+      "name": "image26.png",
+      "bytes": 46649,
+      "width": 617,
+      "height": 492,
+      "slides": [
+        8
+      ]
+    },
+    {
+      "name": "image27.png",
+      "bytes": 40575,
+      "width": 524,
+      "height": 228,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image28.png",
+      "bytes": 41253,
+      "width": 550,
+      "height": 241,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image29.png",
+      "bytes": 1297,
+      "width": 56,
+      "height": 47,
+      "slides": [
+        9,
+        11,
+        12,
+        14,
+        15
+      ]
+    },
+    {
+      "name": "image30.png",
+      "bytes": 47204,
+      "width": 590,
+      "height": 494,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image31.png",
+      "bytes": 78234,
+      "width": 640,
+      "height": 577,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image32.png",
+      "bytes": 18877,
+      "width": 348,
+      "height": 174,
+      "slides": [
+        11
+      ]
+    },
+    {
+      "name": "image33.png",
+      "bytes": 7461,
+      "width": 483,
+      "height": 55,
+      "slides": [
+        11
+      ]
+    },
+    {
+      "name": "image34.png",
+      "bytes": 50230,
+      "width": 582,
+      "height": 494,
+      "slides": [
+        12
+      ]
+    },
+    {
+      "name": "image35.png",
+      "bytes": 78499,
+      "width": 665,
+      "height": 563,
+      "slides": [
+        12
+      ]
+    },
+    {
+      "name": "image36.png",
+      "bytes": 35809,
+      "width": 630,
+      "height": 329,
+      "slides": [
+        14,
+        15
+      ]
+    },
+    {
+      "name": "image37.png",
+      "bytes": 13009,
+      "width": 487,
+      "height": 302,
+      "slides": [
+        14,
+        15
+      ]
+    },
+    {
+      "name": "image38.jpg",
+      "bytes": 172441,
+      "width": 1440,
+      "height": 1080,
+      "slides": [
+        16
+      ]
+    },
+    {
+      "name": "image39.png",
+      "bytes": 452837,
+      "width": 1112,
+      "height": 837,
+      "slides": [
+        16
+      ]
+    },
+    {
+      "name": "image40.png",
+      "bytes": 12840,
+      "width": 819,
+      "height": 97,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image41.png",
+      "bytes": 14166,
+      "width": 593,
+      "height": 166,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image42.png",
+      "bytes": 2139,
+      "width": 263,
+      "height": 38,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image43.png",
+      "bytes": 14176,
+      "width": 648,
+      "height": 363,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image44.png",
+      "bytes": 29803,
+      "width": 863,
+      "height": 213,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image45.png",
+      "bytes": 18246,
+      "width": 635,
+      "height": 83,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image46.png",
+      "bytes": 18142,
+      "width": 604,
+      "height": 209,
+      "slides": [
+        19
+      ]
+    },
+    {
+      "name": "image47.png",
+      "bytes": 19174,
+      "width": 670,
+      "height": 179,
+      "slides": [
+        19
+      ]
+    },
+    {
+      "name": "image48.png",
+      "bytes": 10736,
+      "width": 649,
+      "height": 223,
+      "slides": [
+        19
+      ]
+    },
+    {
+      "name": "image49.png",
+      "bytes": 12321,
+      "width": 587,
+      "height": 163,
+      "slides": [
+        20
+      ]
+    },
+    {
+      "name": "image50.png",
+      "bytes": 21794,
+      "width": 631,
+      "height": 162,
+      "slides": [
+        20
+      ]
+    },
+    {
+      "name": "image51.png",
+      "bytes": 6964,
+      "width": 452,
+      "height": 207,
+      "slides": [
+        20
+      ]
+    },
+    {
+      "name": "image52.png",
+      "bytes": 13510,
+      "width": 597,
+      "height": 164,
+      "slides": [
+        21
+      ]
+    },
+    {
+      "name": "image53.png",
+      "bytes": 24478,
+      "width": 1342,
+      "height": 81,
+      "slides": [
+        21
+      ]
+    },
+    {
+      "name": "image54.png",
+      "bytes": 13056,
+      "width": 649,
+      "height": 168,
+      "slides": [
+        21
+      ]
+    },
+    {
+      "name": "image55.png",
+      "bytes": 9733,
+      "width": 647,
+      "height": 267,
+      "slides": [
+        22
+      ]
+    },
+    {
+      "name": "image56.png",
+      "bytes": 20785,
+      "width": 646,
+      "height": 291,
+      "slides": [
+        22
+      ]
+    },
+    {
+      "name": "image57.png",
+      "bytes": 33303,
+      "width": 822,
+      "height": 325,
+      "slides": [
+        22
+      ]
+    },
+    {
+      "name": "image58.png",
+      "bytes": 8296,
+      "width": 459,
+      "height": 189,
+      "slides": [
+        22,
+        23
+      ]
+    },
+    {
+      "name": "image59.png",
+      "bytes": 20236,
+      "width": 618,
+      "height": 203,
+      "slides": [
+        23
+      ]
+    },
+    {
+      "name": "image60.png",
+      "bytes": 18877,
+      "width": 625,
+      "height": 207,
+      "slides": [
+        23
+      ]
+    },
+    {
+      "name": "image61.png",
+      "bytes": 8038,
+      "width": 444,
+      "height": 158,
+      "slides": [
+        23
+      ]
+    },
+    {
+      "name": "image62.png",
+      "bytes": 64490,
+      "width": 789,
+      "height": 494,
+      "slides": [
+        24
+      ]
+    },
+    {
+      "name": "image63.png",
+      "bytes": 30102,
+      "width": 990,
+      "height": 292,
+      "slides": [
+        24
+      ]
+    },
+    {
+      "name": "image64.png",
+      "bytes": 65573,
+      "width": 1282,
+      "height": 283,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image65.png",
+      "bytes": 10250,
+      "width": 300,
+      "height": 161,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image66.png",
+      "bytes": 5921,
+      "width": 423,
+      "height": 479,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image67.png",
+      "bytes": 29096,
+      "width": 1039,
+      "height": 117,
+      "slides": [
+        28
+      ]
+    },
+    {
+      "name": "image68.png",
+      "bytes": 4464,
+      "width": 306,
+      "height": 406,
+      "slides": [
+        28
+      ]
+    },
+    {
+      "name": "image69.png",
+      "bytes": 22366,
+      "width": 834,
+      "height": 124,
+      "slides": [
+        29
+      ]
+    },
+    {
+      "name": "image70.png",
+      "bytes": 18570,
+      "width": 503,
+      "height": 246,
+      "slides": [
+        29
+      ]
+    },
+    {
+      "name": "image71.png",
+      "bytes": 6415,
+      "width": 325,
+      "height": 425,
+      "slides": [
+        29
+      ]
+    },
+    {
+      "name": "image72.png",
+      "bytes": 6856,
+      "width": 543,
+      "height": 363,
+      "slides": [
+        30
+      ]
+    },
+    {
+      "name": "image73.png",
+      "bytes": 18726,
+      "width": 547,
+      "height": 248,
+      "slides": [
+        30
+      ]
+    },
+    {
+      "name": "image74.png",
+      "bytes": 22463,
+      "width": 858,
+      "height": 127,
+      "slides": [
+        30,
+        31
+      ]
+    },
+    {
+      "name": "image75.png",
+      "bytes": 6875,
+      "width": 542,
+      "height": 360,
+      "slides": [
+        31
+      ]
+    },
+    {
+      "name": "image76.png",
+      "bytes": 17461,
+      "width": 495,
+      "height": 248,
+      "slides": [
+        31
+      ]
+    },
+    {
+      "name": "image77.png",
+      "bytes": 20669,
+      "width": 757,
+      "height": 163,
+      "slides": [
+        32,
+        33
+      ]
+    },
+    {
+      "name": "image78.png",
+      "bytes": 43847,
+      "width": 562,
+      "height": 535,
+      "slides": [
+        32
+      ]
+    },
+    {
+      "name": "image79.png",
+      "bytes": 3633,
+      "width": 263,
+      "height": 292,
+      "slides": [
+        32
+      ]
+    },
+    {
+      "name": "image80.png",
+      "bytes": 39477,
+      "width": 579,
+      "height": 494,
+      "slides": [
+        33
+      ]
+    },
+    {
+      "name": "image81.png",
+      "bytes": 6758,
+      "width": 501,
+      "height": 329,
+      "slides": [
+        33
+      ]
+    },
+    {
+      "name": "image82.png",
+      "bytes": 9531,
+      "width": 385,
+      "height": 82,
+      "slides": [
+        34
+      ]
+    },
+    {
+      "name": "image83.png",
+      "bytes": 3287,
+      "width": 239,
+      "height": 222,
+      "slides": [
+        34
+      ]
+    },
+    {
+      "name": "image84.png",
+      "bytes": 46526,
+      "width": 661,
+      "height": 620,
+      "slides": [
+        34
+      ]
+    },
+    {
+      "name": "image85.png",
+      "bytes": 10794,
+      "width": 498,
+      "height": 499,
+      "slides": [
+        35,
+        36
+      ]
+    },
+    {
+      "name": "image86.png",
+      "bytes": 25734,
+      "width": 589,
+      "height": 202,
+      "slides": [
+        36
+      ]
+    },
+    {
+      "name": "image87.png",
+      "bytes": 70914,
+      "width": 1278,
+      "height": 205,
+      "slides": [
+        36
+      ]
+    },
+    {
+      "name": "image88.png",
+      "bytes": 20666,
+      "width": 816,
+      "height": 125,
+      "slides": [
+        38
+      ]
+    },
+    {
+      "name": "image89.png",
+      "bytes": 14402,
+      "width": 663,
+      "height": 169,
+      "slides": [
+        38
+      ]
+    },
+    {
+      "name": "image90.png",
+      "bytes": 10729,
+      "width": 460,
+      "height": 141,
+      "slides": [
+        38
+      ]
+    },
+    {
+      "name": "image91.png",
+      "bytes": 70778,
+      "width": 703,
+      "height": 236,
+      "slides": [
+        38
+      ]
+    },
+    {
+      "name": "image92.png",
+      "bytes": 21540,
+      "width": 834,
+      "height": 125,
+      "slides": [
+        39
+      ]
+    },
+    {
+      "name": "image93.png",
+      "bytes": 24149,
+      "width": 672,
+      "height": 252,
+      "slides": [
+        39
+      ]
+    },
+    {
+      "name": "image94.png",
+      "bytes": 9784,
+      "width": 410,
+      "height": 169,
+      "slides": [
+        39
+      ]
+    },
+    {
+      "name": "image95.png",
+      "bytes": 68329,
+      "width": 643,
+      "height": 262,
+      "slides": [
+        39
+      ]
+    },
+    {
+      "name": "image96.png",
+      "bytes": 34746,
+      "width": 1158,
+      "height": 386,
+      "slides": [
+        41
+      ]
+    },
+    {
+      "name": "image97.png",
+      "bytes": 8458,
+      "width": 516,
+      "height": 123,
+      "slides": [
+        41
+      ]
+    },
+    {
+      "name": "image98.png",
+      "bytes": 51686,
+      "width": 531,
+      "height": 579,
+      "slides": [
+        41
+      ]
+    },
+    {
+      "name": "image99.png",
+      "bytes": 43492,
+      "width": 1220,
+      "height": 488,
+      "slides": [
+        42
+      ]
+    },
+    {
+      "name": "image100.png",
+      "bytes": 8827,
+      "width": 509,
+      "height": 126,
+      "slides": [
+        42
+      ]
+    },
+    {
+      "name": "image101.png",
+      "bytes": 51352,
+      "width": 532,
+      "height": 556,
+      "slides": [
+        42
+      ]
+    },
+    {
+      "name": "image102.png",
+      "bytes": 29620,
+      "width": 949,
+      "height": 164,
+      "slides": [
+        43
+      ]
+    },
+    {
+      "name": "image103.png",
+      "bytes": 9723,
+      "width": 580,
+      "height": 128,
+      "slides": [
+        43
+      ]
+    },
+    {
+      "name": "image104.png",
+      "bytes": 19223,
+      "width": 535,
+      "height": 299,
+      "slides": [
+        43
+      ]
+    },
+    {
+      "name": "image105.png",
+      "bytes": 15760,
+      "width": 533,
+      "height": 168,
+      "slides": [
+        44,
+        45
+      ]
+    },
+    {
+      "name": "image106.png",
+      "bytes": 51250,
+      "width": 1473,
+      "height": 375,
+      "slides": [
+        44,
+        45
+      ]
+    },
+    {
+      "name": "image107.png",
+      "bytes": 27533,
+      "width": 709,
+      "height": 396,
+      "slides": [
+        45
+      ]
+    },
+    {
+      "name": "image108.png",
+      "bytes": 30995,
+      "width": 450,
+      "height": 330,
+      "slides": [
+        47
+      ]
+    },
+    {
+      "name": "image109.png",
+      "bytes": 45997,
+      "width": 674,
+      "height": 463,
+      "slides": [
+        47
+      ]
+    },
+    {
+      "name": "image110.png",
+      "bytes": 22774,
+      "width": 794,
+      "height": 321,
+      "slides": [
+        48
+      ]
+    },
+    {
+      "name": "image111.png",
+      "bytes": 14412,
+      "width": 481,
+      "height": 212,
+      "slides": [
+        48
+      ]
+    },
+    {
+      "name": "image112.png",
+      "bytes": 65365,
+      "width": 739,
+      "height": 316,
+      "slides": [
+        49
+      ]
+    },
+    {
+      "name": "image113.png",
+      "bytes": 80399,
+      "width": 741,
+      "height": 337,
+      "slides": [
+        49
+      ]
+    },
+    {
+      "name": "image114.png",
+      "bytes": 7269,
+      "width": 296,
+      "height": 129,
+      "slides": [
+        49
+      ]
+    },
+    {
+      "name": "image115.png",
+      "bytes": 17610,
+      "width": 506,
+      "height": 210,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image116.png",
+      "bytes": 32327,
+      "width": 671,
+      "height": 307,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image117.png",
+      "bytes": 35716,
+      "width": 702,
+      "height": 326,
+      "slides": [
+        51
+      ]
+    },
+    {
+      "name": "image118.png",
+      "bytes": 24268,
+      "width": 874,
+      "height": 207,
+      "slides": [
+        51
+      ]
+    },
+    {
+      "name": "image119.png",
+      "bytes": 77321,
+      "width": 854,
+      "height": 541,
+      "slides": [
+        52
+      ]
+    },
+    {
+      "name": "image120.png",
+      "bytes": 2210,
+      "width": 265,
+      "height": 264,
+      "slides": [
+        52
+      ]
+    },
+    {
+      "name": "image121.png",
+      "bytes": 2197,
+      "width": 264,
+      "height": 269,
+      "slides": [
+        52
+      ]
+    },
+    {
+      "name": "image122.png",
+      "bytes": 2126,
+      "width": 259,
+      "height": 260,
+      "slides": [
+        52
+      ]
+    },
+    {
+      "name": "image123.png",
+      "bytes": 2220,
+      "width": 265,
+      "height": 267,
+      "slides": [
+        52
+      ]
+    },
+    {
+      "name": "image124.png",
+      "bytes": 3245,
+      "width": 419,
+      "height": 134,
+      "slides": [
+        52
+      ]
+    },
+    {
+      "name": "image125.png",
+      "bytes": 2225,
+      "width": 266,
+      "height": 267,
+      "slides": [
+        52
+      ]
+    },
+    {
+      "name": "image126.png",
+      "bytes": 21532,
+      "width": 829,
+      "height": 128,
+      "slides": [
+        54
+      ]
+    },
+    {
+      "name": "image127.png",
+      "bytes": 13346,
+      "width": 509,
+      "height": 160,
+      "slides": [
+        54
+      ]
+    },
+    {
+      "name": "image128.png",
+      "bytes": 10031,
+      "width": 306,
+      "height": 263,
+      "slides": [
+        54,
+        55
+      ]
+    },
+    {
+      "name": "image129.png",
+      "bytes": 21190,
+      "width": 812,
+      "height": 126,
+      "slides": [
+        55
+      ]
+    },
+    {
+      "name": "image130.png",
+      "bytes": 11552,
+      "width": 511,
+      "height": 168,
+      "slides": [
+        55
+      ]
+    },
+    {
+      "name": "image131.png",
+      "bytes": 11020,
+      "width": 390,
+      "height": 163,
+      "slides": [
+        56
+      ]
+    },
+    {
+      "name": "image132.png",
+      "bytes": 23172,
+      "width": 1188,
+      "height": 171,
+      "slides": [
+        56
+      ]
+    },
+    {
+      "name": "image133.png",
+      "bytes": 17205,
+      "width": 501,
+      "height": 233,
+      "slides": [
+        56
+      ]
+    },
+    {
+      "name": "image134.png",
+      "bytes": 20246,
+      "width": 477,
+      "height": 330,
+      "slides": [
+        57
+      ]
+    },
+    {
+      "name": "image135.png",
+      "bytes": 11308,
+      "width": 481,
+      "height": 196,
+      "slides": [
+        57
+      ]
+    },
+    {
+      "name": "image136.png",
+      "bytes": 11924,
+      "width": 544,
+      "height": 251,
+      "slides": [
+        57
+      ]
+    },
+    {
+      "name": "image137.png",
+      "bytes": 13921,
+      "width": 732,
+      "height": 92,
+      "slides": [
+        57
+      ]
+    },
+    {
+      "name": "image138.png",
+      "bytes": 10049,
+      "width": 504,
+      "height": 164,
+      "slides": [
+        57
+      ]
+    },
+    {
+      "name": "image139.png",
+      "bytes": 10360,
+      "width": 517,
+      "height": 182,
+      "slides": [
+        57
+      ]
+    },
+    {
+      "name": "image140.png",
+      "bytes": 9715,
+      "width": 567,
+      "height": 142,
+      "slides": [
+        58
+      ]
+    },
+    {
+      "name": "image141.png",
+      "bytes": 18521,
+      "width": 730,
+      "height": 172,
+      "slides": [
+        58
+      ]
+    },
+    {
+      "name": "image142.png",
+      "bytes": 10662,
+      "width": 413,
+      "height": 208,
+      "slides": [
+        58
+      ]
+    },
+    {
+      "name": "image143.png",
+      "bytes": 18425,
+      "width": 721,
+      "height": 163,
+      "slides": [
+        58
+      ]
+    },
+    {
+      "name": "image144.png",
+      "bytes": 11966,
+      "width": 407,
+      "height": 204,
+      "slides": [
+        58
+      ]
+    }
+  ]
+}

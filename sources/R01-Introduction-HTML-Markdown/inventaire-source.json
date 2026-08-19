@@ -1,0 +1,2103 @@
+{
+  "source": "P:\\Projects\\_CEGEP\\Z03-Local\\R01\\R01 - Introduction à HTML.pptx",
+  "slideCount": 52,
+  "slides": [
+    {
+      "slide": 1,
+      "text": [
+        "Introduction à HTML et CSS",
+        "Rencontre #1"
+      ],
+      "media": [
+        "image15.png"
+      ]
+    },
+    {
+      "slide": 2,
+      "text": [
+        "Menu du jour",
+        "Présentation du cours",
+        "Introduction à HTML",
+        "C’est quoi ?",
+        "Structure de base",
+        "Éléments de base",
+        "Navigation",
+        "Validation"
+      ],
+      "media": [
+        "image16.png",
+        "image17.png"
+      ]
+    },
+    {
+      "slide": 3,
+      "text": [
+        "Introduction à HTML"
+      ],
+      "media": [
+        "image18.png"
+      ]
+    },
+    {
+      "slide": 4,
+      "text": [
+        "C’est quoi HTML ?",
+        "H.T.M.L.",
+        "→",
+        " H",
+        "yper",
+        "T",
+        "ext ",
+        "M",
+        "arkup ",
+        "L",
+        "anguage ( ͡❛ ͜ʖ ͡❛)",
+        "Permet de décrire la ",
+        "structure",
+        " d’une page Web :",
+        "Texte, images, boutons, formulaires, vidéos, titres, etc.",
+        "Cette structure peut être interprétée (et affichée sur votre écran)  par un navigateur. (Internet Explorer ",
+        "♥",
+        ", Chrome, Firefox, etc.)"
+      ],
+      "media": []
+    },
+    {
+      "slide": 5,
+      "text": [
+        "C’est quoi HTML ?",
+        "HTML est composé d’",
+        "éléments",
+        " qui nous permettront de meubler nos pages."
+      ],
+      "media": [
+        "image19.gif",
+        "image20.png"
+      ]
+    },
+    {
+      "slide": 6,
+      "text": [
+        "Structure de base",
+        "Chaque élément HTML est représenté par des ",
+        "balises",
+        ".",
+        "Par exemple, ci-dessus, on a l’élément ",
+        "p",
+        ", qui correspond à un paragraphe.",
+        "Si j’ouvre une page Web qui ne contient que cet élément ",
+        "p",
+        ", j’ai une page blanche avec mon texte !",
+        "Notez que l’élément ",
+        "p",
+        " débute avec la base ouvrante ",
+        "<p>",
+        " et se termine avec la balise fermante ",
+        "</p>",
+        ". Une balise fermante nécessite toujours une barre oblique suivi du nom de l’élément. "
+      ],
+      "media": [
+        "image21.png",
+        "image22.png"
+      ]
+    },
+    {
+      "slide": 7,
+      "text": [
+        "Structure de base",
+        "Les balises ouvrantes et fermantes peuvent être vues comme une boîte dans laquelle on met notre élément.",
+        "S’il manque la balise ouvrante ou la balise fermante… Il manque la moitié de la boîte ",
+        " … Et le résultat pourrait être décevant !",
+        "Ce chat ne pourrait pas se cacher dans une moitié de boîte …"
+      ],
+      "media": [
+        "image23.png",
+        "image24.png",
+        "image25.png",
+        "image26.png",
+        "image27.png",
+        "image28.png",
+        "image29.png"
+      ]
+    },
+    {
+      "slide": 8,
+      "text": [
+        "Il y a tout de même quelques exceptions !",
+        "Élément ",
+        "br",
+        "Pas besoin de balise fermante, ni de contenu ! Insère un saut de ligne dans un paragraphe.",
+        "Élément ",
+        "img",
+        "Pas besoin de balise fermante, nécessite des ",
+        "attributs",
+        " pour choisir l’image à afficher.",
+        "Il y a plusieurs autres exceptions.",
+        "Structure de base"
+      ],
+      "media": [
+        "image30.png",
+        "image31.png"
+      ]
+    },
+    {
+      "slide": 9,
+      "text": [
+        "Structure de base",
+        "Certains éléments peuvent en contenir d’autres.",
+        "Ici on a :",
+        "un ",
+        "body",
+        " qui contient ..",
+        "un ",
+        "div",
+        ", qui contient …",
+        "un ",
+        "p",
+        ", qui contient …",
+        "du texte et un ",
+        "b",
+        ", qui contient …",
+        "du texte !",
+        "Du texte"
+      ],
+      "media": [
+        "image32.png",
+        "image33.png",
+        "image34.png",
+        "image35.png",
+        "image36.png",
+        "image37.png"
+      ]
+    },
+    {
+      "slide": 10,
+      "text": [
+        "Structure de base",
+        "Croiser",
+        " des éléments pourrait être tentant … mais c’est ",
+        "interdit",
+        " !",
+        "Voici la bonne façon de faire :",
+        "* L’élément ",
+        "b",
+        " rend le texte ",
+        "gras",
+        ". L’élément ",
+        "i",
+        " met le texte en ",
+        "italique",
+        "."
+      ],
+      "media": [
+        "image38.png",
+        "image39.png",
+        "image40.png",
+        "image41.png"
+      ]
+    },
+    {
+      "slide": 11,
+      "text": [
+        "Structure de base",
+        "Parfois, c’est moins évident de trouver les balises mal formées ou croisées …",
+        "Heureusement, notre éditeur de code peut nous aider à identifier ce genre de détails !"
+      ],
+      "media": [
+        "image42.png"
+      ]
+    },
+    {
+      "slide": 12,
+      "text": [
+        "Question sur la syntaxe",
+        "Quelles sont les 2 erreurs de syntaxe ici ?"
+      ],
+      "media": [
+        "image43.png"
+      ]
+    },
+    {
+      "slide": 13,
+      "text": [
+        "Structure de base",
+        "Un élément HTML est composé des segments suivants :",
+        "La valeur d’un ",
+        "attribut",
+        " doit être encadrée avec des ",
+        "guillemets",
+        ". Ils sont toujours situés dans la balise ouvrante … s’il y en a !",
+        "Les ",
+        "attributs",
+        " sont parfois optionnels.",
+        "Tous les éléments ne contiennent pas forcément un ",
+        "contenu",
+        ".",
+        "Tous les éléments n’ont pas forcément besoin d’une ",
+        "balise fermante",
+        "."
+      ],
+      "media": [
+        "image44.png"
+      ]
+    },
+    {
+      "slide": 14,
+      "text": [
+        "Structure de base",
+        "Une page HTML vide devrait au moins avoir la structure suivante :"
+      ],
+      "media": [
+        "image45.png"
+      ]
+    },
+    {
+      "slide": 15,
+      "text": [
+        "Structure de base",
+        "L’élément ",
+        "body",
+        " contient tous les éléments visibles par l’utilisateur dans le corps de la page.",
+        "Images, paragraphes, lecteur vidéo, formulaire, menu de navigation, etc.",
+        "Par exemple, ",
+        "body",
+        " correspond véritablement à l’entièreté de la page dans le navigateur ci-gauche. (Encadré ",
+        "noir",
+        " pointillé)"
+      ],
+      "media": [
+        "image46.png",
+        "image47.png"
+      ]
+    },
+    {
+      "slide": 16,
+      "text": [
+        "L’élément ",
+        "head",
+        " permet de préciser des métadonnées de notre page HTML. ",
+        "Titre de l’onglet (et titre de notre page dans un moteur de recherche !), lien avec d’autres documents, auteur, description, famille de caractères, styles, etc.",
+        "Structure de base"
+      ],
+      "media": [
+        "image48.png"
+      ]
+    },
+    {
+      "slide": 17,
+      "text": [
+        "Structure de base",
+        "Trois éléments sont ",
+        "obligatoires",
+        " :",
+        "Élément",
+        "",
+        "title",
+        " : Détermine le ",
+        "titre",
+        " de la page Web. Cette information n’est qu’affichée dans le nom de l’onglet et dans les moteurs de recherche.",
+        "Élément ",
+        "meta",
+        "",
+        "charset",
+        "",
+        ": Spécifie ",
+        "la famille de caractères ",
+        "utilisée par la page Web. On met toujours ",
+        "UTF-8",
+        " ici. ",
+        "Élément ",
+        "meta",
+        " (",
+        "viewport",
+        ") : Ajuste la ",
+        "taille",
+        " d’affichage du site Web. Ci-dessous, on l’adapte à l’appareil (",
+        "width",
+        "=",
+        "device-width",
+        ") et on met le ",
+        "zoom",
+        " par défaut à 100% (initial-",
+        "scale",
+        "=1.0)"
+      ],
+      "media": [
+        "image49.png",
+        "image50.png",
+        "image51.png",
+        "image52.png"
+      ]
+    },
+    {
+      "slide": 18,
+      "text": [
+        "Structure de base",
+        "Trois éléments sont ",
+        "optionnels",
+        ", mais très utiles :",
+        "Élément ",
+        "meta",
+        " (",
+        "description",
+        ") : Spécifie la ",
+        "description",
+        " du site. Elle apparaîtra généralement dans les moteurs de recherche.",
+        "Élément ",
+        "meta",
+        " (",
+        "keywords",
+        ") : Spécifie les « ",
+        "mots-clés ",
+        "» du site Web. Aide les moteurs de recherche à référencer la page lorsque c’est pertinent. Il faut séparer les mots-clés par des ",
+        "virgules",
+        ".",
+        "Élément ",
+        "meta",
+        " (",
+        "author",
+        ") : Spécifie le ou les ",
+        "auteur(s) ",
+        "de la page Web."
+      ],
+      "media": [
+        "image53.png",
+        "image54.png",
+        "image55.png"
+      ]
+    },
+    {
+      "slide": 19,
+      "text": [
+        "Structure de base",
+        "Les éléments ",
+        "head",
+        " et ",
+        "body",
+        " sont englobés par l’élément ",
+        "html",
+        ".",
+        "L’élément ",
+        "html",
+        " contient ",
+        "TOUT",
+        " !",
+        "… Sauf la déclaration ",
+        "<!DOCTYPE html>",
+        " à insérer au début de tout document HTML. (Cette ligne sert d’instruction au navigateur Web pour indiquer quelle version de HTML est utilisée…)"
+      ],
+      "media": [
+        "image45.png"
+      ]
+    },
+    {
+      "slide": 20,
+      "text": [
+        "Structure de base",
+        "Les commentaires",
+        "Sont ignorés lors de l’affichage de la page Web.",
+        "Servent simplement d’indice / de description pour les développeurs.",
+        "Ils prennent la forme suivante :",
+        "On peut les glisser à peu près n’importe où, tant que la syntaxe ",
+        "<!--",
+        " … ",
+        "-->",
+        " est respectée."
+      ],
+      "media": [
+        "image56.png"
+      ]
+    },
+    {
+      "slide": 21,
+      "text": [
+        "Structure de base",
+        "Les caractères spéciaux",
+        "Certains caractères peuvent être affichés à l’aide « d’entités de caractères ».",
+        "Ces entités de caractères ont la forme suivante : ",
+        "&…;",
+        "Étant donné que les navigateurs ne prennent pas en compte les espaces ordinaires (ils les effacent pour n’en laisser que 1 seul), ",
+        "&",
+        "nbsp",
+        "; ",
+        "permet de mettre plusieurs espaces d’affilé.",
+        "Liste de caractères spéciaux : ",
+        "https://dev.w3.org/html5/html-author/charref"
+      ],
+      "media": [
+        "image57.png",
+        "image58.png"
+      ]
+    },
+    {
+      "slide": 22,
+      "text": [
+        "Éléments de base",
+        "Abordons quelques éléments HTML de base :",
+        "p",
+        " : Paragraphe",
+        "br",
+        " : Saut de ligne",
+        "h1",
+        ", ",
+        "h2",
+        ", ",
+        "h3",
+        ", ",
+        "h4",
+        ", ",
+        "h5",
+        " et ",
+        "h6",
+        " : Titres et sous-titres",
+        "strong",
+        " et ",
+        "em",
+        " : Texte en gras (",
+        "strong",
+        ") et en italique(",
+        "em",
+        ")",
+        "ul",
+        ", ",
+        "ol",
+        ", ",
+        "li",
+        " : Listes",
+        "hr",
+        " : Ligne horizontale",
+        "img",
+        " : Images"
+      ],
+      "media": []
+    },
+    {
+      "slide": 23,
+      "text": [
+        "Éléments de base",
+        "L’élément ",
+        "p",
+        "Permet d’insérer des paragraphes dans la page Web. ",
+        "Un saut de ligne automatique est inséré à la fin de notre premier élément ",
+        "p",
+        ".",
+        "Notez toutefois que le saut de ligne ajouté à la main après « école. » n’a aucun effet sur l’affichage de notre page Web !",
+        "Mais alors, comment insérer un saut de ligne à l’intérieur d’un paragraphe ? ",
+        "😞"
+      ],
+      "media": [
+        "image59.png",
+        "image60.png"
+      ]
+    },
+    {
+      "slide": 24,
+      "text": [
+        "Éléments de base",
+        "L’élément ",
+        "p",
+        " rencontre l’élément ",
+        "br",
+        " ♥",
+        "C’est un match parfait : ",
+        "br",
+        " permet d’insérer des sauts de ligne manuellement à l’intérieur d’un paragraphe !",
+        "Remarquons que l’élément ",
+        "br",
+        " n’a ni contenu, ni balise fermante."
+      ],
+      "media": [
+        "image61.png",
+        "image62.png",
+        "image63.png"
+      ]
+    },
+    {
+      "slide": 25,
+      "text": [
+        "Question sur <br>",
+        "Combien de ",
+        "<br> ",
+        "y a-t-il dans le code au ",
+        "minimum",
+        ", sachant",
+        "qu’on a un seul paragraphe ",
+        "<p> ",
+        "?"
+      ],
+      "media": [
+        "image64.png"
+      ]
+    },
+    {
+      "slide": 26,
+      "text": [
+        "Question sur <br>",
+        "Combien de ",
+        "<br> ",
+        "y a-t-il dans le code au ",
+        "minimum",
+        ", sachant",
+        "qu’on a un seul paragraphe ",
+        "<p> ",
+        "?"
+      ],
+      "media": [
+        "image64.png",
+        "image65.png"
+      ]
+    },
+    {
+      "slide": 27,
+      "text": [
+        "Éléments de base",
+        "Les éléments ",
+        "h1",
+        ", ",
+        "h2",
+        ", ",
+        "h3",
+        ", ",
+        "h4",
+        ", ",
+        "h5",
+        ", ",
+        "h6",
+        "Utilisés pour insérer des titres ou des sous-titres.",
+        "Remarquez que les éléments ",
+        "h4",
+        ", ",
+        "h5",
+        "et ",
+        "h6",
+        " sont plus petits ou semblables à",
+        "un paragraphe ordinaire !"
+      ],
+      "media": [
+        "image66.png",
+        "image67.png",
+        "image68.png"
+      ]
+    },
+    {
+      "slide": 28,
+      "text": [
+        "Éléments de base",
+        "Les éléments ",
+        "strong",
+        " et ",
+        "em",
+        "Encadrer du texte avec ",
+        "strong",
+        " le rend gras.",
+        "Encadrer du texte avec ",
+        "em",
+        " le met en italique.",
+        "On remarque que ces éléments sont glissés à l’intérieur d’un paragraphe (d’un élément ",
+        "p",
+        "), directement dans le texte.",
+        "On peut les insérer dans plusieurs autres éléments qui contiennent du texte !"
+      ],
+      "media": [
+        "image69.png",
+        "image70.png"
+      ]
+    },
+    {
+      "slide": 29,
+      "text": [
+        "Éléments de base",
+        "Les éléments ",
+        "ul",
+        ", ",
+        "ol",
+        " et ",
+        "li",
+        "Permettent d’insérer des listes à puces … ou numérotées."
+      ],
+      "media": [
+        "image71.png",
+        "image72.png"
+      ]
+    },
+    {
+      "slide": 30,
+      "text": [
+        "Éléments de base",
+        "Les éléments ",
+        "ul",
+        ", ",
+        "ol",
+        " et ",
+        "li",
+        "Dans les 2 cas, ",
+        "li",
+        " représente chaque élément d’une liste.",
+        "Alors que",
+        "",
+        "ul",
+        " et ",
+        "ol",
+        " encadrent la liste et déterminent si c’est une liste numérotée(",
+        "ol",
+        ") ou non (",
+        "ul",
+        ")."
+      ],
+      "media": [
+        "image71.png",
+        "image72.png"
+      ]
+    },
+    {
+      "slide": 31,
+      "text": [
+        "Éléments de base",
+        "Les éléments ",
+        "ul",
+        ", ",
+        "ol",
+        " et ",
+        "li",
+        "Les listes peuvent avoir plusieurs niveaux !",
+        "Il suffit d’insérer une autre liste dans un élément ",
+        "li",
+        ".",
+        "Ici, on remarque qu’après « pomme », on n’a pas ",
+        "</li>",
+        " directement puisqu’il est situé tout de suite après la sous-liste."
+      ],
+      "media": [
+        "image73.png",
+        "image74.png"
+      ]
+    },
+    {
+      "slide": 32,
+      "text": [
+        "Éléments de base",
+        "L’élément ",
+        "hr",
+        "Insère une ligne horizontale dans la page Web.",
+        "Cette ligne prendra toute la largeur",
+        "disponible."
+      ],
+      "media": [
+        "image75.png",
+        "image76.png"
+      ]
+    },
+    {
+      "slide": 33,
+      "text": [
+        "Éléments de base",
+        "Élément ",
+        "img",
+        "Permet d’insérer une image dans notre page Web.",
+        "Attribut source ",
+        ": Où trouver l’image ?",
+        " Ça peut être sur un autre site Web ou dans un dossier voisin du dossier qui contient votre page Web.",
+        "Attribut texte alternatif ",
+        ": Si l’image ne peut pas être affichée, la valeur de alt est le texte qui la remplacera. (Obligatoire !)",
+        "Ça peut également servir à des fins d’accessibilité."
+      ],
+      "media": [
+        "image77.png"
+      ]
+    },
+    {
+      "slide": 34,
+      "text": [
+        "Éléments de base",
+        "Élément ",
+        "img"
+      ],
+      "media": [
+        "image78.png",
+        "image79.png"
+      ]
+    },
+    {
+      "slide": 35,
+      "text": [
+        "Éléments de base",
+        "Élément ",
+        "img",
+        "Comment trouver la valeur de l’attribut ",
+        "src",
+        " ?",
+        "Cas le plus simple ",
+        ": Tel que ci-dessus, notre page Web est dans le même dossier que l’image.",
+        "Très simple … la valeur de l’attribut ",
+        "src",
+        " sera simplement le nom du fichier image ! Dans ce cas-ci, on aura ",
+        "src=\"ehh.png\"",
+        "Cela correspond à un « ",
+        "lien relatif ",
+        "»."
+      ],
+      "media": [
+        "image80.png"
+      ]
+    },
+    {
+      "slide": 36,
+      "text": [
+        "Éléments de base",
+        "Élément ",
+        "img",
+        "Comment trouver la valeur de l’attribut ",
+        "src",
+        " ?",
+        "Cas suivant ",
+        ": L’image est située dans un sous-dossier du dossier qui contient la page Web.",
+        "On devra préciser le chemin vers ce sous-dossier suivi d’une barre oblique dans la valeur de l’attribut. Disons que notre image « ",
+        "ehh.png ",
+        "» est située dans le dossier ",
+        "images",
+        ", on devra mettre :"
+      ],
+      "media": [
+        "image81.png",
+        "image82.png"
+      ]
+    },
+    {
+      "slide": 37,
+      "text": [
+        "Éléments de base",
+        "Élément ",
+        "img",
+        "Comment trouver la valeur de l’attribut ",
+        "src",
+        " ?",
+        "Autre cas ",
+        ": L’image est située dans un dossier ",
+        "parent",
+        " du dossier qui contient la page Web.",
+        "On devra mettre ",
+        "../",
+        " avant le nom de notre fichier image. Ces deux points signifient qu’on retourne au dossier ",
+        "parent",
+        " du dossier actuel."
+      ],
+      "media": [
+        "image83.png",
+        "image84.png"
+      ]
+    },
+    {
+      "slide": 38,
+      "text": [
+        "Éléments de base",
+        "Élément ",
+        "img",
+        "Comment trouver la valeur de l’attribut ",
+        "src",
+        " ?",
+        "Pire cas ",
+        ": Combinaison des deux cas précédents. L’image est dans le dossier enfant du dossier arrière-grand-parent du dossier qui contient la page Web…",
+        "On devra utiliser une combinaison des deux méthodes précédentes !",
+        "On est donc revenu dans le dossier parent 3 fois d’affilée puis on est allé dans le sous-dossier « images »."
+      ],
+      "media": [
+        "image85.png",
+        "image86.png"
+      ]
+    },
+    {
+      "slide": 39,
+      "text": [
+        "Éléments de base",
+        "Élément ",
+        "img",
+        "Comment trouver la valeur de l’attribut ",
+        "src",
+        " ?",
+        "Image externe (sur un autre site Web) : ",
+        "Mettez simplement l’URL en entier vers cet image.",
+        "Attention aux droits d’auteur ! ",
+        "D:",
+        "Cela correspond à un « ",
+        "lien absolu ",
+        "».",
+        "URL beaucoup trop longue pour ma capture d’écran …"
+      ],
+      "media": [
+        "image87.png",
+        "image88.png",
+        "image89.png"
+      ]
+    },
+    {
+      "slide": 40,
+      "text": [
+        "Navigation",
+        "On est maintenant capable de faire ",
+        "une",
+        " page Web simple et de l’ouvrir.",
+        "Un site Web est constitué de plusieurs pages Web cela dit …",
+        "Comment faire pour avoir 2 pages reliées ?",
+        "On aimerait que les mots « ",
+        "Accueil",
+        " » et « ",
+        "À propos ",
+        "» dans le haut des pages soient cliquables et permettent de changer de page Web !"
+      ],
+      "media": [
+        "image90.png",
+        "image91.png"
+      ]
+    },
+    {
+      "slide": 41,
+      "text": [
+        "Navigation",
+        "L’élément ",
+        "a",
+        "Permet de rendre un élément (texte, image, bouton, etc.) cliquable !",
+        "Mène vers une autre page Web, un site externe, un document à télécharger, etc.",
+        "Fonctionnement :",
+        "<a",
+        "",
+        "href",
+        "=\"url relatif ou absolu\"",
+        ">",
+        "",
+        "Élément cliquable ",
+        "</a>",
+        "Cliquable !"
+      ],
+      "media": [
+        "image92.png",
+        "image93.png"
+      ]
+    },
+    {
+      "slide": 42,
+      "text": [
+        "Navigation",
+        "L’élément ",
+        "a",
+        "Dans ce cas-ci, nos pages « ",
+        "apropos.html ",
+        "» et « ",
+        "accueil.html ",
+        "» sont dans le même dossier :",
+        "Comme pour une image, il suffit d’utiliser un ",
+        "lien relatif ",
+        "pour que l’élément ",
+        "a",
+        " nous amène vers l’autre page.",
+        "Voici le code dans nos 2 pages :",
+        "Accueil",
+        "À propos"
+      ],
+      "media": [
+        "image94.png",
+        "image95.png",
+        "image96.png"
+      ]
+    },
+    {
+      "slide": 43,
+      "text": [
+        "Navigation",
+        "L’élément ",
+        "a",
+        "Le texte « ",
+        "À propos ",
+        "» est entouré d’un élément ",
+        "a",
+        " qui mène vers la page ",
+        "apropos.html",
+        "Le texte « ",
+        "Accueil ",
+        "» est entouré d’un élément ",
+        "a",
+        " qui mène vers la page ",
+        "accueil.html",
+        "Page ",
+        "Accueil",
+        "Page ",
+        "À propos",
+        "Le texte cliquable devient par défaut ",
+        "bleu",
+        " (ou ",
+        "violet",
+        " si vous avez déjà visité la page visitable)"
+      ],
+      "media": [
+        "image95.png",
+        "image96.png",
+        "image97.png",
+        "image98.png"
+      ]
+    },
+    {
+      "slide": 44,
+      "text": [
+        "Navigation",
+        "L’élément ",
+        "a",
+        "Lien vers un site Web externe :",
+        "Lien vers un document situé dans le même dossier que la page Web (lance le téléchargement du document en question) :"
+      ],
+      "media": [
+        "image100.png",
+        "image101.png",
+        "image102.png",
+        "image103.png",
+        "image99.png"
+      ]
+    },
+    {
+      "slide": 45,
+      "text": [
+        "Validation",
+        "Valider",
+        " son code HTML = Vérifier qu’il n’y a aucune erreur de syntaxe",
+        "Très important ! ",
+        "Votre page ou des éléments pourraient mal s’afficher.",
+        "Accessibilité",
+        " : Concept qui facilite l’accès au contenu Web pour des gens avec des handicaps variés.",
+        "Exemple concret : Utilisateur aveugle qui utilise un « Lecteur de page Web » qui verbalise le contenu de la page.",
+        "Si vous faites des erreurs de syntaxe, ce genre d’outil se met à très mal fonctionner et l’utilisateur ne pourra pas profiter de votre contenu."
+      ],
+      "media": []
+    },
+    {
+      "slide": 46,
+      "text": [
+        "Validation",
+        "Comment valider ?",
+        "Grâce à l’outil ",
+        "https://validator.w3.org/",
+        "Choisissez cet onglet.",
+        "Trouvez votre fichier .html",
+        "Vérifiez la validité !"
+      ],
+      "media": [
+        "image104.png"
+      ]
+    },
+    {
+      "slide": 47,
+      "text": [
+        "Validation",
+        "Exemple :",
+        "Cette page Web est-elle valide .. ?",
+        "Oulala",
+        "… il y a quelques erreurs !"
+      ],
+      "media": [
+        "image105.png",
+        "image106.png"
+      ]
+    },
+    {
+      "slide": 48,
+      "text": [
+        "Question de validation",
+        "Quels sont les 4 éléments à corriger / améliorer ?"
+      ],
+      "media": [
+        "image105.png"
+      ]
+    },
+    {
+      "slide": 49,
+      "text": [
+        "Question de validation",
+        "Quels sont les 4 éléments à corriger / améliorer ?"
+      ],
+      "media": [
+        "image107.png"
+      ]
+    },
+    {
+      "slide": 50,
+      "text": [
+        "Validation",
+        "Correction :",
+        "Ajouter la langue dans ",
+        "<html>",
+        "Améliore le référencement pour ",
+        "les moteurs de recherche !",
+        "Ajouter la famille de caractères dans le ",
+        "<",
+        "head",
+        ">",
+        "Mettre ",
+        "</h1> ",
+        "plutôt que ",
+        "</h2>",
+        " pour",
+        "la balise de fermeture qui était erronée"
+      ],
+      "media": [
+        "image108.png",
+        "image109.png",
+        "image110.png",
+        "image111.png",
+        "image112.png",
+        "image113.png"
+      ]
+    },
+    {
+      "slide": 51,
+      "text": [
+        "Validation",
+        "Correction (suite) :",
+        "Les balises ",
+        "strong",
+        " et ",
+        "em",
+        " sont croisées … il faut les imbriquer."
+      ],
+      "media": [
+        "image114.png",
+        "image115.png"
+      ]
+    },
+    {
+      "slide": 52,
+      "text": [
+        "Validation",
+        "Code corrigé : ",
+        "Le validateur est content ",
+        ""
+      ],
+      "media": [
+        "image107.png",
+        "image116.png"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "name": "image1.png",
+      "bytes": 1542,
+      "width": 1280,
+      "height": 38,
+      "slides": []
+    },
+    {
+      "name": "image2.png",
+      "bytes": 9109,
+      "width": 1280,
+      "height": 256,
+      "slides": []
+    },
+    {
+      "name": "image3.gif",
+      "bytes": 59432,
+      "width": 162,
+      "height": 222,
+      "slides": []
+    },
+    {
+      "name": "image4.png",
+      "bytes": 40317,
+      "width": 2000,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image5.png",
+      "bytes": 73287,
+      "width": 2000,
+      "height": 137,
+      "slides": []
+    },
+    {
+      "name": "image6.png",
+      "bytes": 453,
+      "width": 38,
+      "height": 57,
+      "slides": []
+    },
+    {
+      "name": "image7.png",
+      "bytes": 3163,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image8.png",
+      "bytes": 4934,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image9.png",
+      "bytes": 4896,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image10.png",
+      "bytes": 3136,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image11.png",
+      "bytes": 3146,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image12.png",
+      "bytes": 4904,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image13.png",
+      "bytes": 3162,
+      "width": 1280,
+      "height": 57,
+      "slides": []
+    },
+    {
+      "name": "image14.png",
+      "bytes": 4916,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image15.png",
+      "bytes": 21204,
+      "width": 400,
+      "height": 259,
+      "slides": [
+        1
+      ]
+    },
+    {
+      "name": "image16.png",
+      "bytes": 60329,
+      "width": 256,
+      "height": 256,
+      "slides": [
+        2
+      ]
+    },
+    {
+      "name": "image17.png",
+      "bytes": 8562,
+      "width": 512,
+      "height": 512,
+      "slides": [
+        2
+      ]
+    },
+    {
+      "name": "image18.png",
+      "bytes": 28136,
+      "width": 512,
+      "height": 512,
+      "slides": [
+        3
+      ]
+    },
+    {
+      "name": "image19.gif",
+      "bytes": 541116,
+      "width": 1611,
+      "height": 739,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image20.png",
+      "bytes": 2973,
+      "width": 122,
+      "height": 98,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image21.png",
+      "bytes": 4036,
+      "width": 894,
+      "height": 40,
+      "slides": [
+        6
+      ]
+    },
+    {
+      "name": "image22.png",
+      "bytes": 8766,
+      "width": 415,
+      "height": 128,
+      "slides": [
+        6
+      ]
+    },
+    {
+      "name": "image23.png",
+      "bytes": 12789,
+      "width": 295,
+      "height": 248,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image24.png",
+      "bytes": 3098,
+      "width": 539,
+      "height": 50,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image25.png",
+      "bytes": 2804,
+      "width": 439,
+      "height": 43,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image26.png",
+      "bytes": 2908,
+      "width": 450,
+      "height": 45,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image27.png",
+      "bytes": 7373,
+      "width": 262,
+      "height": 275,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image28.png",
+      "bytes": 7257,
+      "width": 259,
+      "height": 248,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image29.png",
+      "bytes": 274242,
+      "width": 593,
+      "height": 394,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image30.png",
+      "bytes": 6925,
+      "width": 612,
+      "height": 116,
+      "slides": [
+        8
+      ]
+    },
+    {
+      "name": "image31.png",
+      "bytes": 36504,
+      "width": 287,
+      "height": 261,
+      "slides": [
+        8
+      ]
+    },
+    {
+      "name": "image32.png",
+      "bytes": 12209,
+      "width": 620,
+      "height": 353,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image33.png",
+      "bytes": 9479,
+      "width": 360,
+      "height": 247,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image34.png",
+      "bytes": 8175,
+      "width": 360,
+      "height": 230,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image35.png",
+      "bytes": 7296,
+      "width": 354,
+      "height": 230,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image36.png",
+      "bytes": 7223,
+      "width": 356,
+      "height": 230,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image37.png",
+      "bytes": 2020,
+      "width": 159,
+      "height": 92,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image38.png",
+      "bytes": 3814,
+      "width": 913,
+      "height": 49,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image39.png",
+      "bytes": 15545,
+      "width": 907,
+      "height": 111,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image40.png",
+      "bytes": 4031,
+      "width": 942,
+      "height": 70,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image41.png",
+      "bytes": 12746,
+      "width": 903,
+      "height": 69,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image42.png",
+      "bytes": 21873,
+      "width": 917,
+      "height": 374,
+      "slides": [
+        11
+      ]
+    },
+    {
+      "name": "image43.png",
+      "bytes": 17918,
+      "width": 998,
+      "height": 196,
+      "slides": [
+        12
+      ]
+    },
+    {
+      "name": "image44.png",
+      "bytes": 24061,
+      "width": 900,
+      "height": 200,
+      "slides": [
+        13
+      ]
+    },
+    {
+      "name": "image45.png",
+      "bytes": 46725,
+      "width": 1129,
+      "height": 548,
+      "slides": [
+        14,
+        19
+      ]
+    },
+    {
+      "name": "image46.png",
+      "bytes": 30821,
+      "width": 1104,
+      "height": 198,
+      "slides": [
+        15
+      ]
+    },
+    {
+      "name": "image47.png",
+      "bytes": 160481,
+      "width": 1047,
+      "height": 532,
+      "slides": [
+        15
+      ]
+    },
+    {
+      "name": "image48.png",
+      "bytes": 55200,
+      "width": 1116,
+      "height": 379,
+      "slides": [
+        16
+      ]
+    },
+    {
+      "name": "image49.png",
+      "bytes": 5440,
+      "width": 429,
+      "height": 34,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image50.png",
+      "bytes": 1830,
+      "width": 329,
+      "height": 86,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image51.png",
+      "bytes": 3729,
+      "width": 328,
+      "height": 34,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image52.png",
+      "bytes": 8889,
+      "width": 1023,
+      "height": 34,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image53.png",
+      "bytes": 7849,
+      "width": 947,
+      "height": 31,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image54.png",
+      "bytes": 9411,
+      "width": 1067,
+      "height": 31,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image55.png",
+      "bytes": 6692,
+      "width": 694,
+      "height": 31,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image56.png",
+      "bytes": 9414,
+      "width": 636,
+      "height": 205,
+      "slides": [
+        20
+      ]
+    },
+    {
+      "name": "image57.png",
+      "bytes": 52301,
+      "width": 617,
+      "height": 195,
+      "slides": [
+        21
+      ]
+    },
+    {
+      "name": "image58.png",
+      "bytes": 13231,
+      "width": 324,
+      "height": 219,
+      "slides": [
+        21
+      ]
+    },
+    {
+      "name": "image59.png",
+      "bytes": 9759,
+      "width": 831,
+      "height": 144,
+      "slides": [
+        23
+      ]
+    },
+    {
+      "name": "image60.png",
+      "bytes": 6992,
+      "width": 351,
+      "height": 141,
+      "slides": [
+        23
+      ]
+    },
+    {
+      "name": "image61.png",
+      "bytes": 9038,
+      "width": 1171,
+      "height": 105,
+      "slides": [
+        24
+      ]
+    },
+    {
+      "name": "image62.png",
+      "bytes": 7722,
+      "width": 340,
+      "height": 211,
+      "slides": [
+        24
+      ]
+    },
+    {
+      "name": "image63.png",
+      "bytes": 158112,
+      "width": 512,
+      "height": 512,
+      "slides": [
+        24
+      ]
+    },
+    {
+      "name": "image64.png",
+      "bytes": 9453,
+      "width": 213,
+      "height": 245,
+      "slides": [
+        25,
+        26
+      ]
+    },
+    {
+      "name": "image65.png",
+      "bytes": 11198,
+      "width": 1190,
+      "height": 65,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image66.png",
+      "bytes": 19108,
+      "width": 739,
+      "height": 239,
+      "slides": [
+        27
+      ]
+    },
+    {
+      "name": "image67.png",
+      "bytes": 14564,
+      "width": 326,
+      "height": 366,
+      "slides": [
+        27
+      ]
+    },
+    {
+      "name": "image68.png",
+      "bytes": 140667,
+      "width": 275,
+      "height": 281,
+      "slides": [
+        27
+      ]
+    },
+    {
+      "name": "image69.png",
+      "bytes": 4881,
+      "width": 306,
+      "height": 141,
+      "slides": [
+        28
+      ]
+    },
+    {
+      "name": "image70.png",
+      "bytes": 29705,
+      "width": 561,
+      "height": 152,
+      "slides": [
+        28
+      ]
+    },
+    {
+      "name": "image71.png",
+      "bytes": 19924,
+      "width": 556,
+      "height": 433,
+      "slides": [
+        29,
+        30
+      ]
+    },
+    {
+      "name": "image72.png",
+      "bytes": 7403,
+      "width": 310,
+      "height": 252,
+      "slides": [
+        29,
+        30
+      ]
+    },
+    {
+      "name": "image73.png",
+      "bytes": 5808,
+      "width": 294,
+      "height": 204,
+      "slides": [
+        31
+      ]
+    },
+    {
+      "name": "image74.png",
+      "bytes": 76718,
+      "width": 752,
+      "height": 481,
+      "slides": [
+        31
+      ]
+    },
+    {
+      "name": "image75.png",
+      "bytes": 7587,
+      "width": 605,
+      "height": 123,
+      "slides": [
+        32
+      ]
+    },
+    {
+      "name": "image76.png",
+      "bytes": 6975,
+      "width": 484,
+      "height": 169,
+      "slides": [
+        32
+      ]
+    },
+    {
+      "name": "image77.png",
+      "bytes": 4519,
+      "width": 794,
+      "height": 60,
+      "slides": [
+        33
+      ]
+    },
+    {
+      "name": "image78.png",
+      "bytes": 35031,
+      "width": 285,
+      "height": 212,
+      "slides": [
+        34
+      ]
+    },
+    {
+      "name": "image79.png",
+      "bytes": 4553,
+      "width": 768,
+      "height": 66,
+      "slides": [
+        34
+      ]
+    },
+    {
+      "name": "image80.png",
+      "bytes": 14045,
+      "width": 907,
+      "height": 167,
+      "slides": [
+        35
+      ]
+    },
+    {
+      "name": "image81.png",
+      "bytes": 12644,
+      "width": 903,
+      "height": 161,
+      "slides": [
+        36
+      ]
+    },
+    {
+      "name": "image82.png",
+      "bytes": 5255,
+      "width": 883,
+      "height": 66,
+      "slides": [
+        36
+      ]
+    },
+    {
+      "name": "image83.png",
+      "bytes": 17965,
+      "width": 903,
+      "height": 158,
+      "slides": [
+        37
+      ]
+    },
+    {
+      "name": "image84.png",
+      "bytes": 4743,
+      "width": 799,
+      "height": 64,
+      "slides": [
+        37
+      ]
+    },
+    {
+      "name": "image85.png",
+      "bytes": 182437,
+      "width": 400,
+      "height": 270,
+      "slides": [
+        38
+      ]
+    },
+    {
+      "name": "image86.png",
+      "bytes": 5259,
+      "width": 1020,
+      "height": 44,
+      "slides": [
+        38
+      ]
+    },
+    {
+      "name": "image87.png",
+      "bytes": 136160,
+      "width": 542,
+      "height": 346,
+      "slides": [
+        39
+      ]
+    },
+    {
+      "name": "image88.png",
+      "bytes": 11588,
+      "width": 521,
+      "height": 47,
+      "slides": [
+        39
+      ]
+    },
+    {
+      "name": "image89.png",
+      "bytes": 156825,
+      "width": 432,
+      "height": 344,
+      "slides": [
+        39
+      ]
+    },
+    {
+      "name": "image90.png",
+      "bytes": 15926,
+      "width": 306,
+      "height": 289,
+      "slides": [
+        40
+      ]
+    },
+    {
+      "name": "image91.png",
+      "bytes": 25342,
+      "width": 462,
+      "height": 318,
+      "slides": [
+        40
+      ]
+    },
+    {
+      "name": "image92.png",
+      "bytes": 20025,
+      "width": 839,
+      "height": 48,
+      "slides": [
+        41
+      ]
+    },
+    {
+      "name": "image93.png",
+      "bytes": 5652,
+      "width": 265,
+      "height": 119,
+      "slides": [
+        41
+      ]
+    },
+    {
+      "name": "image94.png",
+      "bytes": 17778,
+      "width": 688,
+      "height": 178,
+      "slides": [
+        42
+      ]
+    },
+    {
+      "name": "image95.png",
+      "bytes": 19955,
+      "width": 841,
+      "height": 43,
+      "slides": [
+        42,
+        43
+      ]
+    },
+    {
+      "name": "image96.png",
+      "bytes": 18871,
+      "width": 829,
+      "height": 40,
+      "slides": [
+        42,
+        43
+      ]
+    },
+    {
+      "name": "image97.png",
+      "bytes": 16588,
+      "width": 304,
+      "height": 291,
+      "slides": [
+        43
+      ]
+    },
+    {
+      "name": "image98.png",
+      "bytes": 25549,
+      "width": 452,
+      "height": 310,
+      "slides": [
+        43
+      ]
+    },
+    {
+      "name": "image99.png",
+      "bytes": 30947,
+      "width": 965,
+      "height": 62,
+      "slides": [
+        44
+      ]
+    },
+    {
+      "name": "image100.png",
+      "bytes": 6830,
+      "width": 444,
+      "height": 47,
+      "slides": [
+        44
+      ]
+    },
+    {
+      "name": "image101.png",
+      "bytes": 27318,
+      "width": 809,
+      "height": 65,
+      "slides": [
+        44
+      ]
+    },
+    {
+      "name": "image102.png",
+      "bytes": 6619,
+      "width": 443,
+      "height": 48,
+      "slides": [
+        44
+      ]
+    },
+    {
+      "name": "image103.png",
+      "bytes": 20592,
+      "width": 556,
+      "height": 411,
+      "slides": [
+        44
+      ]
+    },
+    {
+      "name": "image104.png",
+      "bytes": 43759,
+      "width": 758,
+      "height": 440,
+      "slides": [
+        46
+      ]
+    },
+    {
+      "name": "image105.png",
+      "bytes": 54301,
+      "width": 645,
+      "height": 428,
+      "slides": [
+        47,
+        48
+      ]
+    },
+    {
+      "name": "image106.png",
+      "bytes": 87680,
+      "width": 738,
+      "height": 851,
+      "slides": [
+        47
+      ]
+    },
+    {
+      "name": "image107.png",
+      "bytes": 63592,
+      "width": 648,
+      "height": 425,
+      "slides": [
+        49,
+        52
+      ]
+    },
+    {
+      "name": "image108.png",
+      "bytes": 9472,
+      "width": 222,
+      "height": 57,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image109.png",
+      "bytes": 39812,
+      "width": 690,
+      "height": 306,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image110.png",
+      "bytes": 7550,
+      "width": 702,
+      "height": 111,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image111.png",
+      "bytes": 19015,
+      "width": 439,
+      "height": 103,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image112.png",
+      "bytes": 13358,
+      "width": 705,
+      "height": 128,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image113.png",
+      "bytes": 7502,
+      "width": 327,
+      "height": 32,
+      "slides": [
+        50
+      ]
+    },
+    {
+      "name": "image114.png",
+      "bytes": 9642,
+      "width": 489,
+      "height": 27,
+      "slides": [
+        51
+      ]
+    },
+    {
+      "name": "image115.png",
+      "bytes": 25483,
+      "width": 628,
+      "height": 267,
+      "slides": [
+        51
+      ]
+    },
+    {
+      "name": "image116.png",
+      "bytes": 6722,
+      "width": 646,
+      "height": 153,
+      "slides": [
+        52
+      ]
+    }
+  ]
+}

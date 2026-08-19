@@ -1,0 +1,1460 @@
+{
+  "source": "P:\\Projects\\_CEGEP\\Z03-Local\\R02\\R02 - Introduction à CSS.pptx",
+  "slideCount": 34,
+  "slides": [
+    {
+      "slide": 1,
+      "text": [
+        "Introduction à CSS"
+      ],
+      "media": [
+        "image15.png"
+      ]
+    },
+    {
+      "slide": 2,
+      "text": [
+        "C’est quoi CSS ?",
+        "C.S.S.",
+        "→ ",
+        "C",
+        "ascading ",
+        "S",
+        "tyle ",
+        "S",
+        "heet ( ͡❛ ͜ʖ ͡❛)",
+        "Décrit comment les éléments HTML doivent être affichés. (Couleur, taille, bordures, position, etc.)",
+        "Peut décrire l’affichage de plusieurs pages à la fois ! (Économie de temps et de code)",
+        "Fonctionne avec des ",
+        "sélecteurs ",
+        "et des ",
+        "règles",
+        "."
+      ],
+      "media": []
+    },
+    {
+      "slide": 3,
+      "text": [
+        "C’est quoi CSS ?",
+        "Exemple simple :",
+        "color:violet; ",
+        "est un petit morceau de CSS qui change",
+        "le style de notre paragraphe."
+      ],
+      "media": [
+        "image16.png",
+        "image17.png"
+      ]
+    },
+    {
+      "slide": 4,
+      "text": [
+        "Syntaxe de CSS",
+        "Chaque modification appliquée à un élément est représentée par une règle",
+        "Cette règle est composée d’un ",
+        "attribut",
+        " et d’une ",
+        "valeur",
+        " :",
+        "Quelques exemples :",
+        "color",
+        "",
+        ":",
+        "",
+        "blue",
+        "",
+        ";",
+        "border",
+        "",
+        ":",
+        "",
+        "solid",
+        " black 3px ",
+        ";",
+        "text-decoration",
+        "",
+        ":",
+        "",
+        "none",
+        "",
+        ";",
+        "font-",
+        "weight",
+        "",
+        ":",
+        "",
+        "bold",
+        "",
+        ";",
+        "Deux points séparent l’",
+        "attribut",
+        " et sa ",
+        "valeur",
+        " et un point-virgule conclut la règle."
+      ],
+      "media": []
+    },
+    {
+      "slide": 5,
+      "text": [
+        "CSS Intraligne",
+        "Manière #1",
+        " d’appliquer une règle CSS : ",
+        "CSS",
+        "",
+        "Intraligne",
+        "On glisse la ou les règles CSS dans l’attribut ",
+        "style",
+        " d’une balise ouvrante.",
+        "Comme pour tout attribut, les règles CSS devront être entourées de guillemets."
+      ],
+      "media": [
+        "image18.png",
+        "image19.png",
+        "image20.png",
+        "image21.png"
+      ]
+    },
+    {
+      "slide": 6,
+      "text": [
+        "CSS interne",
+        "Manière #2",
+        " d’appliquer une règle CSS : ",
+        "CSS interne",
+        ".",
+        "Pour comprendre cette deuxième manière, nous allons devoir aborder les ",
+        "sélecteurs ",
+        "CSS.",
+        "Un ",
+        "sélecteur",
+        " permet d’indiquer à quel(s) élément(s) HTML des règles CSS doivent être appliquées.",
+        "Voici la syntaxe à respecter pour le CSS interne :",
+        "sélecteur",
+        " {",
+        "",
+        "attribut",
+        " : ",
+        "valeur ",
+        ";",
+        "",
+        "attribut",
+        " : ",
+        "valeur ",
+        ";",
+        "",
+        "attribut",
+        " : ",
+        "valeur ",
+        ";",
+        "}"
+      ],
+      "media": []
+    },
+    {
+      "slide": 7,
+      "text": [
+        "CSS interne (Sélecteurs)",
+        "Type 1 de sélecteur : ",
+        "Sélecteur élément",
+        "Ce type de sélecteur correspond exactement au nom de l’élément HTML auquel le CSS doit être appliqué. ",
+        "Pour appliquer un ",
+        "style",
+        " (un ensemble de règles CSS) à toutes les balises ",
+        "<p>",
+        ", le sélecteur sera tout simplement ",
+        "p",
+        ".",
+        "Pour appliquer un style à toutes les balises ",
+        "<h1>",
+        ", le sélecteur sera ",
+        "h1",
+        ".",
+        "Exemple :",
+        "Ce petit carré bleu est un échantillon de la couleur automatiquement généré par VS Code."
+      ],
+      "media": [
+        "image22.png"
+      ]
+    },
+    {
+      "slide": 8,
+      "text": [
+        "CSS interne (Sélecteurs)",
+        "Où insère-t-on le CSS interne avec les sélecteurs ?",
+        "Dans le ",
+        "<head>",
+        ", dans une balise qu’on nomme ",
+        "<style> ",
+        ":"
+      ],
+      "media": [
+        "image23.png",
+        "image24.png",
+        "image25.png"
+      ]
+    },
+    {
+      "slide": 9,
+      "text": [
+        "CSS interne (Sélecteurs)",
+        "Type 2 de sélecteur : ",
+        "Sélecteur classe",
+        "Ce type de sélecteur peut avoir n’importe quel nom, mais il doit être appliqué aux éléments concernés grâce à l’attribut ",
+        "class",
+        ".",
+        "Remarquez que ce sélecteur ",
+        "DOIT",
+        " être précédé d’un ",
+        "point",
+        ". Cela dit, quand on précise le nom de la classe dans l’attribut ",
+        "class",
+        ", on ne met pas de point.",
+        "On peut appliquer cette classe à autant d’éléments qu’on le souhaite !"
+      ],
+      "media": [
+        "image26.png",
+        "image27.png",
+        "image28.png"
+      ]
+    },
+    {
+      "slide": 10,
+      "text": [
+        "CSS interne (Sélecteurs)",
+        "Type 3 de sélecteur ",
+        ": ",
+        "Sélecteur id",
+        "Ce type de sélecteur peut avoir n’importe quel nom, mais il doit être appliqué à l’élément concerné grâce à l’attribut ",
+        "id",
+        ".",
+        "Remarquez que ce sélecteur doit être précédé d’un dièse. Cela dit, quand on précise le nom de ",
+        "l’id",
+        " dans l’attribut ",
+        "id",
+        ", on ne met pas de dièse.",
+        "La différence avec une ",
+        "classe",
+        " : On ne peut l’appliquer qu’à ",
+        "un seul",
+        " élément par page Web !"
+      ],
+      "media": [
+        "image29.png",
+        "image30.png",
+        "image31.png"
+      ]
+    },
+    {
+      "slide": 11,
+      "text": [
+        "CSS interne (Sélecteurs)",
+        "Tous les éléments HTML peuvent avoir un ",
+        "id",
+        " et / ou une ",
+        "classe",
+        ".",
+        "Un élément HTML peut avoir plusieurs ",
+        "classes",
+        " et ",
+        "un seul ",
+        "id",
+        ".",
+        "Séparez simplement vos classes par des espaces.",
+        "S’il y a un conflit de style, la priorité respectée sera la suivante :",
+        "",
+        "Style ",
+        "intraligne",
+        " > ",
+        "ID",
+        " > ",
+        "Classe",
+        " > ",
+        "Élément"
+      ],
+      "media": [
+        "image32.png",
+        "image33.png",
+        "image34.png",
+        "image35.png"
+      ]
+    },
+    {
+      "slide": 12,
+      "text": [
+        "Question de priorité",
+        "De quelle ",
+        "couleur",
+        " sera chaque paragraphe ?"
+      ],
+      "media": [
+        "image36.png",
+        "image37.png",
+        "image38.png"
+      ]
+    },
+    {
+      "slide": 13,
+      "text": [
+        "Question de priorité",
+        "De quelle ",
+        "couleur",
+        " sera chaque paragraphe ?"
+      ],
+      "media": [
+        "image36.png",
+        "image37.png",
+        "image38.png",
+        "image39.png"
+      ]
+    },
+    {
+      "slide": 14,
+      "text": [
+        "CSS externe",
+        "Manière #3",
+        " d’appliquer du CSS : ",
+        "CSS externe",
+        ".",
+        "Fonctionne exactement comme le ",
+        "CSS interne",
+        " … mais au lieu de glisser du CSS dans ",
+        "<style> ",
+        "dans le ",
+        "<head> ",
+        "… on va l’insérer dans ",
+        "un autre fichier",
+        ".",
+        "C’est un fichier avec l’extension ",
+        ".css",
+        "On y glisse nos sélecteurs et nos règles CSS",
+        "comme dans le ",
+        "<head>",
+        ", mais on doit insérer",
+        "une ligne supplémentaire au tout début :",
+        "",
+        "@charset ",
+        "\"",
+        "UTF-8",
+        "\"",
+        ";",
+        "Cette ligne sert simplement à indiquer la ",
+        "famille de caractères du fichier css."
+      ],
+      "media": [
+        "image40.png"
+      ]
+    },
+    {
+      "slide": 15,
+      "text": [
+        "CSS externe",
+        "Par contre, ce fichier doit être « associé » à notre page Web pour fonctionner.",
+        "On utilise pour ça l’élément ",
+        "link",
+        " dans le ",
+        "<head>",
+        ".",
+        "Ce lien relatif vers notre fichier CSS externe fonctionne car le fichier CSS est dans le même dossier que la page Web ! (Fonctionne comme les éléments ",
+        "img",
+        " et les éléments ",
+        "a",
+        ")",
+        "Cet attribut permet de spécifier le type de relation avec le fichier associé. Dans ce cas-ci, c’est une feuille de styles."
+      ],
+      "media": [
+        "image41.png"
+      ]
+    },
+    {
+      "slide": 16,
+      "text": [
+        "CSS",
+        "Quelle manière faut-il privilégier ?",
+        "",
+        "CSS externe",
+        " (fichier séparé) : ",
+        "À privilégier",
+        " ! Cela permet de réunir le CSS de ",
+        "plusieurs",
+        " pages Web dans un seul fichier et cela encourager à ",
+        "uniformiser",
+        " les styles d’un site Web avec plusieurs pages.",
+        "",
+        "CSS interne",
+        " (dans le ",
+        "head",
+        ") : À éviter, mais ",
+        "parfois pratique",
+        ". Si une page Web se ",
+        "distingue",
+        " fortement des autres en raison de son contenu, du CSS interne peut être pertinent… Cela évite de mettre du CSS qui ne servira qu’à une seule page dans un fichier CSS commun.",
+        "",
+        "CSS ",
+        "intraligne",
+        " (dans la balise concernée avec ",
+        "style=",
+        "\"",
+        "…",
+        "\"",
+        ") : ",
+        "À éviter",
+        " ! Si un élément est très particulier et a besoin d’une règle unique, le CSS ",
+        "intraligne",
+        " dépanne… mais il faut tenter de trouver une solution plus globale si possible.",
+        "Dans le cadre du cours, nous utiliserons les trois",
+        " manières",
+        " à des fins pédagogiques."
+      ],
+      "media": []
+    },
+    {
+      "slide": 17,
+      "text": [
+        "Éléments de groupement",
+        "Disons qu’on souhaite appliquer un style à quelques paragraphes précis …"
+      ],
+      "media": [
+        "image42.png",
+        "image43.png",
+        "image44.png"
+      ]
+    },
+    {
+      "slide": 18,
+      "text": [
+        "Éléments de groupement",
+        "Élément ",
+        "div",
+        " :",
+        "Permet (entre autre) d’appliquer un style à plusieurs balises simultanément.",
+        "Pas besoin d’appliquer la classe à chaque élément ",
+        "p",
+        "."
+      ],
+      "media": [
+        "image45.png",
+        "image46.png"
+      ]
+    },
+    {
+      "slide": 19,
+      "text": [
+        "Éléments de groupement",
+        "Élément ",
+        "span",
+        " :",
+        "Similaire à ",
+        "div",
+        " … mais pour une portion de texte !"
+      ],
+      "media": [
+        "image47.png",
+        "image48.png",
+        "image49.png"
+      ]
+    },
+    {
+      "slide": 20,
+      "text": [
+        "Éléments de groupement",
+        "Il existe d’autres éléments de groupement comme ",
+        "div",
+        " et ",
+        "span",
+        "… mais ils sont « sémantiques ».",
+        "Les éléments ",
+        "div",
+        " et ",
+        "span",
+        " ne sont pas sémantiques : Ils sont utilitaires / pratiques, ils nous permettent de grouper du texte ou des éléments.",
+        "Les éléments ",
+        "header",
+        ", ",
+        "nav",
+        ", ",
+        "main",
+        " et ",
+        "footer",
+        " sont sémantiques : Ils donnent une signification aux éléments qu’ils regroupent et ne devrait être utilisés qu’une fois par page Web chacun. (Sauf ",
+        "nav",
+        ")",
+        "En ",
+        "terme",
+        " d’utilité, ils sont similaires à ",
+        "div",
+        " : ils regroupent des éléments.",
+        "Par contre : La sémantique / signification qu’ils ajoutent à leur section de la page Web offre des avantages au niveau de l’",
+        "accessibilité",
+        ". (Accès au contenu pour les utilisateurs avec handicap)"
+      ],
+      "media": []
+    },
+    {
+      "slide": 21,
+      "text": [
+        "Éléments de groupement",
+        "L’élément ",
+        "header",
+        " : En-tête de la page. Souvent commun à toutes les pages d’un site Web. Contient titres, bannières, logos, etc.",
+        "Encadré en rouge ici :"
+      ],
+      "media": [
+        "image50.png",
+        "image51.png"
+      ]
+    },
+    {
+      "slide": 22,
+      "text": [
+        "Éléments de groupement",
+        "L’élément ",
+        "nav",
+        " : Contient le menu de navigation (généralement avec des boutons) vers les autres pages principales du site Web.",
+        "Parfois intégré à l’intérieur du ",
+        "header",
+        ", parfois non.",
+        "Parfois horizontal, parfois vertical.",
+        "Encadré en rouge ",
+        "dans l’extrait ci-contre",
+        ".",
+        "Il peut y en avoir plusieurs dans une page."
+      ],
+      "media": [
+        "image52.png",
+        "image53.png"
+      ]
+    },
+    {
+      "slide": 23,
+      "text": [
+        "Éléments de groupement",
+        "Élément ",
+        "footer",
+        " : Pied de page, souvent commun à toutes les pages d’un Site Web. Contient logo, copyrights, « à propos », etc.",
+        " Encadré en rouge ici :"
+      ],
+      "media": [
+        "image54.png",
+        "image55.png"
+      ]
+    },
+    {
+      "slide": 24,
+      "text": [
+        "Éléments de groupement",
+        "Élément ",
+        "main",
+        " : Contenu qui varie grandement d’une page à l’autre. C’est toutes les informations propres à ",
+        "une",
+        " page Web. Potentiellement très vaste.",
+        "Encadré en rouge ici :"
+      ],
+      "media": [
+        "image56.png",
+        "image57.png"
+      ]
+    },
+    {
+      "slide": 25,
+      "text": [
+        "Styles de base",
+        "Pour conclure, abordons quelques styles CSS de base :",
+        "Styles colorés",
+        "Styles de texte",
+        "Styles de police",
+        "Pour les curieux / étudiants qui ne dorment pas :",
+        "Liste de tous les styles CSS : ",
+        "https://www.w3schools.com/cssref/"
+      ],
+      "media": [
+        "image58.png",
+        "image59.png"
+      ]
+    },
+    {
+      "slide": 26,
+      "text": [
+        "Couleurs",
+        "Règle ",
+        "color",
+        " :",
+        "Change la couleur du texte.",
+        "Règle ",
+        "background-color",
+        " :",
+        "Change la couleur de fond d’un élément."
+      ],
+      "media": [
+        "image60.png",
+        "image61.png",
+        "image62.png",
+        "image63.png"
+      ]
+    },
+    {
+      "slide": 27,
+      "text": [
+        "Couleurs",
+        "Règle ",
+        "border",
+        " :",
+        "Encadre un élément / du texte avec une bordure.",
+        "Couleur",
+        " de la bordure",
+        "Type de bordure (ici elle est ",
+        "continue",
+        " plutôt que ",
+        "pointillée",
+        " par exemple)",
+        "Largeur",
+        " de la bordure (ici, mesurée en pixels)"
+      ],
+      "media": [
+        "image64.png",
+        "image65.png",
+        "image66.png"
+      ]
+    },
+    {
+      "slide": 28,
+      "text": [
+        "Couleurs",
+        "Comment choisir une couleur PRÉCISE ?",
+        "On peut utiliser un des 145 noms de couleurs que CSS connait … (",
+        "blue",
+        ", ",
+        "red",
+        ", ",
+        "yellow",
+        ", ",
+        "green",
+        ", ",
+        "rebeccapurple",
+        ", ",
+        "saddlebrown",
+        ", ",
+        "peru",
+        ", etc.)",
+        "Ou utiliser le ",
+        "code hexadécimal ",
+        "d’une couleur précise :",
+        "Pipette à couleurs en ligne :",
+        "https://htmlcolorcodes.com/color-picker/"
+      ],
+      "media": [
+        "image67.png",
+        "image68.png",
+        "image69.png"
+      ]
+    },
+    {
+      "slide": 29,
+      "text": [
+        "Styles de texte",
+        "Règle ",
+        "text-align",
+        " :",
+        "Change l’alignement horizontal d’un texte. (Options : left, center, right, justify)"
+      ],
+      "media": [
+        "image70.png",
+        "image71.png"
+      ]
+    },
+    {
+      "slide": 30,
+      "text": [
+        "Styles de texte",
+        "Règle ",
+        "text-decoration",
+        " :",
+        "Permet de mettre un trait sur / à travers / sous le texte. (Options : underline, overline, line-through, none)"
+      ],
+      "media": [
+        "image72.png",
+        "image73.png"
+      ]
+    },
+    {
+      "slide": 31,
+      "text": [
+        "Styles de texte",
+        "Règle ",
+        "text-transform",
+        " :",
+        "Détermine si le texte est en majuscules / minuscules. (Options : lowercase, uppercase, capitalize)"
+      ],
+      "media": [
+        "image74.png",
+        "image75.png"
+      ]
+    },
+    {
+      "slide": 32,
+      "text": [
+        "Styles de police",
+        "Règle ",
+        "font-family",
+        " :",
+        "Détermine la famille de police du texte (Les options sont TRÈS nombreuses : Times New Roman, Verdana, Calibri, Courrier New, etc.)",
+        "On peut préciser ",
+        "plusieurs ",
+        "polices en les séparant par des ",
+        "virgules",
+        ". Si jamais la première police n’est pas disponible dans le navigateur, la suivante sera utilisée.",
+        "Une police qui doit être écrite en plusieurs mots doit être encadrée avec des ",
+        "apostrophes",
+        ".",
+        "Cela ne se voit peut-être pas, mais ce texte est en Verdana."
+      ],
+      "media": [
+        "image76.png",
+        "image77.png"
+      ]
+    },
+    {
+      "slide": 33,
+      "text": [
+        "Styles de police",
+        "Règle ",
+        "font-style",
+        " :",
+        "Règle qui détermine « à quel point une police est penchée / italique ». (Options : normal, italic, oblique)"
+      ],
+      "media": [
+        "image78.png",
+        "image79.png"
+      ]
+    },
+    {
+      "slide": 34,
+      "text": [
+        "Styles de police",
+        "Règle ",
+        "font-size",
+        " :",
+        "Détermine la taille du texte. Calculé en ",
+        "pixels",
+        " ou en ",
+        "em",
+        ". 1 ",
+        "em",
+        " = taille ordinaire, 2 ",
+        "em",
+        " = double de la taille ordinaire."
+      ],
+      "media": [
+        "image80.png",
+        "image81.png"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "name": "image1.png",
+      "bytes": 1542,
+      "width": 1280,
+      "height": 38,
+      "slides": []
+    },
+    {
+      "name": "image2.png",
+      "bytes": 9109,
+      "width": 1280,
+      "height": 256,
+      "slides": []
+    },
+    {
+      "name": "image3.gif",
+      "bytes": 59432,
+      "width": 162,
+      "height": 222,
+      "slides": []
+    },
+    {
+      "name": "image4.png",
+      "bytes": 40317,
+      "width": 2000,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image5.png",
+      "bytes": 73287,
+      "width": 2000,
+      "height": 137,
+      "slides": []
+    },
+    {
+      "name": "image6.png",
+      "bytes": 453,
+      "width": 38,
+      "height": 57,
+      "slides": []
+    },
+    {
+      "name": "image7.png",
+      "bytes": 3163,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image8.png",
+      "bytes": 4934,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image9.png",
+      "bytes": 4896,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image10.png",
+      "bytes": 3136,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image11.png",
+      "bytes": 3146,
+      "width": 1280,
+      "height": 56,
+      "slides": []
+    },
+    {
+      "name": "image12.png",
+      "bytes": 4904,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image13.png",
+      "bytes": 3162,
+      "width": 1280,
+      "height": 57,
+      "slides": []
+    },
+    {
+      "name": "image14.png",
+      "bytes": 4916,
+      "width": 1280,
+      "height": 88,
+      "slides": []
+    },
+    {
+      "name": "image15.png",
+      "bytes": 45878,
+      "width": 1200,
+      "height": 1693,
+      "slides": [
+        1
+      ]
+    },
+    {
+      "name": "image16.png",
+      "bytes": 18955,
+      "width": 867,
+      "height": 33,
+      "slides": [
+        3
+      ]
+    },
+    {
+      "name": "image17.png",
+      "bytes": 7924,
+      "width": 333,
+      "height": 131,
+      "slides": [
+        3
+      ]
+    },
+    {
+      "name": "image18.png",
+      "bytes": 13022,
+      "width": 576,
+      "height": 47,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image19.png",
+      "bytes": 2470,
+      "width": 171,
+      "height": 48,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image21.png",
+      "bytes": 3241,
+      "width": 140,
+      "height": 113,
+      "slides": [
+        5
+      ]
+    },
+    {
+      "name": "image22.png",
+      "bytes": 12225,
+      "width": 364,
+      "height": 294,
+      "slides": [
+        7
+      ]
+    },
+    {
+      "name": "image23.png",
+      "bytes": 29689,
+      "width": 526,
+      "height": 447,
+      "slides": [
+        8
+      ]
+    },
+    {
+      "name": "image24.png",
+      "bytes": 7514,
+      "width": 245,
+      "height": 195,
+      "slides": [
+        8
+      ]
+    },
+    {
+      "name": "image25.png",
+      "bytes": 13603,
+      "width": 481,
+      "height": 276,
+      "slides": [
+        8
+      ]
+    },
+    {
+      "name": "image26.png",
+      "bytes": 7699,
+      "width": 438,
+      "height": 105,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image27.png",
+      "bytes": 7744,
+      "width": 695,
+      "height": 62,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image28.png",
+      "bytes": 11218,
+      "width": 348,
+      "height": 264,
+      "slides": [
+        9
+      ]
+    },
+    {
+      "name": "image29.png",
+      "bytes": 6390,
+      "width": 356,
+      "height": 107,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image30.png",
+      "bytes": 6659,
+      "width": 587,
+      "height": 64,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image31.png",
+      "bytes": 10965,
+      "width": 337,
+      "height": 228,
+      "slides": [
+        10
+      ]
+    },
+    {
+      "name": "image32.png",
+      "bytes": 7929,
+      "width": 752,
+      "height": 55,
+      "slides": [
+        11
+      ]
+    },
+    {
+      "name": "image33.png",
+      "bytes": 16785,
+      "width": 491,
+      "height": 174,
+      "slides": [
+        11
+      ]
+    },
+    {
+      "name": "image34.png",
+      "bytes": 8554,
+      "width": 835,
+      "height": 54,
+      "slides": [
+        11
+      ]
+    },
+    {
+      "name": "image35.png",
+      "bytes": 2567,
+      "width": 218,
+      "height": 43,
+      "slides": [
+        11
+      ]
+    },
+    {
+      "name": "image36.png",
+      "bytes": 25667,
+      "width": 1473,
+      "height": 131,
+      "slides": [
+        12,
+        13
+      ]
+    },
+    {
+      "name": "image37.png",
+      "bytes": 19754,
+      "width": 613,
+      "height": 175,
+      "slides": [
+        12,
+        13
+      ]
+    },
+    {
+      "name": "image38.png",
+      "bytes": 25901,
+      "width": 828,
+      "height": 156,
+      "slides": [
+        12,
+        13
+      ]
+    },
+    {
+      "name": "image39.png",
+      "bytes": 7037,
+      "width": 206,
+      "height": 258,
+      "slides": [
+        13
+      ]
+    },
+    {
+      "name": "image40.png",
+      "bytes": 28123,
+      "width": 595,
+      "height": 428,
+      "slides": [
+        14
+      ]
+    },
+    {
+      "name": "image41.png",
+      "bytes": 18908,
+      "width": 656,
+      "height": 179,
+      "slides": [
+        15
+      ]
+    },
+    {
+      "name": "image42.png",
+      "bytes": 21811,
+      "width": 521,
+      "height": 311,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image43.png",
+      "bytes": 39891,
+      "width": 634,
+      "height": 282,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image44.png",
+      "bytes": 26146,
+      "width": 332,
+      "height": 439,
+      "slides": [
+        17
+      ]
+    },
+    {
+      "name": "image45.png",
+      "bytes": 40046,
+      "width": 511,
+      "height": 353,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image46.png",
+      "bytes": 25972,
+      "width": 327,
+      "height": 430,
+      "slides": [
+        18
+      ]
+    },
+    {
+      "name": "image47.png",
+      "bytes": 10816,
+      "width": 1158,
+      "height": 49,
+      "slides": [
+        19
+      ]
+    },
+    {
+      "name": "image48.png",
+      "bytes": 22125,
+      "width": 484,
+      "height": 315,
+      "slides": [
+        19
+      ]
+    },
+    {
+      "name": "image49.png",
+      "bytes": 12734,
+      "width": 388,
+      "height": 207,
+      "slides": [
+        19
+      ]
+    },
+    {
+      "name": "image50.png",
+      "bytes": 63753,
+      "width": 1033,
+      "height": 691,
+      "slides": [
+        21
+      ]
+    },
+    {
+      "name": "image51.png",
+      "bytes": 8547,
+      "width": 453,
+      "height": 127,
+      "slides": [
+        21
+      ]
+    },
+    {
+      "name": "image52.png",
+      "bytes": 63759,
+      "width": 1033,
+      "height": 691,
+      "slides": [
+        22
+      ]
+    },
+    {
+      "name": "image53.png",
+      "bytes": 6670,
+      "width": 404,
+      "height": 112,
+      "slides": [
+        22
+      ]
+    },
+    {
+      "name": "image54.png",
+      "bytes": 82346,
+      "width": 1035,
+      "height": 919,
+      "slides": [
+        23
+      ]
+    },
+    {
+      "name": "image55.png",
+      "bytes": 8215,
+      "width": 462,
+      "height": 118,
+      "slides": [
+        23
+      ]
+    },
+    {
+      "name": "image56.png",
+      "bytes": 81229,
+      "width": 1035,
+      "height": 920,
+      "slides": [
+        24
+      ]
+    },
+    {
+      "name": "image57.png",
+      "bytes": 6931,
+      "width": 427,
+      "height": 123,
+      "slides": [
+        24
+      ]
+    },
+    {
+      "name": "image58.png",
+      "bytes": 2141,
+      "width": 53,
+      "height": 47,
+      "slides": [
+        25
+      ]
+    },
+    {
+      "name": "image59.png",
+      "bytes": 1387,
+      "width": 40,
+      "height": 45,
+      "slides": [
+        25
+      ]
+    },
+    {
+      "name": "image60.png",
+      "bytes": 9365,
+      "width": 1085,
+      "height": 36,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image61.png",
+      "bytes": 4825,
+      "width": 301,
+      "height": 37,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image62.png",
+      "bytes": 25706,
+      "width": 840,
+      "height": 203,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image63.png",
+      "bytes": 18904,
+      "width": 476,
+      "height": 239,
+      "slides": [
+        26
+      ]
+    },
+    {
+      "name": "image64.png",
+      "bytes": 12071,
+      "width": 499,
+      "height": 170,
+      "slides": [
+        27
+      ]
+    },
+    {
+      "name": "image65.png",
+      "bytes": 14202,
+      "width": 900,
+      "height": 82,
+      "slides": [
+        27
+      ]
+    },
+    {
+      "name": "image66.png",
+      "bytes": 6162,
+      "width": 462,
+      "height": 58,
+      "slides": [
+        27
+      ]
+    },
+    {
+      "name": "image67.png",
+      "bytes": 91021,
+      "width": 1064,
+      "height": 687,
+      "slides": [
+        28
+      ]
+    },
+    {
+      "name": "image68.png",
+      "bytes": 6758,
+      "width": 316,
+      "height": 100,
+      "slides": [
+        28
+      ]
+    },
+    {
+      "name": "image69.png",
+      "bytes": 3085,
+      "width": 145,
+      "height": 44,
+      "slides": [
+        28
+      ]
+    },
+    {
+      "name": "image70.png",
+      "bytes": 23559,
+      "width": 926,
+      "height": 122,
+      "slides": [
+        29
+      ]
+    },
+    {
+      "name": "image71.png",
+      "bytes": 20364,
+      "width": 564,
+      "height": 344,
+      "slides": [
+        29
+      ]
+    },
+    {
+      "name": "image72.png",
+      "bytes": 24320,
+      "width": 924,
+      "height": 121,
+      "slides": [
+        30
+      ]
+    },
+    {
+      "name": "image73.png",
+      "bytes": 7875,
+      "width": 221,
+      "height": 144,
+      "slides": [
+        30
+      ]
+    },
+    {
+      "name": "image74.png",
+      "bytes": 32690,
+      "width": 1267,
+      "height": 125,
+      "slides": [
+        31
+      ]
+    },
+    {
+      "name": "image75.png",
+      "bytes": 12774,
+      "width": 413,
+      "height": 133,
+      "slides": [
+        31
+      ]
+    },
+    {
+      "name": "image76.png",
+      "bytes": 12398,
+      "width": 745,
+      "height": 80,
+      "slides": [
+        32
+      ]
+    },
+    {
+      "name": "image77.png",
+      "bytes": 3798,
+      "width": 326,
+      "height": 51,
+      "slides": [
+        32
+      ]
+    },
+    {
+      "name": "image78.png",
+      "bytes": 26944,
+      "width": 1049,
+      "height": 122,
+      "slides": [
+        33
+      ]
+    },
+    {
+      "name": "image79.png",
+      "bytes": 7396,
+      "width": 348,
+      "height": 133,
+      "slides": [
+        33
+      ]
+    },
+    {
+      "name": "image80.png",
+      "bytes": 25131,
+      "width": 833,
+      "height": 115,
+      "slides": [
+        34
+      ]
+    },
+    {
+      "name": "image81.png",
+      "bytes": 17364,
+      "width": 456,
+      "height": 263,
+      "slides": [
+        34
+      ]
+    },
+    {
+      "name": "image20.png",
+      "bytes": 25498,
+      "width": 728,
+      "height": 135,
+      "slides": [
+        5
+      ]
+    }
+  ]
+}
