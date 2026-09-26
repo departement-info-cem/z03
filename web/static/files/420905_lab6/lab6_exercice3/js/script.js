@@ -37,6 +37,7 @@ function texteRouge(){
 // Cette fonction rend le texte dans la boîte vert.
 function texteVert(){
     document.querySelector(".vert").style.color = "green";
+}
 
 
 // Cette fonction rend le texte dans la boîte rose ou jaune (selon la valeur de gCouleur)
