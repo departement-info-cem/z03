@@ -81,6 +81,30 @@ document.querySelector(".titre")
 
 Dans R7, nous utiliserons principalement des **sélecteurs de classe** comme `".titre"`, `".description"` ou `".prix"`.
 
+:::note Classe ou `id`?
+
+`querySelector()` peut utiliser les mêmes sélecteurs que le CSS.
+
+Avec une **classe** :
+
+```js
+document.querySelector(".titre")
+```
+
+Avec un **id** :
+
+```js
+document.querySelector("#titrePrincipal")
+```
+
+Un `id` est normalement **unique dans la page**, alors qu'une même classe peut être utilisée sur plusieurs éléments.
+
+Si plusieurs éléments possèdent la même classe, `querySelector(".classe")` retourne seulement **le premier élément correspondant**.
+
+Dans les exercices de R7, nous utiliserons donc des classes choisies de façon à cibler un élément précis. Plus tard, nous verrons comment récupérer **plusieurs éléments à la fois**.
+
+:::
+
 ## 🔍 Lire le texte avec `textContent`
 
 Pour obtenir le texte contenu dans un élément, on ajoute `.textContent` :
