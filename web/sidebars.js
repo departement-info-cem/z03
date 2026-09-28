@@ -152,7 +152,22 @@ const sidebars = {
         },
       ],
     },
-    { type: "doc", id: "cours/rencontre7", label: "Rencontre 7 — DOM et fonctions" },
+    {
+      type: "category",
+      label: "Rencontre 7 — DOM et fonctions",
+      items: [
+        {
+          type: "doc",
+          id: "cours/rencontre7",
+          label: "Cours — DOM et fonctions",
+        },
+        {
+          type: "ref",
+          id: "labos/labo3",
+          label: "Laboratoire — DOM et fonctions",
+        },
+      ],
+    },
     {
       type: "category",
       label: "Rencontre 8 — Interactivité, classes et attributs",
@@ -202,6 +217,11 @@ const sidebars = {
       type: "doc",
       id: "labos/labo2",
       label: "Rencontre 6 — Variables",
+    },
+    {
+      type: "doc",
+      id: "labos/labo3",
+      label: "Rencontre 7 — DOM et fonctions",
     },
   ],
 };
