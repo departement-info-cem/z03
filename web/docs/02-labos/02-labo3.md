@@ -16,4 +16,7 @@ Le fichier contient les quatre exercices de la rencontre :
 - `exercice3-creer-fonctions`
 - `exercice4-portee-variables`
 
-Les consignes se trouvent dans le fichier `consignes.md` inclus dans le téléchargement.
+Les consignes sont incluses dans les deux formats :
+
+- `consignes.html` — à ouvrir directement dans le navigateur;
+- `consignes.md` — à ouvrir dans VS Code; utilisez `Ctrl+Shift+V` pour afficher l'aperçu Markdown.
