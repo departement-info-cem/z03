@@ -269,6 +269,49 @@ Si une fonction semble « briser tout le fichier », commencez par vérifier les
 
 :::
 
+## 📍 Portée des variables
+
+L'endroit où une variable est déclarée détermine **où elle peut être utilisée**.
+
+### Variable locale
+
+Une variable déclarée **dans une fonction** est une variable **locale**. Elle existe seulement dans cette fonction.
+
+```js
+function afficherMessage(){
+    let message = "Bonjour!";
+    console.log(message);
+}
+```
+
+Ici, `message` peut être utilisée dans `afficherMessage()`, mais pas à l'extérieur de cette fonction.
+
+### Variable globale
+
+Une variable déclarée **à l'extérieur de toutes les fonctions** est une variable **globale**. Plusieurs fonctions peuvent alors utiliser et modifier la même valeur.
+
+```js
+let gScore = 0;
+
+function ajouterPoint(){
+    gScore += 1;
+}
+
+function afficherScore(){
+    console.log(gScore);
+}
+```
+
+Dans ce cours, nous utiliserons souvent la lettre `g` au début du nom d'une variable globale, par exemple `gScore` ou `gCouleur`. C'est une **convention du cours** pour les reconnaître plus facilement.
+
+:::tip
+
+Si une valeur sert seulement à une fonction, préférez une **variable locale**.
+
+Utilisez une **variable globale** lorsqu'une valeur doit être partagée entre plusieurs fonctions.
+
+:::
+
 ## 🧰 Quelques outils déjà disponibles
 
 Nous pouvons utiliser certaines commandes JavaScript sans les déclarer nous-mêmes.

@@ -275,6 +275,39 @@ else{
 }
 ```
 
+### 🔖 Vérifier une classe avec `classList.contains()`
+
+Une condition peut aussi dépendre de l'état d'un élément HTML.
+
+La méthode `classList.contains(...)` permet de vérifier si un élément possède une classe. Elle retourne un **booléen** : `true` ou `false`.
+
+```js
+document.querySelector(".texte").classList.contains("sobre")
+```
+
+Comme le résultat est déjà un booléen, on peut l'utiliser directement comme condition d'un `if`.
+
+```html
+<div class="texte sobre">Ton thé t'a-t-il ôté ta toux ?</div>
+```
+
+```js showLineNumbers
+if(document.querySelector(".texte").classList.contains("sobre")){
+
+    document.querySelector(".texte").textContent =
+        "Je possède la classe sobre 😏";
+
+}
+else{
+
+    document.querySelector(".texte").textContent =
+        "Je ne possède pas la classe sobre 😭";
+
+}
+```
+
+Ici, le bloc `if` s'exécute parce que l'élément possède la classe `sobre`.
+
 :::warning
 
 <center>![Plusieurs ifs](../../static/img/cours6/ifs.png)</center>

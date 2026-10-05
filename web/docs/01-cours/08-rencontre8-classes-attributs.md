@@ -52,43 +52,6 @@ document.querySelector(".classe").classList.toggle("classe_a_basculer");
 
 <center>![Classes](../../static/img/cours15/toggleClass.png)</center>
 
-### 🔍 Vérifier si un élément possède une classe
-
-Syntaxe :
-
-```js
-document.querySelector(".classe").classList.contains("classe_a_verifier");
-```
-
-💡 Cette ligne de code va retourner `true` si la classe est présente et `false` sinon.
-
-<center>![Classes](../../static/img/cours15/containsClass.png)</center>
-
-#### Exemple dans une fonction
-
-```html
-<div class="texte sobre">Ton thé t'a-t-il ôté ta toux ?</div>
-```
-
-Si l’élément `.texte` possède la classe `sobre`, son texte devient `"Je possède la classe sobre 😏"`. Sinon, son texte devient `"Je ne possède pas la classe sobre 😭"`.
-
-```js showLineNumbers
-function verifierClasse(){
-
-    if(document.querySelector(".texte").classList.contains("sobre") == true){
-
-        document.querySelector(".texte").textContent = "Je possède la classe sobre 😏";
-
-    }
-    else{
-
-        document.querySelector(".texte").textContent = "Je ne possède pas la classe sobre 😭";
-
-    }
-
-}
-```
-
 :::warning
 
 ⛔ Notez que si plusieurs éléments possèdent **la même classe**, alors `document.querySelector(...)` va seulement réussir à accéder au **premier élément avec cette classe** dans le code HTML :
@@ -172,7 +135,6 @@ Voici un récapitulatif de tout ce qu'on peut faire avec `document.querySelector
 * Ajouter une classe : `.classList.add("maClasse")`
 * Retirer une classe : `.classList.remove("maClasse")`
 * Basculer une classe : `.classList.toggle("maClasse")`
-* Vérifier une classe : `.classList.contains("maClasse")`
 * Manipuler les attributs : `.attribut = "valeur"`
 
 N'oubliez pas que tout comme le **contenu textuel** et les **styles**, `currentTarget` peut être utilisé pour manipuler les **classes** et les **attributs** d'un élément HTML **avec lequel on vient de générer un événement** :
@@ -180,7 +142,6 @@ N'oubliez pas que tout comme le **contenu textuel** et les **styles**, `currentT
 * Ajouter une classe : `event.currentTarget.classList.add("maClasse")`
 * Retirer une classe : `event.currentTarget.classList.remove("maClasse")`
 * Basculer une classe : `event.currentTarget.classList.toggle("maClasse")`
-* Vérifier une classe : `event.currentTarget.classList.contains("maClasse")`
 * Manipuler les attributs : `event.currentTarget.attribut = "valeur"`
 
 ## 📦 Stocker un élément HTML dans une variable

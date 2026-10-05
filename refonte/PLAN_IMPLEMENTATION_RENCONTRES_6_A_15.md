@@ -24,8 +24,8 @@ Pendant cette passe :
 |---|---|---|
 | **Documentation / mapping** | **Terminé** | Mapping R6–R15 stabilisé; principe « placement avant révision » documenté. |
 | **R6** | **Implanté** | Ancien cours 2 + labo 2. |
-| **R7** | **Implanté** | Ancien cours 3 + labo 3. |
-| **R8** | **Implanté** | Ancien cours 4 + ancien cours 14, conservés en deux pages; labo 4 + exercices 1–2 du labo 14. Mini-quiz 10 % indiqué au début. |
+| **R7** | **Implanté / révisé** | Ancien cours 3 + labo 3, avec portée locale/globale et labo 4 exercice 1 déplacés depuis R8. |
+| **R8** | **À réviser** | Ancien cours 4 sans la portée + ancien cours 14; labo 4 exercices 2–5. La section `.style` est conservée telle quelle; `classList.contains()` passe à R9. |
 | **R9** | **Implanté** | Anciens cours 5 + 6, conservés en deux pages; labos 5 + 6. |
 | **R10** | **Implanté** | Ancien cours 11 + labo 11; `while`, `do...while` et débogueur optionnel conservés tels quels. |
 | **R11** | **Implanté** | Ancien cours 12 + ancien cours 15 en deux pages; labo 12 + exercices 1–3 du labo 15. |
@@ -38,8 +38,8 @@ Pendant cette passe :
 | Rencontre | Théorie historique | Exercices historiques | Intention |
 |---|---|---|---|
 | **R6** | ancien cours 2 — variables et affectation | labo 2 | déplacement direct |
-| **R7** | ancien cours 3 — DOM et fonctions | labo 3 | conserver le bloc ensemble |
-| **R8** | ancien cours 4 + ancien cours 14 | labo 4 + labo 14 exercices 1–2 | mini-quiz 10 % au début; interactivité ensuite |
+| **R7** | ancien cours 3 — DOM et fonctions + portée locale/globale de l'ancien cours 4 | labo 3 + labo 4 exercice 1 | conserver le bloc ensemble et ajouter la portée |
+| **R8** | ancien cours 4 sans la portée + ancien cours 14 | labo 4 exercices 2–5 + portions pertinentes du labo 14 | mini-quiz 10 % au début; événements/styles ensuite; `.style` conservé |
 | **R9** | anciens cours 5 + 6 | labos 5 + 6 | placer ensemble sans enlever les doublons dans la première passe |
 | **R10** | ancien cours 11 — boucles | labo 11 | conserver d'abord `while` / `do...while` tels qu'enseignés historiquement; choix final reporté |
 | **R11** | ancien cours 12 + ancien cours 15 | labo 12 + labo 15 exercices 1–3 | tableaux, parcours, puis `querySelectorAll` |
@@ -60,7 +60,7 @@ Pendant cette passe :
 
 ### Note de révision future
 
-La section Visual Studio Code de R7 est un héritage du séquençage 905. Dans le nouveau parcours, VS Code est déjà introduit et utilisé dès R1; cette section est donc un bon candidat à retirer lors de la révision pédagogique. Les paramètres et `return` demeurent prévus en R12 plutôt que d'être ajoutés à R7 par défaut.
+La section Visual Studio Code de R7 a été retirée puisque VS Code est déjà utilisé depuis R1. R7 inclut maintenant la portée locale/globale afin de préparer les fonctions et le quiz de R8. Les paramètres et `return` demeurent prévus en R12.
 
 ## R8 — Interactivité, événements, classes et attributs
 
@@ -70,7 +70,7 @@ Première implantation réalisée :
 
 - les deux blocs théoriques sont conservés comme pages distinctes;
 - mini-quiz 10 % annoncé au début de la première page;
-- labo 4 rattaché à R8;
+- labo 4 exercice 1 déplacé en R7 pour la portée; exercices 2 à 5 conservés en R8;
 - page du labo 14 indique de faire uniquement les exercices 1 et 2;
 - aucun exercice ni ZIP modifié.
 
@@ -177,3 +177,8 @@ Seulement après que la séquence est structurellement en place :
 - nettoyer le code fourni seulement lorsqu'il crée une confusion réelle;
 - améliorer les exercices sans perdre leur comportement éprouvé;
 - aligner définitivement le TP de R13 et l'examen de R15.
+
+
+### Convention de diffusion des laboratoires
+
+Les pages Docusaurus de laboratoire restent volontairement courtes : titre, contexte minimal et liens de téléchargement. Les consignes détaillées sont conservées dans le matériel téléchargeable plutôt que recopiées sur le site.

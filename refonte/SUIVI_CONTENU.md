@@ -32,8 +32,8 @@ Consulter également :
 |---|---|---|---|---|---|
 | 1 | Atelier / environnement technologique | stockage, système de fichiers, dossiers, extensions, ZIP, outils du cours | Ancien `01-rencontre1.1.md`; PowerPoint historique **Environnement de travail** fourni pendant la refonte; aucun laboratoire numéroté associé | **Intégré comme préambule distinct de la théorie HTML** | Nouveau `01-rencontre1-environnement.md`; OneDrive, arborescence, extensions, ZIP, VS Code et navigateur intégrés. Ancien atelier conservé comme source. Des captures historiques/provisoires sont déjà intégrées; les remplacements modernes éventuels restent suivis dans `RESSOURCES_A_FOURNIR.md`. |
 | 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | **Théorie 905 conservée avec micro-ajustements ciblés en R6; labo réorganisé** | `web/docs/01-cours/06-rencontre6.md` conserve le ton, les captures et la matière du 905, avec sept ajustements ciblés : fil conducteur, priorité rapprochée des calculs, trio déclaration/affectation/réaffectation, redéclaration rapprochée, déclarations multiples en `Pour aller plus loin`, répétition de `+=` réduite et résumé final. Navigation native « Sur cette page » conservée. Le labo actif reste `web/docs/02-labos/01-labo2.md` avec 15 activités principales + pratiques facultatives. Sources historiques conservées. Voir `REVISION_R6.md`. |
-| 3 | DOM et fonctions | `querySelector`, `textContent`, VS Code, fonctions | Labo 3 → `420905_lab3.zip` | **Implanté en R7 comme bloc cohérent** | Théorie historique copiée dans `web/docs/01-cours/07-rencontre7.md`; page de labo présentée comme **Rencontre 7 — DOM et fonctions**. ZIP et dossier décompressé conservés. Aucun exercice scindé ou réécrit. |
-| 4 | Événements et styles | Variables globales/locales, événements, styles DOM | Labo 4 → `420905_lab4.zip` | À réorganiser dans le bloc DOM / événements | Extraire le labo 4 et répartir les exercices selon la nouvelle progression. |
+| 3 | DOM et fonctions | `querySelector`, `textContent`, fonctions, portée locale/globale | Labo 3 + labo 4 exercice 1 | **Implanté en R7 comme bloc cohérent** | R7 conserve DOM + fonctions simples et reçoit maintenant la portée locale/globale provenant de l'ancien cours 4. Le labo 3 reste téléchargeable; l'exercice 1 du labo 4 accompagne R7 comme pratique de portée. |
+| 4 | Événements et styles | événements, styles DOM | Labo 4 → `420905_lab4.zip` | **Portée déplacée en R7** | L'exercice 1 du labo 4 accompagne maintenant R7; les exercices 2 à 5 restent associés à R8. La section `.style` de R8 est conservée telle quelle. |
 | 5 | Booléens et conditions | Booléens, `if`, `else` | Labo 5 → `420905_lab5.zip` | **Fusion envisagée avec le cours 6** | Extraire le labo 5; inventorier les exercices à conserver. |
 | 6 | Opérateurs logiques | Opérateurs logiques, `else if`, débogage | Labo 6 → `420905_lab6.zip` | **Fusion envisagée avec le cours 5** | Extraire le labo 6; fusionner les exercices pertinents avec ceux du labo 5 et éliminer les doublons. |
 | 7 | TP1 | Temps consacré au TP1 | Ancien TP supprimé de Z03 | Rencontre à récupérer | Aucun ancien TP à préserver; réaffecter la rencontre. |
@@ -68,7 +68,7 @@ Les anciennes sources de migration `sources/R01-Introduction-HTML-Markdown/`, `s
 | **4** | consolidation CSS, bordures, dimensions simples, `margin`, `padding`, modèle en boîte | Validation C; début Validation D — WEB-07/08 |
 | **5** | Flexbox simple, navigation horizontale, intégration, pratique et correction | Validation D et reprises |
 | **6** | variables, déclaration, affectation, réaffectation, nombres, chaînes, opérateurs, concaténation et littéraux de gabarits | reprises HTML/CSS seulement au besoin |
-| **7** | DOM de base avec `querySelector` / `textContent`, VS Code et fonctions simples | prépare avec R6 le mini-quiz de R8 |
+| **7** | DOM de base avec `querySelector` / `textContent`, fonctions simples et portée locale/globale | prépare avec R6 le mini-quiz de R8 |
 
 ## Niveaux d'attente pour le contenu
 
@@ -169,7 +169,7 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 - Les chantiers pédagogiques importants doivent être précédés d'un plan d'implémentation versionné et mis à jour pendant le travail.
 - Pour R6–R15, la première implantation a placé la théorie et les exercices historiques aux bonnes rencontres avant la révision pédagogique.
 - R6 conserve la théorie 905 comme base, avec sept micro-ajustements ciblés documentés dans `REVISION_R6.md`; le laboratoire étudiant réorganisé demeure actif.
-- R7 utilise encore l'ancien cours/labo 3 conservé comme bloc cohérent en attente de sa propre révision.
+- R7 regroupe maintenant DOM, fonctions simples et portée locale/globale; l'exercice 1 de l'ancien labo 4 y est déplacé. `classList.contains()` est reporté à R9 avec les conditions.
 
 ## Décisions / hypothèses en cours
 
@@ -205,3 +205,8 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 | 2026-08-26 | Révision pédagogique de R6 avec archive avant révision | `06-rencontre6.md`, `01-labo2.md`, `REVISION_R6.md`, sources `420905_lab2` | 42 questions historiques condensées en 15 activités principales + pratiques facultatives; déclaration / affectation / réaffectation renforcées | Implanté puis partiellement annulé |
 | 2026-08-27 | Retour de la théorie R6 à la version historique 905 | `06-rencontre6.md`, `REVISION_R6.md` | Le labo réorganisé demeure actif; ancien labo complet conservé en source | Décidé et implanté |
 | 2026-08-27 | Micro-ajustements ciblés sur la théorie 905 de R6 | `06-rencontre6.md`, `REVISION_R6.md` | Aucun changement au labo actif | **Décidé et implanté** |
+
+
+## Convention de diffusion des laboratoires
+
+Les pages Docusaurus de laboratoire servent principalement au téléchargement du matériel. Les consignes détaillées restent dans les fichiers téléchargeables, sauf besoin pédagogique explicite de les publier aussi sur le site.

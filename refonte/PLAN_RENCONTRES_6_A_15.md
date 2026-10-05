@@ -41,8 +41,8 @@ La règle de migration minimale demeure valide : ne scinder un laboratoire que l
 | Rencontre | Objectif principal | Théorie historique | Exercices historiques | Remarque |
 |---|---|---|---|---|
 | **R6** | Entrer en programmation avec des valeurs et instructions simples | ancien cours 2 | labo 2 | déplacement direct |
-| **R7** | Premier effet JavaScript visible : DOM + fonctions simples | ancien cours 3 | labo 3 | garder le bloc ensemble |
-| **R8** | Interactivité, événements, classes et attributs | anciens cours 4 + 14 | labo 4 + labo 14 ex. 1–2 | mini-quiz 10 % au début |
+| **R7** | Premier effet JavaScript visible : DOM + fonctions simples + portée des variables | ancien cours 3 + portée de l'ancien cours 4 | labo 3 + labo 4 ex. 1 | garder le bloc ensemble et y ajouter la portée |
+| **R8** | Interactivité, événements, styles, classes et attributs | ancien cours 4 sans la portée + ancien cours 14 | labo 4 ex. 2–5 + portions pertinentes du labo 14 | mini-quiz 10 % au début; section `.style` conservée |
 | **R9** | Faire prendre des décisions au programme | anciens cours 5 + 6 | labos 5 + 6 | placer les deux blocs ensemble sans les réécrire |
 | **R10** | Répéter un traitement | ancien cours 11 | labo 11 | conserver d'abord le matériel de boucles tel quel |
 | **R11** | Tableaux, parcours, puis plusieurs éléments DOM | anciens cours 12 + 15 | labo 12 + labo 15 ex. 1–3 | `querySelectorAll` suit naturellement tableaux + parcours |
@@ -59,15 +59,15 @@ Variables, affectation, nombres, chaînes, opérations simples et console.
 
 ### Ancien 3 → R7
 
-DOM de base et fonctions simples restent ensemble. Le labo 3 ne sera pas éclaté dans la première implantation.
+DOM de base et fonctions simples restent ensemble. La portée locale/globale est déplacée de R8 vers R7, avec l'exercice 1 de l'ancien labo 4 comme pratique.
 
 ### Anciens 4 + 14 → R8, avec scission ciblée du labo 14
 
-Le cours 14 complète naturellement le bloc DOM/interactivité du cours 4.
+Le cours 14 complète naturellement le bloc DOM/interactivité du cours 4. La portée des variables et le premier exercice du labo 4 sont toutefois déplacés vers R7. La section `.style` de R8 demeure inchangée.
 
 Le labo 14 est toutefois composé de deux blocs distincts :
 
-- **exercices 1–2 → R8** : `classList`, attributs, manipulation d'un élément;
+- **exercices 1–2 → R8/R9 à répartir au besoin** : `classList`, attributs, manipulation d'un élément; `classList.contains()` appartient à R9 avec les conditions;
 - **exercices 3–4 → réserve R12/R13** : ils dépendent déjà de boucles, paramètres, retours et intégration plus avancée.
 
 Cette scission ne nécessite aucune réécriture des exercices.
@@ -163,3 +163,8 @@ La prochaine phase consiste à :
 4. vérifier que tout fonctionne;
 5. mettre à jour `SUIVI_CONTENU.md` avec les déplacements réellement réalisés;
 6. **ensuite seulement**, entreprendre une révision qualitative rencontre par rencontre.
+
+
+### Convention des pages de laboratoire
+
+Les pages Docusaurus de laboratoire servent principalement à présenter et télécharger le matériel. Les consignes détaillées restent dans les fichiers téléchargeables, sauf décision pédagogique explicite.

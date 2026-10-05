@@ -1,61 +1,12 @@
 ---
 title: Rencontre 8 - Événements et styles
-description: Variables globales, variables locales, écouteurs d'événements et styles (DOM)
+description: Écouteurs d'événements et styles (DOM)
 ---
 
 # Rencontre 8 - Événements et styles
 
 :::info Mini-quiz — 10 %
 Le mini-quiz a lieu au début de la rencontre et porte sur la matière des rencontres 6 et 7.
-:::
-
-## 🔍 Variables globales et locales
-
-Nous savons déjà comment déclarer une variable :
-
-```js
-// 👶
-let age = 4;
-```
-
-Toutefois, l'**emplacement** dans le code (dans `script.js`) où cette variable est déclarée est **important**.
-
-### 📌 Variables locales
-
-⛔ Si une variable est déclarée **dans une fonction**, elle **n'existe qu'à l'intérieur de cette fonction**. (On ne peut pas l'utiliser ailleurs)
-
-<center>![Variable locale](../../static/img/cours5/local.png)</center>
-
-💡 La variable `phrase` est donc une **variable locale** et **existe seulement** dans `texte1()`.
-
-### 🌐 Variables globales
-
-⛔ Si une variable est déclarée **à l'extérieur de toute fonction** (donc PAS dans une fonction), elle **peut être utilisée n'importe où**.
-
-<center>![Variable globale](../../static/img/cours5/global.png)</center>
-
-💡 La variable `gPhrase` est donc une **variable globale** et **existe partout**.
-
-:::important
-
-Afin de différencier plus facilement ces deux types de variables, nous utiliserons la **convention** suivante dans ce cours :
-
-* Toutes les **variables globales** commenceront par la lettre `g`. (Ex : `gCouleur`, `gScore`, `gAge`, etc.)
-
-<center>![Convention de nom pour les variables globales](../../static/img/cours5/g.png)</center>
-
-:::
-
-:::warning
-
-Vous vous demandez peut-être :
-
-> Pourquoi ne pas simplement toujours utiliser des variables **globales** ? Les variables **locales** ont clairement des *skill issues* !
-
-🌐 Il faut surtout créer une **variable globale** lorsqu'on en a besoin dans **plusieurs fonctions**. Si une **variable globale** est seulement utilisée dans **une** fonction, autant la rendre **locale** pour que la **quantité de variables globales** reste **petite**.
-
-🔍 Le code est généralement plus clair et facile à comprendre lorsqu'une variable est **déclarée** tout près de l'endroit où elle est **utilisée**.
-
 :::
 
 ## 📢 Écouteurs d'événements
