@@ -20,3 +20,7 @@ Les consignes sont incluses dans les deux formats :
 
 - `consignes.html` — à ouvrir directement dans le navigateur;
 - `consignes.md` — à ouvrir dans VS Code; utilisez `Ctrl+Shift+V` pour afficher l'aperçu Markdown.
+
+## Corrigé
+
+**[Télécharger le corrigé de la rencontre 7](pathname:///files/z03-rencontre7-corrige.zip)** — à consulter après avoir essayé les exercices.
