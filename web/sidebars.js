@@ -200,16 +200,7 @@ const sidebars = {
           id: "cours/rencontre9-operateurs-logiques",
           label: "Cours — Opérateurs logiques",
         },
-        {
-          type: "ref",
-          id: "labos/labo5",
-          label: "Laboratoire — Conditions",
-        },
-        {
-          type: "ref",
-          id: "labos/labo6",
-          label: "Laboratoire — Opérateurs logiques",
-        },
+        { type: "ref", id: "labos/labo5", label: "Laboratoire — Conditions et logique" },
       ],
     },
     { type: "doc", id: "cours/rencontre10", label: "Rencontre 10 — Boucles" },
@@ -247,33 +238,14 @@ const sidebars = {
       type: "category",
       label: "Rencontre 8 — Interactivité, classes et attributs",
       items: [
-        {
-          type: "doc",
-          id: "labos/labo4",
-          label: "Événements et styles",
-        },
-        {
-          type: "doc",
-          id: "labos/labo14",
-          label: "Classes et attributs",
-        },
+        { type: "doc", id: "labos/labo4", label: "Événements et styles" },
+        { type: "doc", id: "labos/labo14", label: "Classes et attributs" },
       ],
     },
     {
-      type: "category",
+      type: "doc",
+      id: "labos/labo5",
       label: "Rencontre 9 — Conditions et logique",
-      items: [
-        {
-          type: "doc",
-          id: "labos/labo5",
-          label: "Booléens et conditions",
-        },
-        {
-          type: "doc",
-          id: "labos/labo6",
-          label: "Opérateurs logiques",
-        },
-      ],
     },
   ],
 };

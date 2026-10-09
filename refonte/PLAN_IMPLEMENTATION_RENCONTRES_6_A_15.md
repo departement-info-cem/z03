@@ -1,7 +1,7 @@
 # Plan d'implémentation — rencontres 6 à 15
 
 **Statut du plan : actif**  
-**Dernière mise à jour : 2026-10-06**
+**Dernière mise à jour : 2026-10-09**
 
 Ce document est le plan opérationnel pour mettre en place la séquence JavaScript des rencontres 6 à 15. `PLAN_RENCONTRES_6_A_15.md` demeure la référence pédagogique canonique.
 
@@ -31,7 +31,7 @@ Pendant cette passe :
 | **R11** | **Implanté** | Ancien cours 12 + ancien cours 15 en deux pages; labo 12 + exercices 1–3 du labo 15. |
 | **R12** | **Implanté** | Ancien cours 13 + labo 13 + exercice 4 du labo 15. |
 | **R13–R15** | À faire après R6–R12 | Intégration / buffer / examen. |
-| **Validation CI** | **Bloquée par erreur historique** | `web/static/files/420905_lab6/lab6_exercice3/js/script.js` : `TS1005: '}' expected` ligne 75. |
+| **Validation CI** | **Vérification locale limitée** | Le `tsc` direct passe le 2026-10-09; le build Docusaurus échoue sur un refus d'écriture dans `web/.docusaurus/`. |
 
 ## Répartition stabilisée
 
@@ -77,6 +77,15 @@ Première implantation réalisée :
 **État : Implanté.**
 
 ## R9 — Conditions
+
+### Consolidation des dix exercices — 2026-10-09
+
+| Tâche | État | Dépendance et fichiers | Définition de « terminé » |
+|---|---|---|---|
+| Inventorier les dix activités et préserver les sources | Terminé | Labos 5/6, `rencontre9-conditions-dom.zip` | Mapping complet, aucune source historique modifiée. |
+| Créer l'archive dérivée | Prêt à réviser | `web/static/files/rencontre9.zip` | Dix dossiers autonomes, consignes et TODO conservés, README, syntaxe et liens vérifiés. L'écriture dans `web/static/files/rencontre9/` est refusée par l'environnement; archive placée au niveau parent. |
+| Unifier la diffusion étudiante | Prêt à réviser | `04-labo5.md`, `05-labo6.md`, `web/sidebars.js` | Une archive et une entrée R9 dans chaque menu, anciennes pages conservées. |
+| Vérifier et consigner | Prêt à réviser | `SUIVI_CONTENU.md`, typecheck, build | Mapping et liens vérifiés. `tsc` direct réussi; build bloqué par `EPERM` dans `web/.docusaurus/`. |
 
 ### Réorganisation ciblée du labo 14 — 2026-10-06
 
@@ -160,6 +169,8 @@ TS1005: '}' expected.
 ```
 
 Cette erreur n'a pas été corrigée pendant la passe de placement afin de respecter la règle de ne pas modifier les exercices avant la phase de révision. Elle doit être traitée séparément comme défaut technique historique lorsque nous déciderons de rendre toute la collection exécutable par la CI.
+
+Vérification du 2026-10-09 : les dix scripts de l'archive R9 passent `node --check`, y compris l'exercice 09 dont les bogues sont comportementaux. `node node_modules/typescript/bin/tsc` réussit dans `web/`. Les commandes `npm run typecheck` et `npm run build` échouent au lancement de npm avec `EPERM` sur `C:\Users\Eric`. Le lancement direct de Docusaurus atteint le build puis échoue avec `EPERM` à la création d'un fichier sous `web/.docusaurus/`. Ces restrictions de l'environnement empêchent de confirmer le build complet.
 
 ## Prochain point de reprise
 

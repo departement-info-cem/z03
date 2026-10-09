@@ -183,6 +183,25 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 
 Le 2026-10-06, deux archives dérivées du labo 14 ont été créées : `web/static/files/rencontre8/rencontre8-classes-attributs.zip` (exercices 1–2, sans tâches conditionnelles dans le premier) et `web/static/files/rencontre9/rencontre9-conditions-dom.zip` (uniquement les deux tâches retirées). Les pages R8 et R9 pointent vers ces archives. `420905_lab14/` et `420905_lab14.zip` restent les sources historiques; les exercices 3–4 n'ont pas été migrés.
 
+### R9 — Archive consolidée du 2026-10-09
+
+L'archive dérivée `web/static/files/rencontre9.zip` regroupe dix activités sans supprimer les sources ni les ZIP historiques. L'emplacement souhaité `web/static/files/rencontre9/rencontre9.zip` n'a pas pu être écrit : accès refusé dans ce dossier, bien que son parent soit inscriptible. Le lien étudiant pointe vers l'emplacement accessible. Les deux tâches DOM sont séparées, chacune avec son bouton et son TODO. Aucune erreur pédagogique volontaire de l'exercice 09 n'a été corrigée.
+
+| Dossier dérivé | Source exacte | Activité | Difficulté |
+|---|---|---|---|
+| `exercice01` | `web/static/files/420905_lab5/lab5_exercice1/` | Premiers tests avec `if` | ★☆☆ |
+| `exercice02` | `web/static/files/420905_lab5/lab5_exercice2/` | Choisir avec `if` et `else` | ★☆☆ |
+| `exercice03` | `web/static/files/rencontre9/conditions-dom/`, TODO `verifierClasse` | Vérifier une classe | ★★☆ |
+| `exercice04` | `web/static/files/rencontre9/conditions-dom/`, TODO `alternerImage` | Alterner une image | ★★☆ |
+| `exercice05` | `web/static/files/420905_lab5/lab5_exercice3/` | Ampoule bleue ou rouge | ★★☆ |
+| `exercice06` | `web/static/files/420905_lab5/lab5_exercice4/` | Ice Bro et Fire Bro | ★★★ |
+| `exercice07` | `web/static/files/420905_lab6/lab6_exercice1/` | Plusieurs choix avec `else if` | ★★☆ |
+| `exercice08` | `web/static/files/420905_lab6/lab6_exercice2/` | Prix des fruits | ★★☆ |
+| `exercice09` | `web/static/files/420905_lab6/lab6_exercice3/` | Trouver les bogues | ★★★ |
+| `exercice10` | `web/static/files/420905_lab6/lab6_exercice4/` | Imprimante capricieuse | ★★★ |
+
+Les pages `04-labo5.md` et `05-labo6.md` restent dans le dépôt; seule la première est affichée dans les menus R9. La seconde dirige vers le laboratoire consolidé. Les archives et dossiers `420905_lab5`, `420905_lab6` et `rencontre9-conditions-dom.zip` sont conservés intégralement.
+
 | Date | Changement | Sources concernées | Exercices concernés | État |
 |---|---|---|---|---|
 | 2026-10-07 | Relance du déploiement GitHub Pages après attente d'approbation incohérente avec la configuration courante de l'environnement `github-pages` | `.github/workflows/deploy.yml`, environnement `github-pages` | Aucun contenu pédagogique modifié | Relance technique |\n| 2026-08-18 | Création du registre de suivi | Cours 1 à 15 | Labos 2–6 et 11–15 inventoriés | En cours |

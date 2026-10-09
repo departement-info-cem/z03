@@ -1,16 +1,30 @@
 ---
-title: Rencontre 9 - Laboratoire booléens et conditions
-sidebar_label: Rencontre 9 — Booléens et conditions
+title: Rencontre 9 - Laboratoire conditions et logique
+sidebar_label: Rencontre 9 — Conditions et logique
 ---
 
-# Rencontre 9 - Laboratoire booléens et conditions
+# Rencontre 9 — Conditions et logique
 
-:::info 📥 Fichiers à télécharger
-**[Télécharger `420905_lab5.zip`](pathname:///files/420905_lab5.zip)** — Booléens et conditions
+Pratiquez les conditions avec dix exercices. Ouvrez d'abord le `README.md` de l'archive, puis le `index.html` de chaque dossier.
 
-**[Télécharger `rencontre9-conditions-dom.zip`](pathname:///files/rencontre9/rencontre9-conditions-dom.zip)** — Conditions appliquées au DOM
+★☆☆ : départ guidé · ★★☆ : plusieurs conditions · ★★★ : défi plus autonome.
 
-Décompressez les archives avant de commencer les exercices.
+| Exercice | Activité | Difficulté |
+|---|---|---|
+| 01 | Premiers tests avec `if` | ★☆☆ |
+| 02 | Choisir avec `if` et `else` | ★☆☆ |
+| 03 | Vérifier une classe | ★★☆ |
+| 04 | Alterner une image | ★★☆ |
+| 05 | Ampoule bleue ou rouge | ★★☆ |
+| 06 | Ice Bro et Fire Bro | ★★★ |
+| 07 | Plusieurs choix avec `else if` | ★★☆ |
+| 08 | Prix des fruits | ★★☆ |
+| 09 | Trouver les bogues | ★★★ |
+| 10 | Imprimante capricieuse | ★★★ |
+
+:::info 📥 Fichier à télécharger
+**[Télécharger `rencontre9.zip`](pathname:///files/rencontre9.zip)**
+
+Enregistrez l'archive sur votre ordinateur et décompressez-la avant de commencer.
+
 :::
-
-📬 N'oubliez pas de remettre l'exercice sur Teams une fois complété !

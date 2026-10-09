@@ -1,14 +1,8 @@
 ---
-title: Rencontre 9 - Laboratoire opérateurs logiques
-sidebar_label: Rencontre 9 — Opérateurs logiques
+title: Rencontre 9 - Laboratoire consolidé
+sidebar_label: Rencontre 9 — Laboratoire consolidé
 ---
 
-# Rencontre 9 - Laboratoire opérateurs logiques
+# Laboratoire de la rencontre 9
 
-:::info 📥 Fichier à télécharger
-**[Télécharger `420905_lab6.zip`](pathname:///files/420905_lab6.zip)**
-
-Décompressez l'archive avant de commencer les exercices.
-:::
-
-📬 N'oubliez pas de remettre l'exercice sur Teams une fois complété !
+Les dix exercices de conditions et de logique se trouvent dans le [laboratoire de la rencontre 9](./04-labo5.md).
