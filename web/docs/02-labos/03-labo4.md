@@ -15,7 +15,13 @@ Quatre exercices, numérotés **1 à 4** (anciennement 2 à 5). L'ancien exercic
 | 4 | Combien faut-il d'étudiants pour changer une ampoule ? 💡 | ★★☆ Intermédiaire |
 
 :::info 📥 Fichier à télécharger
-**[Télécharger les exercices actuels — `420905_lab4.zip`](pathname:///files/420905_lab4.zip)**
+**[Télécharger les exercices — `rencontre8-evenements-styles.zip`](pathname:///files/rencontre8/rencontre8-evenements-styles.zip)**
 
-**Note :** l'archive actuelle utilise encore l'ancienne numérotation. Une version renumérotée est en préparation.
+Décompresse l'archive avant de commencer. Les exercices sont numérotés de 1 à 4.
+:::
+
+:::tip 💡 Une fois les exercices terminés
+Les corrigés sont fournis **dans une archive complètement séparée** des exercices.
+
+**[Télécharger les corrigés — `rencontre8-evenements-styles-corriges.zip`](pathname:///files/rencontre8/rencontre8-evenements-styles-corriges.zip)**
 :::
