@@ -16,14 +16,7 @@ Enregistrez l'archive sur votre ordinateur et décompressez-la avant de commence
 
 :::
 
-:::warning 📝 Corrigés des exercices
-**Terminez d'abord les exercices avant de consulter les corrigés.** Ils sont là pour vérifier votre raisonnement et comprendre vos erreurs.
 
-**[Télécharger l'archive contenant les corrigés des dix exercices](pathname:///files/rencontre9.zip)**
-
-Les corrigés sont intégrés à cette même archive, sous chacun des exercices : ouvrez le fichier `index.html` du dossier concerné, puis dépliez la section **Corrigé** en bas de la page.
-
-:::
 
 | Exercice | Activité | Difficulté |
 |---|---|---|
