@@ -21,66 +21,132 @@ steps=[
 ["Les événements sont déjà dans init() : ne les modifie pas.","Complète ajouterClasse(), retirerClasse() et basculerClasse() : elles manipulent la classe brun de .texte1 avec classList.","Complète ajouterAttribut() : title de .objetBrun devient « Trop mignon ! 💩 ». retirerAttribut() vide title. modifierAttribut() change src en images/chocolate.png et alt en Morceau de chocolat.","Teste les trois classes et les trois attributs. Le caca devient du chocolat ! 🍫"],
 ["Les deux boutons fonctionnent déjà : ne change pas leur comportement.","Dans styleFlashy() et styleSobre(), crée une variable locale let imageMario = document.querySelector('.image');","Remplace les cinq appels répétitifs à document.querySelector('.image') par imageMario dans chaque fonction.","Teste plusieurs alternances : Mario sobre 🤵, Mario flashy 🌈."]]
 def corrections(index, original):
-    if index==0:
+    if index == 0:
         return '''let gNouveauTexte = "La hippopotomonstrosesquippedaliophobie est la phobie des longs mots. 😨";
 let gTexteAlerte = "COMMENT OSEZ-VOUS SURVOLER CE BOUTON ? 😡";
-function init(){
-document.querySelector(".bouton1").addEventListener("click",changerTexte);
-document.querySelector(".bouton2").addEventListener("mouseover",lancerAlerte);
-document.querySelector(".bouton3").addEventListener("mouseout",imprimerDansConsole);
+
+function init() {
+    document.querySelector(".bouton1").addEventListener("click", changerTexte);
+    document.querySelector(".bouton2").addEventListener("mouseover", lancerAlerte);
+    document.querySelector(".bouton3").addEventListener("mouseout", imprimerDansConsole);
 }
-function changerTexte(){document.querySelector(".texte").textContent=gNouveauTexte;}
-function lancerAlerte(){alert(gTexteAlerte);}
-function imprimerDansConsole(){console.log("Tu as arrêté de survoler le 3e bouton 😠 !");}
-'''
-    if index==1:
-        return '''let gCompteur=0;
-function init(){
-document.querySelector(".up").addEventListener("click",augmenterCompteur);
-document.querySelector(".down").addEventListener("click",reduireCompteur);
+
+function changerTexte() {
+    document.querySelector(".texte").textContent = gNouveauTexte;
 }
-function augmenterCompteur(){gCompteur=gCompteur+1;document.querySelector(".compteur").textContent=gCompteur;}
-function reduireCompteur(){gCompteur=gCompteur-1;document.querySelector(".compteur").textContent=gCompteur;}
-'''
-    if index==2:
-        rules=[("couleurTexte","bouton1","color",'"red"'),("couleurFond","bouton2","backgroundColor",'"gold"'),("couleurBordure","bouton3","borderColor",'"blue"'),("largeurBordure","bouton4","borderWidth",'"10px"'),("opaciteBouton","bouton6","opacity","0.2"),("visibiliteBouton","bouton7","display",'"none"')]
-        s=original[:original.index("// ▄▄▄",original.index("function init()"))]
-        for fn,button,prop,value in rules:
-            s+=f'\nfunction {fn}(){{document.querySelector(".{button}").style.{prop}={value};}}\n'
-        s+='''function tailleBouton(){
-document.querySelector(".bouton5").style.width="300px";
-document.querySelector(".bouton5").style.height="100px";
+
+function lancerAlerte() {
+    alert(gTexteAlerte);
+}
+
+function imprimerDansConsole() {
+    console.log("Tu as arrêté de survoler le 3e bouton 😠 !");
 }
 '''
-        return s
-    if index==3:
-        return '''function init(){
-document.querySelector(".lightOff").addEventListener("mouseover",on);
-document.querySelector(".lightOn").addEventListener("mouseout",off);
+    if index == 1:
+        return '''let gCompteur = 0;
+
+function init() {
+    document.querySelector(".up").addEventListener("click", augmenterCompteur);
+    document.querySelector(".down").addEventListener("click", reduireCompteur);
 }
-function on(){
-document.querySelector(".lightOff").style.display="none";
-document.querySelector(".lightOn").style.display="block";
+
+function augmenterCompteur() {
+    gCompteur = gCompteur + 1;
+    document.querySelector(".compteur").textContent = gCompteur;
 }
-function off(){
-document.querySelector(".lightOn").style.display="none";
-document.querySelector(".lightOff").style.display="block";
-}
-'''
-    if index==4:
-        head=original[:original.index("// ▄▄▄")]
-        return head+'''
-function ajouterClasse(){document.querySelector(".texte1").classList.add("brun");}
-function retirerClasse(){document.querySelector(".texte1").classList.remove("brun");}
-function basculerClasse(){document.querySelector(".texte1").classList.toggle("brun");}
-function ajouterAttribut(){document.querySelector(".objetBrun").title="Trop mignon ! 💩";}
-function retirerAttribut(){document.querySelector(".objetBrun").title="";}
-function modifierAttribut(){
-document.querySelector(".objetBrun").src="images/chocolate.png";
-document.querySelector(".objetBrun").alt="Morceau de chocolat";
+
+function reduireCompteur() {
+    gCompteur = gCompteur - 1;
+    document.querySelector(".compteur").textContent = gCompteur;
 }
 '''
-    return re.sub(r'document\.querySelector\("\.image"\)',"imageMario",original).replace("function styleFlashy(){",'function styleFlashy(){\nlet imageMario=document.querySelector(".image");').replace("function styleSobre(){",'function styleSobre(){\nlet imageMario=document.querySelector(".image");')
+    if index == 2:
+        initialisation = original[:original.index("// ▄▄▄", original.index("function init()"))]
+        return initialisation + '''
+function couleurTexte() {
+    document.querySelector(".bouton1").style.color = "red";
+}
+
+function couleurFond() {
+    document.querySelector(".bouton2").style.backgroundColor = "gold";
+}
+
+function couleurBordure() {
+    document.querySelector(".bouton3").style.borderColor = "blue";
+}
+
+function largeurBordure() {
+    document.querySelector(".bouton4").style.borderWidth = "10px";
+}
+
+function tailleBouton() {
+    document.querySelector(".bouton5").style.width = "300px";
+    document.querySelector(".bouton5").style.height = "100px";
+}
+
+function opaciteBouton() {
+    document.querySelector(".bouton6").style.opacity = 0.2;
+}
+
+function visibiliteBouton() {
+    document.querySelector(".bouton7").style.display = "none";
+}
+'''
+    if index == 3:
+        return '''function init() {
+    document.querySelector(".lightOff").addEventListener("mouseover", on);
+    document.querySelector(".lightOn").addEventListener("mouseout", off);
+}
+
+function on() {
+    document.querySelector(".lightOff").style.display = "none";
+    document.querySelector(".lightOn").style.display = "block";
+}
+
+function off() {
+    document.querySelector(".lightOn").style.display = "none";
+    document.querySelector(".lightOff").style.display = "block";
+}
+'''
+    if index == 4:
+        initialisation = original[:original.index("// ▄▄▄")]
+        return initialisation + '''
+function ajouterClasse() {
+    document.querySelector(".texte1").classList.add("brun");
+}
+
+function retirerClasse() {
+    document.querySelector(".texte1").classList.remove("brun");
+}
+
+function basculerClasse() {
+    document.querySelector(".texte1").classList.toggle("brun");
+}
+
+function ajouterAttribut() {
+    document.querySelector(".objetBrun").title = "Trop mignon ! 💩";
+}
+
+function retirerAttribut() {
+    document.querySelector(".objetBrun").title = "";
+}
+
+function modifierAttribut() {
+    document.querySelector(".objetBrun").src = "images/chocolate.png";
+    document.querySelector(".objetBrun").alt = "Morceau de chocolat";
+}
+'''
+    # Exercice Mario : conserver le code original et remplacer les répétitions.
+    code = original.replace('document.querySelector(".image")', 'imageMario')
+    code = code.replace(
+        'function styleFlashy(){',
+        'function styleFlashy(){\n    let imageMario = document.querySelector(".image");'
+    ).replace(
+        'function styleSobre(){',
+        'function styleSobre(){\n    let imageMario = document.querySelector(".image");'
+    )
+    return code
 for i in range(6):
     group="evenements-styles" if i<4 else "classes-attributs"
     number=i+1 if i<4 else i-3
