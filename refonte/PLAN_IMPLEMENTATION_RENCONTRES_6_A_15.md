@@ -1,7 +1,7 @@
 # Plan d'implémentation — rencontres 6 à 15
 
 **Statut du plan : actif**  
-**Dernière mise à jour : 2026-10-09**
+**Dernière mise à jour : 2026-10-16**
 
 Ce document est le plan opérationnel pour mettre en place la séquence JavaScript des rencontres 6 à 15. `PLAN_RENCONTRES_6_A_15.md` demeure la référence pédagogique canonique.
 
@@ -77,6 +77,21 @@ Première implantation réalisée :
 **État : Implanté.**
 
 ## R9 — Conditions
+
+### Révision approuvée de l’archive R9 — 2026-10-16
+
+Portée : appliquer les approbations détaillées de l’utilisateur aux dix exercices du seul `web/static/files/rencontre9.zip`; aucune modification des sources historiques ni des compétences évaluées. Dépendance : checkout de réconciliation avancé en fast-forward vers `origin/main` (`0667739`).
+
+| Tâche | État | Fichiers visés et définition de « terminé » |
+|---|---|---|
+| Clarifier les consignes des exercices 01–08 | Terminé | `index.html` et `js/script.js` dans le ZIP; seuils, tests, code fourni et travail demandé explicites, sans solutions ajoutées. |
+| Clarifier le débogage 09 et l’imprimante 10 | Terminé | Mêmes fichiers; code exécutable de 09 identique, seulement `let` ajouté aux deux variables de 10; messages conservés. |
+| Préciser le README et la priorité logique | Terminé | README interne; correction minimale `&&` avant `||` dans `09-rencontre9-operateurs-logiques.md`; passage `x=5` inchangé. |
+| Valider l’archive et le site | Terminé | Dix dossiers, vingt marqueurs de travail, syntaxe des dix scripts, chemins internes et ressources inchangées; typecheck/build sous Node 20 et rendu du tableau de tests vérifiés. |
+
+Contrôles locaux : dix dossiers, vingt TODO numérotés, dix `node --check` réussis sous Node 20.19.0; 26 chemins HTML valides. Les CSS/images et le code exécutable de 09 sont identiques. Seuls les deux éléments inutilisés de 02 et les deux `let` de 10 changent le code exécutable. Tous les messages originaux sont conservés. Typecheck et builds (dont la preview personnelle finale) réussis; tableau de tests de 10 vérifié visuellement.
+
+Livraison : commit neuf fondé sur le dernier main distant; push uniquement en avance rapide vers `emcmp/Z03`. Le SHA exact, le résultat du push et le suivi GitHub Pages sont consignés dans le journal local `.codex-temp/r9-approved-20261016/livraison.json` et dans le compte rendu, sans toucher au main local historique divergé.
 
 ### Consolidation des dix exercices — 2026-10-09
 

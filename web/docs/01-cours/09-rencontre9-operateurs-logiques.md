@@ -215,8 +215,9 @@ L'**ordre de priorité** de tous les opérateurs que nous avons vu jusqu'ici est
 3. Multiplication et division `*` `/`
 4. Addition et soustraction `+` `-`
 5. Comparaison `<` `>` `>=` `<=` `==` `!=`
-6. Opérateurs logiques `&&` `||`
-7. Affectation `=`
+6. ET logique `&&`
+7. OU logique `||`
+8. Affectation `=`
 
 ### 🧠 Exemples plus complexes
 
