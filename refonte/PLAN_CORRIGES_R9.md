@@ -1,5 +1,49 @@
 # Corrigés R9 — état actuel et historique
 
+## Retrait des documents internes du ZIP public — 2026-10-16
+
+Portée explicitement autorisée : correction ciblée du ZIP corrigé sur le site personnel, branche dédiée, PR, CI, fusion personnelle si les contrôles réussissent et déploiement par GitHub Actions. Aucune modification de théorie, de compétence évaluée, du ZIP étudiant, des sources historiques ou du dépôt du cégep.
+
+État initial : worktree propre sur `codex/r9-corriges-coherence`, PR #18 déjà fusionnée; `origin/main` actualisé à `22de68ffa86f99517898befc422d9c8bc5f8c9fa`. Le `main` local encore à `e8cb64061985989e4d59abb6075c7cba6420fc58` contient l'ancien ZIP à 50 fichiers (SHA-256 `486f1a6c58c1df5488ddf5cb25ed396d0c9f01828661d6220f308ab8d16fe2d7`). Le ZIP de `origin/main`, celui de la branche initiale et le téléchargement public sont identiques (50 fichiers, CRC valides, SHA-256 `95c52426402c842459beb8c36c7a6d46a2137dcf7a78f60e84d8c898671a534c`).
+
+Branche de correction créée depuis `origin/main` : `codex/r9-zip-sans-documents-internes`. Les branches et les fichiers existants sont conservés.
+
+| Tâche | État | Dépendances et fichiers visés | Définition de terminé |
+|---|---|---|---|
+| Inventorier les trois références et le ZIP publié | Terminé | Git et téléchargement HTTPS; preuves locales | SHA-256, listes exhaustives et CRC consignés sous `.codex-temp/r9-nettoyage-20261016/`. |
+| Nettoyer le corrigé | Terminé | `web/static/files/rencontre9-corrige.zip` | Retirer `LIRE-MOI-ENSEIGNANT.md`, `RAPPORT-VALIDATION.md`, `MANIFESTE.json`; README strictement étudiant, sans provenance; conserver les 46 fichiers des dix exercices octet pour octet. |
+| Valider le lot | Terminé | ZIP corrigé et étudiant, Node 20, typecheck et build | 47 fichiers corrigés, zéro document interne, CRC valides, dix HTML/CSS/JS et seize images; liens résolus, syntaxe valide; ZIP étudiant identique et distinct; aucune théorie modifiée. |
+| Livrer sur le dépôt personnel | En cours | Branche dédiée et PR `emcmp/Z03`; état final dans le journal local `livraison.json` | CI réussie avant fusion; déploiement Actions réussi au SHA fusionné; ZIP public retéléchargé, liste et SHA-256 identiques au livrable. Vérification personnelle par `scripts/deploiement/verifier-preview.ps1`. |
+
+Les preuves QA et les inventaires restent hors du matériel téléchargeable. Le README remplacé contenait des consignes de travail à compléter et une colonne de provenance technique; son remplacement explique uniquement comment consulter les solutions dans un dossier distinct. Les comparaisons `==` et `!=` restent strictement inchangées. Aucun déplacement ni renumérotation de rencontre.
+
+### Résultats du nettoyage
+
+- Corrigé : **47 fichiers**, CRC valides, SHA-256 `49e4ae1a441e32af1a40649c0e6b7693f780b63347fff27150c78e2e45c0c444`. Seuls trois documents internes retirés et le README remplacé; les 46 fichiers d'exercice sont identiques octet pour octet à `origin/main` avant correction.
+- Étudiant : **47 fichiers**, archive inchangée, CRC valides, SHA-256 `3275f9fbf2dd16eab132611f3fd32b30f986f0b8d4d1f0b10fe07fa9456ffbf2`. Les différences avec le corrigé sont exactement les dix scripts et le README. Aucun corrigé ajouté à l'archive étudiante.
+- Node **20.19.0** : `node --check` réussi pour les **20 scripts**; **26 références HTML** résolues par archive, références d'images dans le JavaScript également résolues. Les deux liens de téléchargement du laboratoire sont présents dans le build et les deux ZIP générés sont identiques aux sources validées.
+- `npm run build` et `npm run typecheck` réussis depuis la racine. Le premier typecheck lancé simultanément au build a rencontré des fichiers générés supprimés pendant sa lecture (`TS6053`); relance après le build réussie. Les avertissements du build concernent la configuration et les données de dépendances héritées; aucune dépendance modifiée.
+- Preuves locales : `inventaire-avant.json` (listes complètes pour `main`, `origin/main`, `HEAD` initial et ZIP public téléchargé), `validation.json` (listes finales, CRC, liens et comparaisons), `liens-build.json`, `build.log`, `typecheck-final.log`. Les résultats de CI, fusion, déploiement et retéléchargement public seront consignés après livraison dans `livraison.json` et `public-apres.json`, sous `.codex-temp/r9-nettoyage-20261016/`.
+
+### Inventaire final du corrigé
+
+À la racine : `README.md` strictement étudiant. Chacun des dix dossiers ci-dessous contient `index.html`, `css/styles.css`, `js/script.js`, plus les images indiquées dans son sous-dossier `images/`.
+
+| Dossier | Images |
+|---|---|
+| `exercice01` | Aucune |
+| `exercice02` | Aucune |
+| `exercice03` | `chocolate.png`, `poop.png` |
+| `exercice04` | `chocolate.png`, `poop.png` |
+| `exercice05` | `lightBlue.png`, `lightRed.png` |
+| `exercice06` | `fireBro.png`, `iceBro.png` |
+| `exercice07` | `chocolate.png`, `poop.png` |
+| `exercice08` | `flashy.png`, `sobre.png` |
+| `exercice09` | Aucune |
+| `exercice10` | `multi.png`, `off.png`, `on.png`, `printer.png` |
+
+Les sections ci-dessous décrivent les lots antérieurs; leurs mentions de rapport/manifeste inclus dans le ZIP sont historiques et remplacées par le présent nettoyage.
+
 ## Mise en cohérence autorisée — 2026-10-16
 
 Base vérifiée avant mutation : worktree propre, `main == origin/main == e8cb64061985989e4d59abb6075c7cba6420fc58`, y compris lecture du SHA distant. Branche personnelle : `codex/r9-corriges-coherence`. Sauvegarde à préserver : `sauvegarde/rencontre9-cd7ecd5` à `cd7ecd52489564bc075099d89f39ab1bc5fb4a29`.
