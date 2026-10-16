@@ -30,3 +30,12 @@ Enregistrez l'archive sur votre ordinateur et décompressez-la avant de commence
 | 08 | Prix des fruits | ★★☆ |
 | 09 | Trouver les bogues | ★★★ |
 | 10 | Imprimante capricieuse | ★★★ |
+
+:::warning Corrigé — à consulter après avoir fait les exercices
+
+Essayez d'abord de résoudre les dix exercices, puis utilisez le corrigé pour comparer vos solutions.
+
+**[Télécharger `rencontre9-corrige.zip`](pathname:///files/rencontre9-corrige.zip)**
+
+Décompressez cette archive dans un dossier distinct de vos exercices.
+:::
