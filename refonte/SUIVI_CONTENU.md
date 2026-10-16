@@ -34,8 +34,8 @@ Consulter également :
 | 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | **Théorie 905 conservée avec micro-ajustements ciblés en R6; labo réorganisé** | `web/docs/01-cours/06-rencontre6.md` conserve le ton, les captures et la matière du 905, avec sept ajustements ciblés : fil conducteur, priorité rapprochée des calculs, trio déclaration/affectation/réaffectation, redéclaration rapprochée, déclarations multiples en `Pour aller plus loin`, répétition de `+=` réduite et résumé final. Navigation native « Sur cette page » conservée. Le labo actif reste `web/docs/02-labos/01-labo2.md` avec 15 activités principales + pratiques facultatives. Sources historiques conservées. Voir `REVISION_R6.md`. |
 | 3 | DOM et fonctions | `querySelector`, `textContent`, fonctions, portée locale/globale | Labo 3 + labo 4 exercice 1 | **Implanté en R7 comme bloc cohérent** | R7 conserve DOM + fonctions simples et reçoit maintenant la portée locale/globale provenant de l'ancien cours 4. Le labo 3 reste téléchargeable; l'exercice 1 du labo 4 accompagne R7 comme pratique de portée. |
 | 4 | Événements et styles | événements, styles DOM | Labo 4 → `420905_lab4.zip` | **Portée déplacée en R7** | L'exercice 1 du labo 4 accompagne maintenant R7; les exercices 2 à 5 restent associés à R8. La section `.style` de R8 est conservée telle quelle. |
-| 5 | Booléens et conditions | Booléens, `if`, `else` | Labo 5 → `420905_lab5.zip` | **Fusion envisagée avec le cours 6** | Extraire le labo 5; inventorier les exercices à conserver. |
-| 6 | Opérateurs logiques | Opérateurs logiques, `else if`, débogage | Labo 6 → `420905_lab6.zip` | **Fusion envisagée avec le cours 5** | Extraire le labo 6; fusionner les exercices pertinents avec ceux du labo 5 et éliminer les doublons. |
+| 5 | Booléens et conditions | Booléens, `if`, `else` | Labo 5 → `420905_lab5.zip` | **Implanté en R9 avec l'ancien cours 6** | Théorie en deux pages; exercices regroupés dans `web/static/files/rencontre9.zip`, avec deux tâches DOM du labo 14. Corrigé séparé dans `web/static/files/rencontre9-corrige.zip`. Sources historiques conservées. |
+| 6 | Opérateurs logiques | Opérateurs logiques, `else if`, débogage | Labo 6 → `420905_lab6.zip` | **Implanté en R9 avec l'ancien cours 5** | Dix activités consolidées au total; archive étudiante sans réponses, bogues intentionnels de 09 conservés; dix solutions dans le ZIP corrigé distinct. Sources historiques conservées; aucun doublon supprimé par le présent lot. |
 | 7 | TP1 | Temps consacré au TP1 | Ancien TP supprimé de Z03 | Rencontre à récupérer | Aucun ancien TP à préserver; réaffecter la rencontre. |
 | 8 | TP1 | Temps consacré au TP1 | Ancien TP supprimé de Z03 | Rencontre à récupérer | Aucun ancien TP à préserver; réaffecter la rencontre. |
 | 9 | Examen formatif 1 | Révision / formatif | Pas de labo associé | Formatif possiblement hors classe | Ne pas réserver nécessairement une rencontre complète; conserver l'idée d'une activité formative autonome. |
@@ -174,12 +174,20 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 ## Décisions / hypothèses en cours
 
 - La pondération HTML/CSS est fixée à **30 %**; seule la répartition exacte entre WEB-01 à WEB-08 reste à établir avec la pondération des premières compétences JavaScript.
-- Les anciens cours/labos 5 et 6 doivent être placés ensemble en R9 dans la première implantation; l'élimination de doublons est reportée à la révision pédagogique ultérieure.
+- Les anciens cours/labos 5 et 6 sont placés ensemble en R9, avec dix activités consolidées et un corrigé séparé; l'élimination de doublons reste une éventuelle révision pédagogique ultérieure.
 - Les paramètres de fonctions sont considérés plus importants que l'approfondissement des valeurs de retour.
 - Le choix éventuel d'une boucle principale différente de la théorie historique reste une piste de révision, pas un prérequis à la migration.
 - Le DOM devrait privilégier à terme l'application/retrait de classes CSS plutôt qu'une longue liste de styles écrits directement en JavaScript, mais cette amélioration n'est pas faite pendant la première implantation.
 
 ## Journal des migrations
+
+### R9 — État courant et traçabilité du 2026-10-16
+
+- `38217b5` : clarification des dix activités de `web/static/files/rencontre9.zip`.
+- `b56282b`, puis `81e60df` : intégration temporaire des corrigés aux pages du ZIP étudiant et ajout d'un lien. Cette forme de diffusion a été remplacée.
+- `2f9ccda` : restauration du ZIP étudiant sans réponses; SHA-256 courant `3275f9fbf2dd16eab132611f3fd32b30f986f0b8d4d1f0b10fe07fa9456ffbf2`.
+- `12812aa` : ajout de `web/static/files/rencontre9-corrige.zip`, archive publique distincte de dix solutions; page `web/docs/02-labos/04-labo5.md` avec les deux téléchargements et avertissement. Typecheck, build et workflow personnel réussis : https://github.com/emcmp/Z03/actions/runs/38940277864.
+- Lot courant autorisé sur `emcmp/Z03` seulement, base propre et alignée `e8cb640` : 17 comparaisons adaptées dans les solutions après examen des données, documentation du ZIP et manifeste actualisés, suivis remis à jour. Aucun changement aux cours R9, consignes, archives étudiantes, sources historiques ou compétences évaluées. État des validations et livraison : `PLAN_CORRIGES_R9.md`. Sauvegarde `sauvegarde/rencontre9-cd7ecd5` conservée à `cd7ecd5`.
 
 Le 2026-10-06, deux archives dérivées du labo 14 ont été créées : `web/static/files/rencontre8/rencontre8-classes-attributs.zip` (exercices 1–2, sans tâches conditionnelles dans le premier) et `web/static/files/rencontre9/rencontre9-conditions-dom.zip` (uniquement les deux tâches retirées). Les pages R8 et R9 pointent vers ces archives. `420905_lab14/` et `420905_lab14.zip` restent les sources historiques; les exercices 3–4 n'ont pas été migrés.
 

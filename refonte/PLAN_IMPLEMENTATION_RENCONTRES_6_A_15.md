@@ -26,12 +26,12 @@ Pendant cette passe :
 | **R6** | **Implanté** | Ancien cours 2 + labo 2. |
 | **R7** | **Implanté / révisé** | Ancien cours 3 + labo 3, avec portée locale/globale et labo 4 exercice 1 déplacés depuis R8. |
 | **R8** | **Prêt à réviser** | Ancien cours 4 sans la portée + ancien cours 14; labo 4 exercices 2–5. Labo 14 exercices 1–2 dérivés dans `rencontre8-classes-attributs.zip`; les deux tâches conditionnelles de l'exercice 1 passent à R9. |
-| **R9** | **Prêt à réviser** | Anciens cours 5 + 6, conservés en deux pages; labos 5 + 6. Deux tâches DOM avec `if/else` du labo 14 sont disponibles dans `rencontre9-conditions-dom.zip`. |
+| **R9** | **Implanté; corrigé séparé disponible** | Anciens cours 5 + 6 en deux pages inchangées dans le présent lot; dix activités consolidées dans `rencontre9.zip`, dont les deux tâches DOM du labo 14. Corrigé public distinct dans `rencontre9-corrige.zip`; suivi courant dans `PLAN_CORRIGES_R9.md`. |
 | **R10** | **Implanté** | Ancien cours 11 + labo 11; `while`, `do...while` et débogueur optionnel conservés tels quels. |
 | **R11** | **Implanté** | Ancien cours 12 + ancien cours 15 en deux pages; labo 12 + exercices 1–3 du labo 15. |
 | **R12** | **Implanté** | Ancien cours 13 + labo 13 + exercice 4 du labo 15. |
 | **R13–R15** | À faire après R6–R12 | Intégration / buffer / examen. |
-| **Validation CI** | **Vérification locale limitée** | Le `tsc` direct passe le 2026-10-09; le build Docusaurus échoue sur un refus d'écriture dans `web/.docusaurus/`. |
+| **Validation CI** | **Blocages historiques dépassés** | Typecheck/build et workflow personnel réussis lors de la livraison `12812aa` du 2026-10-16. Les restrictions du 2026-10-09 sont conservées plus bas comme historique. Validation du présent lot suivie dans `PLAN_CORRIGES_R9.md`. |
 
 ## Répartition stabilisée
 
@@ -78,6 +78,12 @@ Première implantation réalisée :
 
 ## R9 — Conditions
 
+### État courant et mise en cohérence — 2026-10-16
+
+Le laboratoire actif propose `web/static/files/rencontre9.zip` (47 fichiers, dix activités sans réponses) et `web/static/files/rencontre9-corrige.zip` (50 fichiers, dix solutions), avec avertissement dans `web/docs/02-labos/04-labo5.md`. L'intégration temporaire des corrigés au ZIP étudiant (`b56282b`) a été annulée par `2f9ccda`; le ZIP séparé a été ajouté par `12812aa`. Son workflow personnel a réussi : https://github.com/emcmp/Z03/actions/runs/38940277864.
+
+Le lot courant, autorisé sur le seul dépôt personnel, adapte 17 comparaisons du corrigé après inspection des types, actualise sa documentation de diffusion et son manifeste, et met à jour les suivis. Les consignes, le ZIP étudiant, les cours R9, les sources historiques et l'évaluation restent inchangés. Plan, états et critères de fin : `PLAN_CORRIGES_R9.md`.
+
 ### Révision approuvée de l’archive R9 — 2026-10-16
 
 Portée : appliquer les approbations détaillées de l’utilisateur aux dix exercices du seul `web/static/files/rencontre9.zip`; aucune modification des sources historiques ni des compétences évaluées. Dépendance : checkout de réconciliation avancé en fast-forward vers `origin/main` (`0667739`).
@@ -91,9 +97,11 @@ Portée : appliquer les approbations détaillées de l’utilisateur aux dix exe
 
 Contrôles locaux : dix dossiers, vingt TODO numérotés, dix `node --check` réussis sous Node 20.19.0; 26 chemins HTML valides. Les CSS/images et le code exécutable de 09 sont identiques. Seuls les deux éléments inutilisés de 02 et les deux `let` de 10 changent le code exécutable. Tous les messages originaux sont conservés. Typecheck et builds (dont la preview personnelle finale) réussis; tableau de tests de 10 vérifié visuellement.
 
-Livraison : commit neuf fondé sur le dernier main distant; push uniquement en avance rapide vers `emcmp/Z03`. Le SHA exact, le résultat du push et le suivi GitHub Pages sont consignés dans le journal local `.codex-temp/r9-approved-20261016/livraison.json` et dans le compte rendu, sans toucher au main local historique divergé.
+Livraison historique effectuée par `38217b5` sur `emcmp/Z03`; journal local `.codex-temp/r9-approved-20261016/livraison.json`. Le main local alors divergé est désormais conservé dans `sauvegarde/rencontre9-cd7ecd5`; le main de départ du lot courant est aligné sur `origin/main` à `e8cb640`.
 
 ### Consolidation des dix exercices — 2026-10-09
+
+État historique ci-dessous : les limites d'écriture et de build de ce jour ont été dépassées lors des livraisons du 2026-10-16. La consolidation et la diffusion séparée sont implantées; les sources historiques sont conservées.
 
 | Tâche | État | Dépendance et fichiers | Définition de « terminé » |
 |---|---|---|---|
@@ -176,14 +184,18 @@ Toute nouvelle matière essentielle doit être terminée à la fin de cette renc
 
 ## Validation technique
 
-Le workflow du dépôt exécute `npm run typecheck` avant le build Docusaurus. Le `typecheck` est actuellement bloqué par une erreur déjà présente dans un fichier historique du **labo 6** :
+Le workflow du dépôt exécute `npm run typecheck` avant le build Docusaurus. Ces deux étapes ont réussi au commit personnel `12812aa` le 2026-10-16; la validation du présent lot est consignée dans `PLAN_CORRIGES_R9.md`.
+
+### Historique des blocages de la première implantation
+
+Le `typecheck` avait été bloqué par une erreur présente dans un fichier historique du **labo 6** :
 
 ```text
 web/static/files/420905_lab6/lab6_exercice3/js/script.js(75,2)
 TS1005: '}' expected.
 ```
 
-Cette erreur n'a pas été corrigée pendant la passe de placement afin de respecter la règle de ne pas modifier les exercices avant la phase de révision. Elle doit être traitée séparément comme défaut technique historique lorsque nous déciderons de rendre toute la collection exécutable par la CI.
+Cette erreur n'avait pas été corrigée pendant la passe de placement afin de respecter la règle de ne pas modifier les exercices avant la phase de révision. Elle décrit cette étape historique et n'est plus un blocage du typecheck courant. Le présent lot ne modifie pas ce fichier source.
 
 Vérification du 2026-10-09 : les dix scripts de l'archive R9 passent `node --check`, y compris l'exercice 09 dont les bogues sont comportementaux. `node node_modules/typescript/bin/tsc` réussit dans `web/`. Les commandes `npm run typecheck` et `npm run build` échouent au lancement de npm avec `EPERM` sur `C:\Users\Eric`. Le lancement direct de Docusaurus atteint le build puis échoue avec `EPERM` à la création d'un fichier sous `web/.docusaurus/`. Ces restrictions de l'environnement empêchent de confirmer le build complet.
 

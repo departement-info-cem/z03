@@ -160,7 +160,9 @@ Le script retrouve l'unique candidat, vérifie le SHA encodé dans son nom, conf
 git push cegep "<sha-candidat>:refs/heads/main"
 ```
 
-Le push ne contient jamais `--force` ni `--force-with-lease`. Après le push, le script exige le SHA distant exact, le succès des jobs `Build le site` et `Déployer le site`, les routes officielles, les ressources statiques et l'absence de `Refonte` et `Laboratoires` dans la navigation publique.
+Le push ne contient jamais `--force` ni `--force-with-lease`. Après le push, le script exige le SHA distant exact, le succès des jobs `Build le site` et `Déployer le site`, les routes officielles, les ressources statiques et l'absence de `Refonte` dans la navigation publique. `Laboratoires` est désormais autorisé dans cette navigation (décision intégrée au commit personnel `e8cb640`, PR #17, le 2026-10-16).
+
+Contrôle de cohérence du 2026-10-16 : `Assert-PublicNavigation` dans `scripts/deploiement/commun.ps1` refuse déjà `Refonte` sans interdire `Laboratoires`. La suite `scripts/deploiement/tests/run-tests.ps1` contient les deux cas explicites, « navigation Laboratoires acceptée » et « navigation Refonte refusée ». Aucune modification des scripts ni des garde-fous n'est nécessaire pour cette correction documentaire.
 
 Après succès complet seulement, il crée ou confirme l'immuable :
 
