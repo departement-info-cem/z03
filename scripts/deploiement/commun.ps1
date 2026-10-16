@@ -504,6 +504,17 @@ function Get-HttpPage {
     return $response
 }
 
+function Assert-PublicNavigation {
+    param([Parameter(Mandatory = $true)][string]$Content)
+
+    $navMatches = [regex]::Matches($Content, '<nav\b[\s\S]*?</nav>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+    $navigation = ($navMatches | ForEach-Object { $_.Value }) -join "`n"
+    if ($navigation -match '>\s*Refonte\s*<') {
+        throw 'ARRÊT — la navigation publique contient Refonte.'
+    }
+    Write-DeploymentMessage -Level 'OK' -Message 'Navigation publique sans Refonte.'
+}
+
 function Test-SiteRoutes {
     param(
         [Parameter(Mandatory = $true)][string]$BaseUrl,
@@ -529,12 +540,7 @@ function Test-SiteRoutes {
     }
 
     if ($CheckPublicNavigation) {
-        $navMatches = [regex]::Matches($rootContent, '<nav\b[\s\S]*?</nav>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-        $navigation = ($navMatches | ForEach-Object { $_.Value }) -join "`n"
-        if ($navigation -match '>\s*Refonte\s*<' -or $navigation -match '>\s*Laboratoires\s*<') {
-            throw 'ARRÊT — la navigation publique contient Refonte ou Laboratoires.'
-        }
-        Write-DeploymentMessage -Level 'OK' -Message 'Navigation publique sans Refonte ni Laboratoires.'
+        Assert-PublicNavigation -Content $rootContent
     }
 
     if ($CheckStaticAssets) {

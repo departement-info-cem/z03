@@ -214,6 +214,14 @@ try {
         Assert-Throws -Body { Assert-WorkflowJobsObjectSucceeded -Details $details } -Pattern "Build le site"
     }
 
+    Invoke-Test 'navigation Laboratoires acceptée' {
+        Assert-PublicNavigation -Content '<nav><a>Laboratoires</a></nav>'
+    }
+
+    Invoke-Test 'navigation Refonte refusée' {
+        Assert-Throws -Body { Assert-PublicNavigation -Content '<nav><a>Refonte</a></nav>' } -Pattern 'navigation publique contient Refonte'
+    }
+
     Invoke-Test 'mode DryRun présent et sans force push' {
         $scriptDirectory = Split-Path -Parent $PSScriptRoot
         foreach ($name in @('verifier-preview.ps1', 'preparer-candidat.ps1', 'publier-candidat.ps1', 'annuler-candidat.ps1')) {
