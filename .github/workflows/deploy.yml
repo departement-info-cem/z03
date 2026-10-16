@@ -29,6 +29,9 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Générer les exercices et corrigés R8
+        run: python3 scripts/preparer-rencontre8.py
+
       - name: Installer les dépendances
         working-directory: ./web
         run: npm ci
