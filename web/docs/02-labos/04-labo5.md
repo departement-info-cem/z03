@@ -9,6 +9,13 @@ Pratiquez les conditions avec dix exercices. Ouvrez d'abord le `README.md` de l'
 
 ★☆☆ : départ guidé · ★★☆ : plusieurs conditions · ★★★ : défi plus autonome.
 
+:::info 📥 Fichier à télécharger
+**[Télécharger `rencontre9.zip`](pathname:///files/rencontre9.zip)**
+
+Enregistrez l'archive sur votre ordinateur et décompressez-la avant de commencer.
+
+:::
+
 | Exercice | Activité | Difficulté |
 |---|---|---|
 | 01 | Premiers tests avec `if` | ★☆☆ |
@@ -21,10 +28,3 @@ Pratiquez les conditions avec dix exercices. Ouvrez d'abord le `README.md` de l'
 | 08 | Prix des fruits | ★★☆ |
 | 09 | Trouver les bogues | ★★★ |
 | 10 | Imprimante capricieuse | ★★★ |
-
-:::info 📥 Fichier à télécharger
-**[Télécharger `rencontre9.zip`](pathname:///files/rencontre9.zip)**
-
-Enregistrez l'archive sur votre ordinateur et décompressez-la avant de commencer.
-
-:::
