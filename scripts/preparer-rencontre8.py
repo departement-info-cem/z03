@@ -106,9 +106,9 @@ for i in range(6):
     old=js.read_text(encoding="utf-8")
     if i==4:
         old=old.replace('".bouton5"','".bouton4"').replace('".bouton6"','".bouton5"').replace('".bouton7"','".bouton6"')
-        old=old.replace('// Remplacez la valeur de l\\'attribut src par "images/chocolate.png" pour l\\'élément .objetBrun','// Changez src en images/chocolate.png et alt en "Morceau de chocolat" pour .objetBrun')
+        old=old.replace("Remplacez la valeur de l'attribut src par", "Changez src et alt : valeur de l'attribut src par")
     if i==1:old=old.replace("variale globale","variable globale")
-    if i==5:old=old.replace('Rangez l\\'élément .image dans','Dans chacune des deux fonctions, rangez l\\'élément .image dans')
+    if i==5:old=old.replace("Pour tous les futurs exercices", "Pour ces deux fonctions")
     js.write_text(old,encoding="utf-8")
     cor=dest/"corriges"/group/f"exercice{number}"
     if cor.exists():shutil.rmtree(cor)
