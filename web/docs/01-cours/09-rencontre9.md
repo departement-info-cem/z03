@@ -100,7 +100,7 @@ Par exemple, `1 < 2` signifie « `1` est-il plus petit que `2` ? » et le résul
     </tr>
 </table>
 
-Notez qu'au lieu de directement affecter `true` ou `false` à une variable, on peut le faire via une comparaison :
+Notez que l'on peut stocker le résultat d'une comparaison dans une variable:
 
 <center>![Comparaison](../../static/img/cours6/comparaison.png)</center>
 

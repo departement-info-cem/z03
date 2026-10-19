@@ -137,13 +137,6 @@ Voici un récapitulatif de tout ce qu'on peut faire avec `document.querySelector
 * Basculer une classe : `.classList.toggle("maClasse")`
 * Manipuler les attributs : `.attribut = "valeur"`
 
-N'oubliez pas que tout comme le **contenu textuel** et les **styles**, `currentTarget` peut être utilisé pour manipuler les **classes** et les **attributs** d'un élément HTML **avec lequel on vient de générer un événement** :
-
-* Ajouter une classe : `event.currentTarget.classList.add("maClasse")`
-* Retirer une classe : `event.currentTarget.classList.remove("maClasse")`
-* Basculer une classe : `event.currentTarget.classList.toggle("maClasse")`
-* Manipuler les attributs : `event.currentTarget.attribut = "valeur"`
-
 ## 📦 Stocker un élément HTML dans une variable
 
 Disons qu'on doit manipuler plusieurs propriétés d'un élément HTML... réécrire `document.querySelector(...)` sans arrêt peut être épuisant ... :

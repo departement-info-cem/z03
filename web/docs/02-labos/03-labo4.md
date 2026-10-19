@@ -5,7 +5,7 @@ sidebar_label: Rencontre 8 — Événements et styles
 
 # Rencontre 8 — Événements et styles 🖱️🎨
 
-Quatre exercices, numérotés **1 à 4** (anciennement 2 à 5). L'ancien exercice 1 sur la portée des variables se trouve maintenant à la rencontre 7.
+Quatre exercices, numérotés **1 à 4**.
 
 | Exercice | Sujet | Difficulté |
 | --- | --- | --- |

@@ -142,7 +142,7 @@ else if(couleur != "bleu"){
 
 ## 🧩 Opérateurs logiques
 
-Les opérateurs logiques permettent de **combiner plusieurs comparaisons**.
+Les opérateurs logiques permettent de **combiner plusieurs booléens**.
 
 ### Opérateur `&&` (« ET »)
 
@@ -319,7 +319,7 @@ Vérifions la **classe** que nous avions utilisée dans le code :
 
 <center>![Trouver un bogue](../../static/img/cours7/missingPoint.png)</center>
 
-En vérifiant l'**aide-mémoire**, les **notes de cours** ou d'**autres fonctions similaires**, on peut déduire qu'il manque le `.` devant le nom de la classe.
+En vérifiant les **notes de cours** ou d'**autres fonctions similaires**, on peut déduire qu'il manque le `.` devant le nom de la classe.
 
 <center>![Trouver un bogue](../../static/img/cours7/missingPointSolved.png)</center>
 
@@ -331,13 +331,13 @@ Bien entendu, il ne faut pas oublier de **tester à nouveau** pour s'assurer que
 
 Cette fois-ci, la console nous indique que « `document.queryselector` n'est pas une fonction ».
 
-En vérifiant l'aide-mémoire attentivement, on peut comprendre que le `s` doit être en **majuscule** : `document.querySelector`.
+En vérifiant les **notes de cours**, on peut comprendre que le `s` doit être en **majuscule** : `document.querySelector`.
 
 <center>![Trouver un bogue](../../static/img/cours7/console3.png)</center>
 
 En testant à nouveau, il n'y a plus de message d'erreur, mais **le texte dans la page n'a toujours pas changé** !
 
 * La console ne détecte pas toujours les bogues.
-* Le problème était avec `.textcontent`, qui s'écrit plutôt `.textContent`. (Vérifiable dans l'**aide-mémoire**)
+* Le problème était avec `.textcontent`, qui s'écrit plutôt `.textContent`.
 
 <center>![Trouver un bogue](../../static/img/cours7/uppercaseSolved.png)</center>
