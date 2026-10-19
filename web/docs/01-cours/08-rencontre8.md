@@ -27,10 +27,6 @@ Pour le moment, nous allons voir **trois types d'événements** :
 * `mouseover` : Appelle une fonction lorsqu'un élément HTML est **survolé**
 * `mouseout` : Appelle une fonction lorsqu'un élément HTML **n'est plus survolé** (la souris sort de l'élément)
 
-:::info
-Quand un événement appelle une fonction, celle-ci peut recevoir un paramètre `event`. `event.currentTarget` représente l'élément auquel l'écouteur est associé. Cette syntaxe peut être utile dans les exemples, mais elle n'a pas à être mémorisée pour l'examen.
-:::
-
 ### 🥚 Créer un écouteur d'événements
 
 Voici la syntaxe à utiliser :
