@@ -3,3 +3,6 @@
 
 # Dépendances installées à la racine, le cas échéant
 /node_modules/
+
+# Cache Python des contrôles techniques
+__pycache__/

@@ -29,8 +29,15 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Générer les exercices et corrigés R8
-        run: python3 scripts/preparer-rencontre8.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Tester les contrôles des archives R8
+        run: python3 -m unittest discover -s scripts/tests -p 'test_rencontre8.py'
+
+      - name: Vérifier les quatre ZIP R8 versionnés
+        run: python3 scripts/preparer-rencontre8.py --check
 
       - name: Installer les dépendances
         working-directory: ./web
@@ -43,6 +50,9 @@ jobs:
       - name: Build du site
         working-directory: ./web
         run: npm run build
+
+      - name: Vérifier les ZIP R8 dans le site construit
+        run: python3 scripts/preparer-rencontre8.py --check --build-dir web/build
 
       - name: Corriger les permissions
         working-directory: ./web/build
