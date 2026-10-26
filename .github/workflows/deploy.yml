@@ -37,7 +37,7 @@ jobs:
         run: python3 -m unittest discover -s scripts/tests -p 'test_rencontre8.py'
 
       - name: Vérifier les quatre ZIP R8 versionnés
-        run: python3 scripts/preparer-rencontre8.py --check
+        run: python3 scripts/verifier_zip_rencontre8.py
 
       - name: Installer les dépendances
         working-directory: ./web
@@ -52,7 +52,7 @@ jobs:
         run: npm run build
 
       - name: Vérifier les ZIP R8 dans le site construit
-        run: python3 scripts/preparer-rencontre8.py --check --build-dir web/build
+        run: python3 scripts/verifier_zip_rencontre8.py --build-dir web/build
 
       - name: Corriger les permissions
         working-directory: ./web/build

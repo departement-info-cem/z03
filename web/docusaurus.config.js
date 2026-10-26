@@ -87,6 +87,12 @@ const navbarItems = [
   {
     type: "docSidebar",
     position: "left",
+    sidebarId: "travauxPratiques",
+    label: "Travaux pratiques",
+  },
+  {
+    type: "docSidebar",
+    position: "left",
     sidebarId: "dansAutobus",
     label: "Dans l'autobus",
   },
