@@ -160,19 +160,19 @@ do{
     Parfois, il est difficile de voir ou comprendre ce qui se passe avec notre code. Un outil très intéressant est le débogueur. Il permet d'ouvrir une vue sur l'exécution de notre code et faciliter la découverte d'éventuel problème. 🔎🪳
 
 
-    On le retrouve juste à côté de l'onglet de la console de 🔥🦊FireFox. 
+    On le retrouve juste à côté de l'onglet de la console de 🔥🦊FireFox.
 
     On y retrouve notre script.js! 🎉
     <center>![Débogueur](../../static/img/cours11/debogueur.png)</center>
-    
+
     <hr/>
-    
+
 
     Pour l'utiliser, il suffit d'insérer un point d'arrêt (breakpoint) à la ligne que l'on veut explorer. Lors de l'exécution, notre outil de débogage va s'arrêter à ce point.
 
     ![Insérer un point d'arrêt](../../static/img/cours11/insererPointArret.gif)
 
-    
+
 <hr/>
 
 Nous pouvons ensuite utiliser les quatres boutons suivant pour avancer l'exécution des lignes de code.

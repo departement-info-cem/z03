@@ -42,7 +42,7 @@ Exemple :
 let couleurs = ["Bleu", "Rouge", "Jaune", "Vert", "Violet"];
 ```
 
-* Accéder à la donnée `"Bleu"` et la ranger dans une variable : 
+* Accéder à la donnée `"Bleu"` et la ranger dans une variable :
 ```js
 let a = couleurs[0]; // a contient "Bleu"
 ```
@@ -81,7 +81,7 @@ Résultat :
 
 La **taille** d'un tableau correspond au **nombre de données** qu'il contient.
 
-Syntaxe : 
+Syntaxe :
 
 ```js
 nomTableau.length
@@ -235,7 +235,7 @@ Par exemple, avec ce tableau :
 let lettres = ["a", "b", "c"];
 ```
 
-On aura besoin d'une boucle qui parcourra les index `0`, puis `1`, puis `2`. 
+On aura besoin d'une boucle qui parcourra les index `0`, puis `1`, puis `2`.
 
 C'est à dire qui parcourt tous les index, de `0` à `lettres.length - 1`.
 
