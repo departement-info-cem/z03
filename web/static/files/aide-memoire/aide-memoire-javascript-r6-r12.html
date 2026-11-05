@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aide-mémoire JavaScript Z03 regroupant les rencontres 6 à 12 : six fiches autonomes rassemblées dans un fichier HTML.">
+<title>Aide-mémoire JavaScript — Rencontres 6 à 12</title>
+<style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#edf2f8;color:#1e293b;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}header{background:linear-gradient(120deg,#101e39,#244d7c);color:white;padding:44px max(24px,calc((100% - 960px)/2)) 64px}header p{color:#d6e6ff;margin:0}h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.25;margin:12px 0}main{max-width:1040px;margin:-28px auto 40px;background:white;border-radius:18px;padding:32px 40px;box-shadow:0 12px 36px #152e4914}nav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 28px}a{color:#174f89}nav a,.download{border:1px solid #cbd9ea;border-radius:8px;padding:6px 12px;text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #df9b18;outline-offset:3px}section{scroll-margin-top:20px;margin:32px 0}h2{color:#183b63;font-size:1.4rem;border-bottom:2px solid #e5edf6;padding-bottom:8px}table{border-collapse:collapse;width:100%;font-size:.92rem;margin:16px 0}th{text-align:left;background:#eaf1f9;color:#183b63}th,td{padding:10px 12px;border-bottom:1px solid #dce5ef;vertical-align:top}td:first-child{width:30%}code{font-family:Consolas,"Liberation Mono",monospace;font-size:.9em;overflow-wrap:anywhere}td code{white-space:pre-wrap}pre{background:#f1f5fa;border:1px solid #dce5ef;border-radius:8px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}.memo{background:#edf5ff;border-left:4px solid #3473b7;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.memo p{margin:4px 0}footer{border-top:1px solid #dce5ef;padding-top:18px;font-size:.88rem;color:#526579}@media(max-width:650px){header{padding:28px 18px 48px}main{margin:-24px 10px 24px;padding:22px 14px}th,td{padding:8px}td:first-child{width:32%}}@media print{body{background:white;font-size:10pt}header{background:white;color:#183b63;padding:0}header p{color:#526579}main{box-shadow:none;margin:0;padding:0;max-width:none}nav,.download{display:none}h2{break-after:avoid}tr,.memo,pre{break-inside:avoid}a{color:inherit;text-decoration:none}section{margin:18px 0}@page{margin:15mm}}
+
+/* Mise en page du regroupement R6 à R12 */
+header p.subtitle{font-size:1rem;line-height:1.5;margin-top:12px;max-width:800px}
+main{padding-bottom:38px}
+#sommaire-general{scroll-margin-top:20px}
+h2.sommaire-heading{font-size:1.25rem;border:0;margin-bottom:8px}
+nav.chapters{gap:10px;margin:14px 0 18px}
+nav.chapters a{background:#eaf1f9;font-weight:650;padding:8px 13px;border-radius:10px}
+.notice{background:#f4f8fd;border:1px solid #dbe6f2;border-radius:12px;padding:12px 16px;color:#334155;margin:16px 0 26px}
+.notice p{margin:4px 0}
+.chapter{margin-top:52px;padding-top:26px;border-top:4px solid #eaf1f9;scroll-margin-top:20px}
+.chapter-heading{background:#f1f6fc;border-radius:12px;padding:14px 20px}
+.eyebrow{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#526b87;font-weight:750}
+.chapter-heading h2{font-size:1.55rem;line-height:1.3;margin:4px 0 0;border:0;padding:0}
+.chapter-heading h2 small{display:block;font-weight:450;font-size:1rem;color:#556b82;margin-top:4px}
+.chapter h3{font-size:1.24rem;color:#17456d;border-bottom:2px solid #e5edf6;padding:0 0 8px;margin:30px 0 12px}
+.chapter section{scroll-margin-top:18px;margin:28px 0 34px}
+.chapter-toc{margin:14px 0 22px;border:1px solid #dce5ef;border-radius:10px;padding:10px 14px;background:#fafcff}
+.chapter-toc summary{cursor:pointer;color:#1f4d77;font-weight:600}
+.chapter-toc nav{display:flex;flex-wrap:wrap;margin:12px 0 0;gap:6px}
+.chapter-toc nav a{font-size:.88rem;padding:5px 9px}
+.back-top{text-align:right;font-size:.9rem;margin:24px 0 0}
+.page-footer{margin:36px 0 0}
+@media(max-width:650px){.chapter-heading{padding:12px}.chapter-heading h2{font-size:1.3rem}.chapter h3{font-size:1.15rem}.chapter{margin-top:32px}}
+@media print{
+ header{background:white;color:#183b63}
+ header p.subtitle{color:#526579}
+ .chapter{break-before:page;margin-top:12px;border-top:0;padding-top:0}
+ .chapter:first-of-type{break-before:auto}
+ .chapter-heading{background:white;padding:0}
+ .chapter-heading h2 small{color:#596b7b}
+ .chapter section{break-inside:auto;margin:16px 0}
+ .chapter h3{break-after:avoid}
+ .chapter-toc,.back-top,nav.chapters,.download{display:none}
+ .notice{padding:8px 0;background:white;border:0}
+ .page-footer{font-size:8pt}
+}
+
+/* Navigation rapide flottante : édition hors ligne, sans dépendance externe. */
+.topic-toc{position:fixed;z-index:40;top:74px;right:14px;width:226px;max-height:calc(100vh - 92px);overflow:auto;background:#fff;border:1px solid #cbd9ea;box-shadow:0 8px 24px #101e3926;border-radius:14px;padding:10px 12px}
+.topic-toc-title{margin:0 0 8px;color:#183b63;font-size:.9rem;font-weight:750}
+.topic-toc nav.topic-toc-links{display:block;margin:0}
+.topic-toc-group{margin:0 0 10px}
+.topic-toc-group-title{margin:0 0 3px;color:#566d84;font-size:.73rem;letter-spacing:.035em;font-weight:800}
+.topic-toc nav.topic-toc-links a{display:block;border:0;border-radius:6px;margin:0;padding:3px 7px;color:#174f89;text-decoration:none;font-size:.84rem;line-height:1.45}
+.topic-toc nav.topic-toc-links a:hover,.topic-toc nav.topic-toc-links a:focus-visible{background:#eaf1f9;text-decoration:underline}
+.topic-toc nav.topic-toc-links .topic-toc-top{border-top:1px solid #e5edf6;margin-top:5px;padding-top:9px}
+.topic-toc-desktop{display:none}
+.topic-toc-compact{top:80px;width:min(282px,calc(100vw - 24px));max-height:calc(100vh - 92px);overflow:visible;padding:0;border:0;background:transparent;box-shadow:none}
+.topic-toc-compact summary{cursor:pointer;list-style:none;display:block;width:max-content;margin-left:auto;padding:9px 14px;border-radius:999px;color:#174f89;background:#fff;border:1px solid #afc3da;box-shadow:0 5px 18px #101e3926;font-size:.9rem;font-weight:750}
+.topic-toc-compact summary::-webkit-details-marker{display:none}
+.topic-toc-compact[open]{overflow:auto;border:1px solid #afc3da;background:#fff;box-shadow:0 10px 28px #101e3926;border-radius:14px}
+.topic-toc-compact[open] summary{position:sticky;top:0;margin:0;width:100%;text-align:right;border:0;border-radius:0;box-shadow:none;border-bottom:1px solid #e5edf6}
+.topic-toc-compact nav.topic-toc-links{padding:12px;max-height:calc(100vh - 149px);overflow:auto}
+@media(min-width:1280px) and (max-width:1539px){main{max-width:min(1040px,calc(100vw - 300px));margin-left:auto;margin-right:274px}.topic-toc-desktop{display:block}.topic-toc-compact{display:none}}
+@media(min-width:1540px){.topic-toc-desktop{display:block}.topic-toc-compact{display:none}}
+@media print{.topic-toc{display:none!important}}
+
+</style>
+</head>
+<body>
+<header>
+<p>Z03 · Référence de programmation</p>
+<h1>Aide-mémoire JavaScript — Rencontres 6 à 12</h1>
+<p class="subtitle">Six fiches réunies dans un seul document, avec leurs syntaxes, exemples et rappels.</p>
+</header>
+<!-- Navigation rapide des rubriques principales. Les sommaires détaillés des fiches restent disponibles. -->
+<aside class="topic-toc topic-toc-desktop" aria-label="Navigation rapide de l'aide-mémoire">
+  <p class="topic-toc-title">Aller à un sujet</p>
+  <nav class="topic-toc-links" aria-label="Principaux sujets"><div class="topic-toc-group"><p class="topic-toc-group-title">R6–R7 · Bases</p><a href="#r67-variables">Variables</a>
+<a href="#r67-dom">DOM</a>
+<a href="#r67-fonctions">Fonctions</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R8 · Interactivité</p><a href="#r8-evenements">Événements</a>
+<a href="#r8-styles">Styles DOM</a>
+<a href="#r8-classes">Classes et attributs</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R9 · Conditions</p><a href="#r9-conditions">if / else if / else</a>
+<a href="#r9-logique">Opérateurs logiques</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R10 · Fonctions</p><a href="#r10-parametres">Paramètres</a>
+<a href="#r10-retour">return</a>
+<a href="#r10-hasard">Math.random()</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R11 · Boucles</p><a href="#r11-while">while et compteurs</a>
+<a href="#r11-somme">Accumulation</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R12 · Tableaux</p><a href="#r12-index">Indices</a>
+<a href="#r12-taille">length</a>
+<a href="#r12-ajouter">push / pop / splice</a>
+<a href="#r12-parcours">Parcours avec while</a></div>
+    <a class="topic-toc-top" href="#sommaire-general">↑ Retour au sommaire</a>
+  </nav>
+</aside>
+<details class="topic-toc topic-toc-compact">
+  <summary>☰ Sujets</summary>
+  <nav class="topic-toc-links" aria-label="Principaux sujets (menu compact)"><div class="topic-toc-group"><p class="topic-toc-group-title">R6–R7 · Bases</p><a href="#r67-variables">Variables</a>
+<a href="#r67-dom">DOM</a>
+<a href="#r67-fonctions">Fonctions</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R8 · Interactivité</p><a href="#r8-evenements">Événements</a>
+<a href="#r8-styles">Styles DOM</a>
+<a href="#r8-classes">Classes et attributs</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R9 · Conditions</p><a href="#r9-conditions">if / else if / else</a>
+<a href="#r9-logique">Opérateurs logiques</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R10 · Fonctions</p><a href="#r10-parametres">Paramètres</a>
+<a href="#r10-retour">return</a>
+<a href="#r10-hasard">Math.random()</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R11 · Boucles</p><a href="#r11-while">while et compteurs</a>
+<a href="#r11-somme">Accumulation</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R12 · Tableaux</p><a href="#r12-index">Indices</a>
+<a href="#r12-taille">length</a>
+<a href="#r12-ajouter">push / pop / splice</a>
+<a href="#r12-parcours">Parcours avec while</a></div>
+    <a class="topic-toc-top" href="#sommaire-general">↑ Retour au sommaire</a>
+  </nav>
+</details>
+<main>
+<div id="sommaire-general">
+<p><a class="download" href="aide-memoire-javascript-r6-r12.html" download>Télécharger ce fichier HTML</a></p>
+<h2 class="sommaire-heading">Sommaire général</h2>
+<nav class="chapters" aria-label="Sommaire des rencontres"><a href="#r67">Rencontres 6 et 7</a>
+<a href="#r8">Rencontre 8</a>
+<a href="#r9">Rencontre 9</a>
+<a href="#r10">Rencontre 10</a>
+<a href="#r11">Rencontre 11</a>
+<a href="#r12">Rencontre 12</a></nav>
+<div class="notice"><p>Ce document regroupe les fiches individuelles des rencontres 6 à 12, sans modifier les exemples ni les notions présentées.</p><p>Le fichier HTML peut être enregistré et consulté sans connexion Internet. Pour l'imprimer : Ctrl+P (ou Cmd+P).</p></div>
+</div>
+<article class="chapter" id="r67" aria-labelledby="r67-title">
+<div class="chapter-heading"><span class="eyebrow">Fiche 1 / 6</span><h2 id="r67-title">Rencontres 6 et 7 <small>— Variables, calculs, chaînes, DOM et fonctions</small></h2></div>
+<details class="chapter-toc"><summary>Voir les 7 rubriques de cette fiche</summary><nav aria-label="Sommaire de Rencontres 6 et 7"><a href="#r67-variables">1 · Variables</a><a href="#r67-calculs">2 · Calculs</a><a href="#r67-chaines">3 · Chaînes</a><a href="#r67-dom">4 · DOM</a><a href="#r67-fonctions">5 · Fonctions</a><a href="#r67-messages">6 · Messages</a><a href="#r67-recapitulatif">7 · Récapitulatif</a></nav></details>
+<section id="r67-variables"><h3>1 · Variables</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Créer une variable</td><td><code>let score;</code></td></tr><tr><td>Créer et donner une valeur</td><td><code>let score = 10;</code></td></tr><tr><td>Remplacer la valeur</td><td><code>score = 20;</code></td></tr><tr><td>Ajouter à la valeur</td><td><code>score += 5;</code></td></tr><tr><td>Soustraire à la valeur</td><td><code>score -= 2;</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p><code>let</code> crée une variable; <code>=</code> attribue ou remplace sa valeur.</p></aside></section>
+<section id="r67-calculs"><h3>2 · Calculs</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Calculer avec des parenthèses</td><td><code>let total = (5 + 3) * 2;</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Priorités : parenthèses &gt; multiplications/divisions &gt; additions/soustractions. Ici, <code>total</code> vaut 16.</p></aside></section>
+<section id="r67-chaines"><h3>3 · Chaînes</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Créer une chaîne de caractères</td><td><code>let nom = &quot;Mia&quot;;</code></td></tr><tr><td>Assembler avec +</td><td><code>&quot;Bonjour &quot; + nom</code></td></tr><tr><td>Insérer une variable</td><td><code>`Bonjour ${nom}`</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Les deux expressions donnent <code>Bonjour Mia</code>. La dernière utilise des accents graves <code>`</code>.</p></aside></section>
+<section id="r67-dom"><h3>4 · DOM</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Retrouver un élément</td><td><code>document.querySelector(&quot;.titre&quot;)</code></td></tr><tr><td>Lire son texte</td><td><code>document.querySelector(&quot;.titre&quot;).textContent</code></td></tr><tr><td>Remplacer son texte</td><td><code>document.querySelector(&quot;.titre&quot;).textContent = &quot;Nouveau&quot;;</code></td></tr><tr><td>Ajouter du texte à la fin</td><td><code>document.querySelector(&quot;.titre&quot;).textContent += &quot;!&quot;;</code></td></tr><tr><td>Conserver le texte dans une variable</td><td><code>let texte = document.querySelector(&quot;.titre&quot;).textContent;</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p><code>querySelector</code> retrouve un élément; <code>textContent</code> lit ou modifie son texte. Le point dans <code>".titre"</code> désigne une classe HTML.</p></aside></section>
+<section id="r67-fonctions"><h3>5 · Fonctions</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Définir une fonction</td><td><code>function maFonction() { /* instructions */ }</code></td></tr><tr><td>Appeler une fonction</td><td><code>maFonction();</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Définir une fonction ne lance pas ses instructions. Une fonction nécessite un appel avec <code>()</code>.</p></aside></section>
+<section id="r67-messages"><h3>6 · Messages</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Écrire dans la console</td><td><code>console.log(&quot;Bonjour&quot;);</code></td></tr><tr><td>Afficher une boîte de dialogue</td><td><code>alert(&quot;Bonjour&quot;);</code></td></tr></tbody></table></section>
+<section id="r67-recapitulatif"><h3>7 · Récapitulatif</h3><aside class="memo"><strong>À retenir</strong><p>Créer avec <code>let</code> → calculer ou assembler du texte → cibler avec <code>document.querySelector(".titre")</code> → lire ou modifier avec <code>textContent</code>. Regrouper les instructions dans une fonction, puis l’appeler avec <code>()</code>.</p></aside></section>
+<p class="back-top"><a href="#sommaire-general">Retour au sommaire général</a></p>
+</article>
+<article class="chapter" id="r8" aria-labelledby="r8-title">
+<div class="chapter-heading"><span class="eyebrow">Fiche 2 / 6</span><h2 id="r8-title">Rencontre 8 <small>— Événements, styles, classes et attributs</small></h2></div>
+<details class="chapter-toc"><summary>Voir les 6 rubriques de cette fiche</summary><nav aria-label="Sommaire de Rencontre 8"><a href="#r8-evenements">1 · Événements</a><a href="#r8-init">2 · Fonction init</a><a href="#r8-styles">3 · Styles DOM</a><a href="#r8-classes">4 · Classes</a><a href="#r8-attributs">5 · Attributs</a><a href="#r8-recapitulatif">6 · Récapitulatif</a></nav></details>
+<section id="r8-evenements"><h3>1 · Événements</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Réagir au clic</td><td><code>document.querySelector(&quot;.bouton&quot;).addEventListener(&quot;click&quot;, changerTexte);</code></td></tr><tr><td>Réagir au survol</td><td><code>document.querySelector(&quot;.bouton&quot;).addEventListener(&quot;mouseover&quot;, texteBleu);</code></td></tr><tr><td>Réagir à la sortie de la souris</td><td><code>document.querySelector(&quot;.bouton&quot;).addEventListener(&quot;mouseout&quot;, texteNoir);</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Dans <code>addEventListener</code>, écrire le nom de la fonction <strong>sans ()</strong>. Le navigateur l’appelle quand l’événement arrive.</p></aside></section>
+<section id="r8-init"><h3>2 · Fonction init</h3><pre><code>function init() {
+    document.querySelector(&quot;.bouton&quot;).addEventListener(&quot;click&quot;, changerTexte);
+}
+
+function changerTexte() {
+    document.querySelector(&quot;.bouton&quot;).textContent = &quot;Tu as cliqué !&quot;;
+}</code></pre></section>
+<section id="r8-styles"><h3>3 · Styles DOM</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Changer la couleur du texte</td><td><code>document.querySelector(&quot;.texte&quot;).style.color = &quot;blue&quot;;</code></td></tr><tr><td>Utiliser une couleur hexadécimale</td><td><code>document.querySelector(&quot;.texte&quot;).style.color = &quot;#DC143C&quot;;</code></td></tr><tr><td>Changer le fond</td><td><code>document.querySelector(&quot;.carte&quot;).style.backgroundColor = &quot;yellow&quot;;</code></td></tr><tr><td>Choisir le style de bordure</td><td><code>document.querySelector(&quot;.carte&quot;).style.borderStyle = &quot;solid&quot;;</code></td></tr><tr><td>Choisir la couleur de bordure</td><td><code>document.querySelector(&quot;.carte&quot;).style.borderColor = &quot;red&quot;;</code></td></tr><tr><td>Choisir la largeur de bordure</td><td><code>document.querySelector(&quot;.carte&quot;).style.borderWidth = &quot;2px&quot;;</code></td></tr><tr><td>Changer la largeur</td><td><code>document.querySelector(&quot;.carte&quot;).style.width = &quot;200px&quot;;</code></td></tr><tr><td>Changer la hauteur</td><td><code>document.querySelector(&quot;.carte&quot;).style.height = &quot;100px&quot;;</code></td></tr><tr><td>Changer l’opacité</td><td><code>document.querySelector(&quot;.carte&quot;).style.opacity = 0.5;</code></td></tr><tr><td>Masquer l’élément</td><td><code>document.querySelector(&quot;.carte&quot;).style.display = &quot;none&quot;;</code></td></tr><tr><td>Réafficher l’élément</td><td><code>document.querySelector(&quot;.carte&quot;).style.display = &quot;block&quot;;</code></td></tr><tr><td>Déplacer depuis la gauche</td><td><code>document.querySelector(&quot;.carte&quot;).style.left = &quot;20px&quot;;</code></td></tr><tr><td>Déplacer depuis le haut</td><td><code>document.querySelector(&quot;.carte&quot;).style.top = &quot;30px&quot;;</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Les dimensions et déplacements ci-dessus ont une unité : <code>"20px"</code>. L’opacité va de <code>0</code> (transparent) à <code>1</code> (opaque). <code>left</code> et <code>top</code> nécessitent un positionnement CSS adapté, par exemple <code>position: relative</code>. <code>display = "none"</code> retire aussi la place occupée; <code>"block"</code> réaffiche en bloc.</p></aside></section>
+<section id="r8-classes"><h3>4 · Classes</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Ajouter une classe</td><td><code>document.querySelector(&quot;.carte&quot;).classList.add(&quot;active&quot;);</code></td></tr><tr><td>Retirer une classe</td><td><code>document.querySelector(&quot;.carte&quot;).classList.remove(&quot;active&quot;);</code></td></tr><tr><td>Basculer une classe</td><td><code>document.querySelector(&quot;.carte&quot;).classList.toggle(&quot;active&quot;);</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Dans <code>classList</code>, écrire le nom <strong>sans point</strong>. <code>toggle</code> ajoute la classe absente ou retire la classe présente. Conserver la classe qui sert à retrouver l’élément. <code>querySelector</code> cible seulement le premier élément correspondant.</p></aside></section>
+<section id="r8-attributs"><h3>5 · Attributs</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Lire le texte alternatif</td><td><code>let texteAlternatif = document.querySelector(&quot;.image&quot;).alt;</code></td></tr><tr><td>Ajouter ou remplacer le texte alternatif</td><td><code>document.querySelector(&quot;.image&quot;).alt = &quot;Bébé requin&quot;;</code></td></tr><tr><td>Vider le texte alternatif</td><td><code>document.querySelector(&quot;.image&quot;).alt = &quot;&quot;;</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Les attributs figurent dans la balise ouvrante HTML. L’affectation remplace la valeur précédente.</p></aside></section>
+<section id="r8-recapitulatif"><h3>6 · Récapitulatif</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Modifier le texte</td><td><code>document.querySelector(&quot;.texte&quot;).textContent = &quot;Bonjour&quot;;</code></td></tr><tr><td>Brancher une interaction</td><td><code>document.querySelector(&quot;.bouton&quot;).addEventListener(&quot;click&quot;, changerTexte);</code></td></tr><tr><td>Modifier l’apparence</td><td><code>document.querySelector(&quot;.texte&quot;).style.color = &quot;blue&quot;;</code></td></tr><tr><td>Appliquer une classe CSS</td><td><code>document.querySelector(&quot;.texte&quot;).classList.toggle(&quot;active&quot;);</code></td></tr><tr><td>Modifier un attribut</td><td><code>document.querySelector(&quot;.image&quot;).alt = &quot;Description&quot;;</code></td></tr></tbody></table></section>
+<p class="back-top"><a href="#sommaire-general">Retour au sommaire général</a></p>
+</article>
+<article class="chapter" id="r9" aria-labelledby="r9-title">
+<div class="chapter-heading"><span class="eyebrow">Fiche 3 / 6</span><h2 id="r9-title">Rencontre 9 <small>— Booléens, conditions et opérateurs logiques</small></h2></div>
+<details class="chapter-toc"><summary>Voir les 8 rubriques de cette fiche</summary><nav aria-label="Sommaire de Rencontre 9"><a href="#r9-booleens">1 · Booléens</a><a href="#r9-comparaisons">2 · Comparaisons</a><a href="#r9-conditions">3 · if, else et else if</a><a href="#r9-contains">4 · Vérifier une classe</a><a href="#r9-logique">5 · Opérateurs logiques</a><a href="#r9-priorites">6 · Priorités</a><a href="#r9-debogage">7 · Débogage</a><a href="#r9-recapitulatif">8 · Récapitulatif</a></nav></details>
+<section id="r9-booleens"><h3>1 · Booléens</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Conserver vrai</td><td><code>let estContent = true;</code></td></tr><tr><td>Conserver faux</td><td><code>let estAttentif = false;</code></td></tr><tr><td>Conserver le résultat d’une comparaison</td><td><code>let estMajeur = 19 &gt;= 18;</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p><code>true</code> et <code>false</code> sont des booléens, sans guillemets. <code>"true"</code> est une chaîne de caractères.</p></aside></section>
+<section id="r9-comparaisons"><h3>2 · Comparaisons</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Vérifier l’égalité</td><td><code>5 == 5 // true</code></td></tr><tr><td>Vérifier la différence</td><td><code>5 != 7 // true</code></td></tr><tr><td>Vérifier « plus petit »</td><td><code>5 &lt; 7 // true</code></td></tr><tr><td>Vérifier « plus grand »</td><td><code>5 &gt; 7 // false</code></td></tr><tr><td>Vérifier « plus petit ou égal »</td><td><code>5 &lt;= 5 // true</code></td></tr><tr><td>Vérifier « plus grand ou égal »</td><td><code>5 &gt;= 7 // false</code></td></tr><tr><td>Comparer deux chaînes</td><td><code>&quot;salut&quot; == &quot;Salut&quot; // false</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p><code>=</code> et <code>&lt;=</code> incluent l’égalité. <code>=</code> affecte une valeur; <code>==</code> compare. Les majuscules et les espaces comptent dans les chaînes.</p></aside></section>
+<section id="r9-conditions"><h3>3 · if, else et else if</h3><pre><code>let score = 75;
+
+if (score &gt;= 90) {
+    document.querySelector(&quot;.message&quot;).textContent = &quot;Excellent !&quot;;
+}
+else if (score &gt;= 60) {
+    document.querySelector(&quot;.message&quot;).textContent = &quot;Réussi !&quot;;
+}
+else {
+    document.querySelector(&quot;.message&quot;).textContent = &quot;À reprendre&quot;;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Une seule branche de cette chaîne s’exécute : la première dont la condition est vraie. <code>else</code> n’a pas de condition; il est facultatif. On peut avoir plusieurs <code>else if</code>. Les conditions sont entre parenthèses, les instructions entre accolades.</p></aside><pre><code>let temps = 21;
+
+if (temps &gt; 15) {
+    console.log(&quot;J’attends.&quot;);
+}
+if (temps &gt; 20) {
+    console.log(&quot;C’est long !&quot;);
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Plusieurs <code>if</code> indépendants sont tous vérifiés. Ici, les deux messages s’affichent.</p></aside></section>
+<section id="r9-contains"><h3>4 · Vérifier une classe</h3><pre><code>if (document.querySelector(&quot;.texte&quot;).classList.contains(&quot;sobre&quot;)) {
+    document.querySelector(&quot;.texte&quot;).textContent = &quot;Classe sobre présente&quot;;
+}
+else {
+    document.querySelector(&quot;.texte&quot;).textContent = &quot;Classe sobre absente&quot;;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p><code>contains("sobre")</code> donne <code>true</code> ou <code>false</code>. Le nom de classe s’écrit sans point.</p></aside></section>
+<section id="r9-logique"><h3>5 · Opérateurs logiques</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Exiger les deux conditions : ET</td><td><code>age &gt;= 18 &amp;&amp; age &lt; 30</code></td></tr><tr><td>Accepter au moins une condition : OU</td><td><code>age &lt; 4 || age &gt; 99</code></td></tr><tr><td>Inverser un booléen : NON (complément)</td><td><code>!(age &lt; 4 || age &gt; 99)</code></td></tr><tr><td>Comparer trois couleurs</td><td><code>couleur1 == couleur2 &amp;&amp; couleur2 == couleur3</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Écrire chaque comparaison au complet : <code>age &gt;= 18 &amp;&amp; age &lt; 30</code>. <code>||</code> contient deux barres verticales. <code>!</code> inverse vrai et faux; il est plutôt en complément.</p></aside><pre><code>let age = 21;
+if (age &gt;= 18 &amp;&amp; age &lt; 30) {
+    console.log(&quot;Jeune adulte&quot;);
+}</code></pre></section>
+<section id="r9-priorites"><h3>6 · Priorités</h3><aside class="memo"><strong>À retenir</strong><p>Du premier au dernier : parenthèses <code>()</code> → inverse <code>!</code> → <code>* /</code> → <code>+ -</code> → comparaisons → <code>&amp;&amp;</code> → <code>||</code> → affectation <code>=</code>. Utiliser des parenthèses pour rendre une condition claire.</p></aside><pre><code>let resultat = (5 + 3) * 2 &gt;= 10 &amp;&amp; 4 &lt; 9; // true</code></pre></section>
+<section id="r9-debogage"><h3>7 · Débogage</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Afficher une valeur dans la console</td><td><code>console.log(score);</code></td></tr><tr><td>Tester une comparaison</td><td><code>console.log(score &gt;= 60);</code></td></tr><tr><td>Tester une fonction dans la console</td><td><code>maFonction();</code></td></tr><tr><td>Vérifier le sélecteur</td><td><code>document.querySelector(&quot;.message&quot;)</code></td></tr><tr><td>Vérifier la casse du nom</td><td><code>document.querySelector(&quot;.message&quot;).textContent = &quot;Test&quot;;</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Si <code>querySelector</code> donne <code>null</code>, vérifier le point devant la classe, son orthographe et la présence de l’élément au moment de l’appel. Écrire <code>querySelector</code> avec un S majuscule et <code>textContent</code> avec un C majuscule. Une mauvaise casse de <code>textContent</code> peut ne produire aucun message d’erreur.</p></aside><p>Lire le message et la ligne indiquée dans la console, corriger, puis tester à nouveau. Vérifier aussi le résultat visible dans la page.</p></section>
+<section id="r9-recapitulatif"><h3>8 · Récapitulatif</h3><aside class="memo"><strong>À retenir</strong><p>Comparer → obtenir un booléen → choisir avec <code>if / else if / else</code>. Combiner avec <code>&amp;&amp;</code> ou <code>||</code>. Vérifier une classe avec <code>classList.contains</code>. Contrôler les valeurs dans la console et tester chaque cas.</p></aside></section>
+<p class="back-top"><a href="#sommaire-general">Retour au sommaire général</a></p>
+</article>
+<article class="chapter" id="r10" aria-labelledby="r10-title">
+<div class="chapter-heading"><span class="eyebrow">Fiche 4 / 6</span><h2 id="r10-title">Rencontre 10 <small>— Paramètres, arguments, retours et hasard</small></h2></div>
+<details class="chapter-toc"><summary>Voir les 8 rubriques de cette fiche</summary><nav aria-label="Sommaire de Rencontre 10"><a href="#r10-parametres">1 · Paramètres et arguments</a><a href="#r10-plusieurs">2 · Plusieurs paramètres</a><a href="#r10-reutilisation">3 · Éviter de répéter des fonctions</a><a href="#r10-arguments">4 · Envoyer une valeur ou une variable</a><a href="#r10-retour">5 · Retourner une valeur avec return</a><a href="#r10-hasard">6 · Math.random() et hasard</a><a href="#r10-arret">7 · return arrête la fonction</a><a href="#r10-recapitulatif">8 · Récapitulatif</a></nav></details>
+<section id="r10-parametres"><h3>1 · Paramètres et arguments</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Déclarer une fonction avec un paramètre</td><td><code>function alerteEtConsole(message) { /* instructions */ }</code></td></tr><tr><td>Appeler la fonction avec un argument</td><td><code>alerteEtConsole(&quot;Allo&quot;);</code></td></tr><tr><td>Utiliser le paramètre dans la fonction</td><td><code>alert(message);</code></td></tr><tr><td>Réutiliser le paramètre</td><td><code>console.log(message);</code></td></tr></tbody></table><pre><code>function alerteEtConsole(message) {
+    alert(message);
+    console.log(message);
+}
+
+alerteEtConsole(&quot;Allo&quot;);</code></pre><aside class="memo"><strong>À retenir</strong><p>À la déclaration, message est un paramètre. À l'appel, « Allo » est un argument. Le paramètre est un contrat : fournir une valeur attendue pour que le code fonctionne.</p></aside></section>
+<section id="r10-plusieurs"><h3>2 · Plusieurs paramètres</h3><pre><code>function salutations(nom, heure) {
+    alert(`Bonjour ${nom}, il est actuellement ${heure} !`);
+}
+
+salutations(&quot;Mia&quot;, &quot;15 h&quot;);</code></pre><aside class="memo"><strong>À retenir</strong><p>Les paramètres nom et heure sont séparés par une virgule. À l'appel, les arguments suivent le même ordre.</p></aside></section>
+<section id="r10-reutilisation"><h3>3 · Éviter de répéter des fonctions</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Choisir aussi l’élément HTML</td><td><code>function texteEtBordure(classe, couleurChoisie) { /* instructions */ }</code></td></tr><tr><td>Cibler une classe reçue en argument</td><td><code>document.querySelector(classe).style.color = couleurChoisie;</code></td></tr><tr><td>Appeler avec une classe et une couleur</td><td><code>texteEtBordure(&quot;.description&quot;, &quot;crimson&quot;);</code></td></tr></tbody></table><pre><code>function texteEtBordure(couleurChoisie) {
+    document.querySelector(&quot;.texte&quot;).style.color = couleurChoisie;
+    document.querySelector(&quot;.texte&quot;).style.borderColor = couleurChoisie;
+}
+
+texteEtBordure(&quot;pink&quot;);
+texteEtBordure(&quot;crimson&quot;);</code></pre><aside class="memo"><strong>À retenir</strong><p>Un paramètre permet de choisir une valeur à chaque appel sans recopier la même fonction.</p></aside></section>
+<section id="r10-arguments"><h3>4 · Envoyer une valeur ou une variable</h3><pre><code>function colorierTexte(couleur) {
+    document.querySelector(&quot;.paragraphe2&quot;).style.color = couleur;
+}
+
+colorierTexte(&quot;blue&quot;);
+
+let teinte = &quot;red&quot;;
+colorierTexte(teinte);</code></pre><aside class="memo"><strong>À retenir</strong><p>On peut transmettre directement une valeur (chaîne, nombre, booléen) ou la valeur d'une variable.</p></aside></section>
+<section id="r10-retour"><h3>5 · Retourner une valeur avec return</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Retourner une valeur depuis la fonction</td><td><code>return pi;</code></td></tr><tr><td>Récupérer la valeur retournée</td><td><code>let resultat = valeurPi();</code></td></tr><tr><td>Utiliser directement le retour</td><td><code>alert(saluer(&quot;Simone&quot;));</code></td></tr></tbody></table><pre><code>function valeurPi() {
+    let pi = 3.14159265359;
+    return pi;
+}
+
+let resultat = valeurPi();</code></pre><aside class="memo"><strong>À retenir</strong><p>return renvoie une valeur à l'endroit de l'appel. Une fonction peut recevoir des paramètres, retourner une valeur, ou faire les deux.</p></aside></section>
+<section id="r10-hasard"><h3>6 · Math.random() et hasard</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Obtenir un nombre aléatoire</td><td><code>Math.random()</code></td></tr><tr><td>Conserver le résultat</td><td><code>let nombreAleatoire = Math.random();</code></td></tr><tr><td>Tester un cas de 25 %</td><td><code>if (nombreAleatoire &lt; 0.25) { /* ... */ }</code></td></tr></tbody></table><pre><code>function jouer() {
+    let nombreAleatoire = Math.random();
+
+    if (nombreAleatoire &lt; 0.25) {
+        gArgent += 100;
+    }
+    else {
+        gArgent -= 50;
+    }
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Math.random() retourne un nombre entre 0 inclus et 1 exclu. Dans l'exemple du cours : 25 % de chances de gagner 100 $ et 75 % de perdre 50 $. gArgent est la variable globale utilisée dans cet exemple.</p></aside></section>
+<section id="r10-arret"><h3>7 · return arrête la fonction</h3><pre><code>function tousEgaux() {
+    if (gNombre1 == gNombre2 &amp;&amp; gNombre1 == gNombre3) {
+        return true;
+    }
+    return false;
+}
+
+function maximum(x, y) {
+    if (x &gt; y) {
+        return x;
+    }
+    return y;
+}
+
+let nombre = maximum(2, 4); // 4</code></pre><aside class="memo"><strong>À retenir</strong><p>Dès qu'un return est exécuté, la fonction se termine : on peut donc placer return false ou return y après le if, sans else.</p></aside></section>
+<section id="r10-recapitulatif"><h3>8 · Récapitulatif</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Déclarer les paramètres</td><td><code>function nomDeFonction(parametre) { /* ... */ }</code></td></tr><tr><td>Fournir un argument à l’appel</td><td><code>nomDeFonction(&quot;valeur&quot;);</code></td></tr><tr><td>Retourner une valeur</td><td><code>return resultat;</code></td></tr><tr><td>Conserver le retour</td><td><code>let valeur = maFonction();</code></td></tr><tr><td>Produire un nombre aléatoire</td><td><code>Math.random()</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Paramètres dans la déclaration → arguments dans l'appel → utilisation des paramètres dans le corps → retour éventuel avec return. return met fin à l'exécution de la fonction.</p></aside></section>
+<p class="back-top"><a href="#sommaire-general">Retour au sommaire général</a></p>
+</article>
+<article class="chapter" id="r11" aria-labelledby="r11-title">
+<div class="chapter-heading"><span class="eyebrow">Fiche 5 / 6</span><h2 id="r11-title">Rencontre 11 <small>— Boucles while et compteurs</small></h2></div>
+<details class="chapter-toc"><summary>Voir les 9 rubriques de cette fiche</summary><nav aria-label="Sommaire de Rencontre 11"><a href="#r11-while">1 · Répéter avec while</a><a href="#r11-compteur">2 · Compteur et nombre d’itérations</a><a href="#r11-somme">3 · Accumuler une valeur</a><a href="#r11-dom">4 · Répéter une opération sur le DOM</a><a href="#r11-infinie">5 · Éviter une boucle infinie</a><a href="#r11-conditions">6 · Conditions dans une boucle</a><a href="#r11-logique">7 · Plusieurs conditions avec &amp;&amp;</a><a href="#r11-facultatif">8 · Pour aller plus loin (facultatif)</a><a href="#r11-recap">9 · Récapitulatif</a></nav></details>
+<section id="r11-while"><h3>1 · Répéter avec while</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Répéter tant que la condition est vraie</td><td><code>while (condition) { /* instructions */ }</code></td></tr><tr><td>Vérifier la condition avant chaque passage</td><td><code>while (i &lt; 4) { /* instructions */ }</code></td></tr></tbody></table><pre><code>let i = 1;
+
+while (i &lt; 4) {
+    console.log(i);
+    i += 1;
+}
+// Affiche 1, 2, 3</code></pre><aside class="memo"><strong>À retenir</strong><p>La boucle while vérifie sa condition avant chaque itération. Quand elle devient false, la boucle s'arrête. Si la condition est fausse dès le départ, les instructions ne s'exécutent pas.</p></aside></section>
+<section id="r11-compteur"><h3>2 · Compteur et nombre d’itérations</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Commencer à 1</td><td><code>let i = 1;</code></td></tr><tr><td>Recommencer tant que i est plus petit que 4</td><td><code>while (i &lt; 4) { /* instructions */ }</code></td></tr><tr><td>Augmenter le compteur</td><td><code>i += 1;</code></td></tr><tr><td>Répéter 9 fois, de 1 à 9</td><td><code>while (i &lt; 10) { /* instructions */ }</code></td></tr></tbody></table><pre><code>let i = 1;
+let texte = &quot;&quot;;
+
+while (i &lt; 10) {
+    texte += i;
+    i += 1;
+}
+// 9 itérations : i vaut 1, 2, ..., 9</code></pre><aside class="memo"><strong>À retenir</strong><p>Pour construire une boucle, repérer ce qui change à chaque répétition : valeur initiale du compteur, condition d'arrêt et modification du compteur. Ici, i augmente de 1 à chaque itération.</p></aside></section>
+<section id="r11-somme"><h3>3 · Accumuler une valeur</h3><pre><code>let valeur = 10;
+let i = 1;
+
+while (i &lt; 5) {
+    valeur += i;
+    i += 1;
+}
+// valeur vaut 20 : 10 + 1 + 2 + 3 + 4</code></pre><aside class="memo"><strong>À retenir</strong><p>À chaque itération, += ajoute une valeur à celle qui est déjà conservée. Cette boucle effectue quatre itérations.</p></aside></section>
+<section id="r11-dom"><h3>4 · Répéter une opération sur le DOM</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Construire un nom de classe avec le compteur</td><td><code>&quot;.bob&quot; + i</code></td></tr><tr><td>Retrouver l’élément qui correspond</td><td><code>document.querySelector(&quot;.bob&quot; + i)</code></td></tr><tr><td>Ajouter une classe à cet élément</td><td><code>document.querySelector(&quot;.bob&quot; + i).classList.add(&quot;image&quot;);</code></td></tr></tbody></table><pre><code>let i = 1;
+
+while (i &lt; 4) {
+    document.querySelector(&quot;.bob&quot; + i).classList.add(&quot;image&quot;);
+    i += 1;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Le compteur sert à cibler successivement .bob1, .bob2 et .bob3. La classe image est ajoutée à chaque élément, sans recopier trois fois l'instruction.</p></aside></section>
+<section id="r11-infinie"><h3>5 · Éviter une boucle infinie</h3><pre><code>// Exemple à NE PAS exécuter tel quel :
+let i = 1;
+
+while (i &lt; 4) {
+    console.log(&quot;Oups ! Boucle infinie.&quot;);
+    // Il manque : i += 1;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Si i ne change jamais, la condition i &lt; 4 reste toujours vraie : la boucle peut figer la page. Prévoir une condition qui pourra devenir fausse et mettre à jour les variables nécessaires.</p></aside></section>
+<section id="r11-conditions"><h3>6 · Conditions dans une boucle</h3><pre><code>let i = 1;
+
+while (i &lt; 4) {
+    if (i == 2) {
+        console.log(&quot;Deuxième passage&quot;);
+    }
+    i += 1;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Un bloc if peut se trouver dans une boucle while. Sa condition est évaluée à chaque itération.</p></aside></section>
+<section id="r11-logique"><h3>7 · Plusieurs conditions avec &amp;&amp;</h3><pre><code>let x = 1;
+let y = 10;
+
+while (x &lt; 5 &amp;&amp; y &gt; 5) {
+    x += 1;
+    y -= 2;
+}
+// La boucle s'arrête avec x = 4 et y = 4.</code></pre><aside class="memo"><strong>À retenir</strong><p>Avec &amp;&amp; (ET), toutes les conditions doivent rester vraies. La boucle s'arrête dès que l'une devient fausse : ici, y atteint 4 alors que x est encore plus petit que 5.</p></aside></section>
+<section id="r11-facultatif"><h3>8 · Pour aller plus loin (facultatif)</h3><pre><code>do {
+    // Instructions
+} while (condition);</code></pre><aside class="memo"><strong>À retenir</strong><p>La boucle do...while vérifie sa condition APRÈS les instructions : elle s'exécute donc au moins une fois. Elle est facultative dans Z03 et n'est pas exigée aux évaluations. La section sur le débogueur est elle aussi entièrement optionnelle.</p></aside></section>
+<section id="r11-recap"><h3>9 · Récapitulatif</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Créer un compteur</td><td><code>let i = 1;</code></td></tr><tr><td>Répéter avec une condition</td><td><code>while (i &lt; 4) { /* instructions */ }</code></td></tr><tr><td>Faire évoluer le compteur</td><td><code>i += 1;</code></td></tr><tr><td>Ajouter une valeur</td><td><code>valeur += i;</code></td></tr><tr><td>Cibler des éléments numérotés</td><td><code>document.querySelector(&quot;.bob&quot; + i)</code></td></tr><tr><td>Exiger deux conditions</td><td><code>while (x &lt; 5 &amp;&amp; y &gt; 5) { /* instructions */ }</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Initialiser le compteur → vérifier la condition → exécuter les instructions → faire évoluer le compteur. Éviter les boucles infinies. do...while et le débogueur sont facultatifs.</p></aside></section>
+<p class="back-top"><a href="#sommaire-general">Retour au sommaire général</a></p>
+</article>
+<article class="chapter" id="r12" aria-labelledby="r12-title">
+<div class="chapter-heading"><span class="eyebrow">Fiche 6 / 6</span><h2 id="r12-title">Rencontre 12 <small>— Tableaux et parcours avec while</small></h2></div>
+<details class="chapter-toc"><summary>Voir les 11 rubriques de cette fiche</summary><nav aria-label="Sommaire de Rencontre 12"><a href="#r12-creation">1 · Créer un tableau</a><a href="#r12-index">2 · Accéder aux données avec un index</a><a href="#r12-modifier">3 · Modifier une valeur</a><a href="#r12-taille">4 · Taille du tableau : length</a><a href="#r12-utiliser">5 · Utiliser les valeurs d'un tableau</a><a href="#r12-ajouter">6 · Ajouter et retirer des éléments</a><a href="#r12-parcours">7 · Parcourir un tableau avec while</a><a href="#r12-somme">8 · Calculer la somme d'un tableau</a><a href="#r12-rechercher">9 · Rechercher une valeur</a><a href="#r12-toutModifier">10 · Modifier tous les éléments</a><a href="#r12-recap">11 · Récapitulatif</a></nav></details>
+<section id="r12-creation"><h3>1 · Créer un tableau</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Créer un tableau de chaînes</td><td><code>let couleurs = [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Jaune&quot;];</code></td></tr><tr><td>Créer un tableau de nombres</td><td><code>let ages = [17, 19, 20, 104, 21, 18, 22];</code></td></tr></tbody></table><pre><code>let nomsEtudiants = [&quot;Madeleine&quot;, &quot;Omar&quot;, &quot;Conrad&quot;,
+                     &quot;Marie-Gisèle&quot;, &quot;Jean-Jérémie&quot;,
+                     &quot;Sandra&quot;, &quot;Bartolomé&quot;];
+let ages = [17, 19, 20, 104, 21, 18, 22];</code></pre><aside class="memo"><strong>À retenir</strong><p>Un tableau rassemble plusieurs valeurs semblables dans une seule variable. On utilise des crochets [ ] et des virgules entre les éléments.</p></aside></section>
+<section id="r12-index"><h3>2 · Accéder aux données avec un index</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Lire la première valeur</td><td><code>couleurs[0]</code></td></tr><tr><td>Lire la cinquième valeur</td><td><code>couleurs[4]</code></td></tr><tr><td>Conserver un élément dans une variable</td><td><code>let a = couleurs[0];</code></td></tr></tbody></table><pre><code>let couleurs = [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Jaune&quot;, &quot;Vert&quot;, &quot;Violet&quot;];
+
+let premiere = couleurs[0]; // &quot;Bleu&quot;
+let cinquieme = couleurs[4]; // &quot;Violet&quot;</code></pre><aside class="memo"><strong>À retenir</strong><p>L'index du premier élément est 0, pas 1. Dans un tableau de 5 éléments, les index sont 0, 1, 2, 3 et 4.</p></aside></section>
+<section id="r12-modifier"><h3>3 · Modifier une valeur</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Remplacer un élément à l'index 3</td><td><code>personnages[3] = &quot;Yoshi&quot;;</code></td></tr><tr><td>Lire ensuite cette valeur</td><td><code>personnages[3]</code></td></tr></tbody></table><pre><code>let personnages = [&quot;Mario&quot;, &quot;Luigi&quot;, &quot;Peach&quot;, &quot;Bernard&quot;];
+
+personnages[3] = &quot;Yoshi&quot;;
+// &quot;Bernard&quot; est remplacé par &quot;Yoshi&quot;.</code></pre><aside class="memo"><strong>À retenir</strong><p>On modifie une case existante avec nomTableau[index] = nouvelleValeur. Le reste du tableau ne change pas.</p></aside></section>
+<section id="r12-taille"><h3>4 · Taille du tableau : length</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Connaître le nombre d'éléments</td><td><code>ages.length</code></td></tr><tr><td>Conserver la taille</td><td><code>let longueur = ages.length;</code></td></tr><tr><td>Lire la dernière valeur</td><td><code>ages[ages.length - 1]</code></td></tr></tbody></table><pre><code>let ages = [17, 19, 20, 104, 21, 18, 22];
+
+let longueur = ages.length;          // 7
+let derniereValeur = ages[ages.length - 1]; // 22</code></pre><aside class="memo"><strong>À retenir</strong><p>length donne le nombre d'éléments. Comme les index commencent à 0, le dernier index est length - 1.</p></aside></section>
+<section id="r12-utiliser"><h3>5 · Utiliser les valeurs d'un tableau</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Multiplier deux éléments de tableaux</td><td><code>prix[0] * quantites[0]</code></td></tr><tr><td>Insérer une valeur dans un message</td><td><code>couleurs[0]</code></td></tr><tr><td>Lire une valeur pour un calcul</td><td><code>let totalArticle1 = prix[0] * quantites[0];</code></td></tr></tbody></table><pre><code>let prix = [4.5, 3.99, 7.2, 8.4];
+let quantites = [2, 3, 4, 3];
+let valeurTotaleArticle1 = prix[0] * quantites[0]; // 9
+
+let couleurs = [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Violet&quot;, &quot;Rose&quot;];
+document.querySelector(&quot;.message&quot;).textContent =
+    &quot;Mes couleurs préférées sont &quot; + couleurs[0] + &quot; et &quot; + couleurs[2];</code></pre><aside class="memo"><strong>À retenir</strong><p>Un élément du tableau peut être utilisé comme une variable : dans un calcul, une chaîne de caractères ou une modification du DOM.</p></aside></section>
+<section id="r12-ajouter"><h3>6 · Ajouter et retirer des éléments</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Ajouter un élément à la fin</td><td><code>couleurs.push(&quot;Violet&quot;);</code></td></tr><tr><td>Retirer le dernier élément</td><td><code>notes.pop();</code></td></tr><tr><td>Retirer 2 éléments à partir de l'index 0</td><td><code>couleurs.splice(0, 2);</code></td></tr><tr><td>Retirer 1 élément à partir de l'index 2</td><td><code>couleurs.splice(2, 1);</code></td></tr></tbody></table><pre><code>let couleurs = [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Jaune&quot;, &quot;Vert&quot;];
+couleurs.push(&quot;Violet&quot;);
+// [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Jaune&quot;, &quot;Vert&quot;, &quot;Violet&quot;]
+
+let notes = [68, 71, 93, 78];
+notes.pop();
+// [68, 71, 93]</code></pre><pre><code>let couleurs = [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Jaune&quot;,
+                &quot;Vert&quot;, &quot;Orange&quot;, &quot;Violet&quot;];
+couleurs.splice(0, 2);
+// [&quot;Jaune&quot;, &quot;Vert&quot;, &quot;Orange&quot;, &quot;Violet&quot;]</code></pre><pre><code>let couleurs = [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Jaune&quot;,
+                &quot;Vert&quot;, &quot;Orange&quot;, &quot;Violet&quot;];
+couleurs.splice(2, 1);
+// [&quot;Bleu&quot;, &quot;Rouge&quot;, &quot;Vert&quot;, &quot;Orange&quot;, &quot;Violet&quot;]</code></pre><aside class="memo"><strong>À retenir</strong><p>push ajoute à la fin; pop retire le dernier élément. splice(indexDépart, nombreÀRetirer) supprime des éléments consécutifs, en commençant à l'index indiqué.</p></aside></section>
+<section id="r12-parcours"><h3>7 · Parcourir un tableau avec while</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Commencer au premier index</td><td><code>let i = 0;</code></td></tr><tr><td>Continuer tant qu'il reste des éléments</td><td><code>while (i &lt; lettres.length) { /* instructions */ }</code></td></tr><tr><td>Accéder à l'élément courant</td><td><code>lettres[i]</code></td></tr><tr><td>Avancer à l'index suivant</td><td><code>i += 1;</code></td></tr></tbody></table><pre><code>let lettres = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];
+let i = 0;
+
+while (i &lt; lettres.length) {
+    console.log(lettres[i]);
+    i += 1;
+}
+// Affiche a, puis b, puis c.</code></pre><aside class="memo"><strong>À retenir</strong><p>Une boucle de parcours commence à i = 0, s'arrête lorsque i atteint length et utilise tableau[i]. La condition i &lt; tableau.length évite d'écrire une limite fixe.</p></aside></section>
+<section id="r12-somme"><h3>8 · Calculer la somme d'un tableau</h3><pre><code>let nombres = [10, 20, 30, 40];
+let total = 0;
+let i = 0;
+
+while (i &lt; nombres.length) {
+    total += nombres[i];
+    i += 1;
+}
+// total vaut 100.</code></pre><aside class="memo"><strong>À retenir</strong><p>Initialiser la somme à 0, puis ajouter chaque élément avec total += tableau[i]. Cette boucle effectue quatre itérations.</p></aside></section>
+<section id="r12-rechercher"><h3>9 · Rechercher une valeur</h3><pre><code>let animaux = [&quot;chien&quot;, &quot;chat&quot;, &quot;oiseau&quot;];
+let i = 0;
+
+while (i &lt; animaux.length) {
+    if (animaux[i] == &quot;chat&quot;) {
+        console.log(&quot;Chat trouvé !&quot;);
+    }
+    i += 1;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>On peut utiliser if dans une boucle pour examiner chaque valeur du tableau et réagir si une condition est vraie.</p></aside></section>
+<section id="r12-toutModifier"><h3>10 · Modifier tous les éléments</h3><pre><code>let valeurs = [10, 20, 30];
+let i = 0;
+
+while (i &lt; valeurs.length) {
+    valeurs[i] += 5;
+    i += 1;
+}
+// valeurs contient [15, 25, 35].</code></pre><aside class="memo"><strong>À retenir</strong><p>Pour modifier les éléments du tableau, on utilise le même index i à gauche de l'affectation : tableau[i] += 5.</p></aside></section>
+<section id="r12-recap"><h3>11 · Récapitulatif</h3><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Créer un tableau</td><td><code>let valeurs = [10, 20, 30];</code></td></tr><tr><td>Lire la première case</td><td><code>valeurs[0]</code></td></tr><tr><td>Modifier une case</td><td><code>valeurs[1] = 25;</code></td></tr><tr><td>Obtenir le nombre d'éléments</td><td><code>valeurs.length</code></td></tr><tr><td>Lire le dernier élément</td><td><code>valeurs[valeurs.length - 1]</code></td></tr><tr><td>Ajouter à la fin</td><td><code>valeurs.push(40);</code></td></tr><tr><td>Retirer le dernier</td><td><code>valeurs.pop();</code></td></tr><tr><td>Retirer depuis un index</td><td><code>valeurs.splice(1, 2);</code></td></tr><tr><td>Parcourir tous les éléments</td><td><code>while (i &lt; valeurs.length) { /* ... */ }</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Indices à partir de 0. length donne la taille. push, pop et splice modifient le tableau. Avec while, i commence à 0, augmente à chaque passage, et tableau[i] donne l'élément courant.</p></aside></section>
+<p class="back-top"><a href="#sommaire-general">Retour au sommaire général</a></p>
+</article>
+<footer class="page-footer">Z03 · Aide-mémoire JavaScript R6–R12 · Ressource de révision. La documentation permise à l'examen est déterminée séparément par l'enseignant.</footer>
+</main>
+</body>
+</html>

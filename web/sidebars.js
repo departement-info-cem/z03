@@ -2,6 +2,10 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  aideMemoires: [
+    { type: "doc", id: "aide-memoire/complet-r6-r12", label: "R6 à R12 — complet" },
+    { type: "doc", id: "aide-memoire/telechargements", label: "Téléchargements" },
+  ],
   bienDebuter: [
     {
       type: "doc",
@@ -203,21 +207,31 @@ const sidebars = {
         { type: "ref", id: "labos/labo5", label: "Laboratoire — Conditions et logique" },
       ],
     },
-    { type: "doc", id: "cours/rencontre10", label: "Rencontre 10 — Boucles" },
     {
       type: "category",
-      label: "Rencontre 11 — Tableaux et plusieurs éléments DOM",
+      label: "Rencontre 10 — Fonctions avec paramètres et retours",
       items: [
-        { type: "doc", id: "cours/rencontre11", label: "Cours — Tableaux" },
-        {
-          type: "doc",
-          id: "cours/rencontre11-queryselectorall",
-          label: "Cours — Tableaux d'éléments HTML",
-        },
+        { type: "doc", id: "cours/rencontre10", label: "Cours — Paramètres et retours" },
+        { type: "ref", id: "labos/labo13", label: "Laboratoire — Paramètres et retours" },
       ],
     },
-    { type: "doc", id: "cours/rencontre12", label: "Rencontre 12 — Paramètres et retours" },
-    { type: "doc", id: "cours/rencontre13", label: "Rencontre 13 — Plusieurs éléments du DOM" },
+    {
+      type: "category",
+      label: "Rencontre 11 — DOM et boucles",
+      items: [
+        { type: "doc", id: "cours/rencontre11", label: "Cours — Boucles" },
+        { type: "ref", id: "labos/labo11", label: "Laboratoire — Boucles" },
+      ],
+    },
+    {
+      type: "category",
+      label: "Rencontre 12 — Tableaux et parcours",
+      items: [
+        { type: "doc", id: "cours/rencontre12", label: "Cours — Tableaux" },
+        { type: "ref", id: "labos/labo12", label: "Laboratoire — Tableaux" },
+      ],
+    },
+    { type: "doc", id: "cours/rencontre13", label: "Rencontre 13 — TP3" },
     { type: "doc", id: "cours/rencontre14", label: "Rencontre 14 — Rattrapage et révision" },
     { type: "doc", id: "cours/rencontre15", label: "Rencontre 15 — Évaluation sommative finale" },
   ],
@@ -248,6 +262,9 @@ const sidebars = {
       id: "labos/labo5",
       label: "Rencontre 9 — Conditions et logique",
     },
+    { type: "doc", id: "labos/labo13", label: "Rencontre 10 — Paramètres et retours" },
+    { type: "doc", id: "labos/labo11", label: "Rencontre 11 — Boucles" },
+    { type: "doc", id: "labos/labo12", label: "Rencontre 12 — Tableaux" },
   ],
 };
 

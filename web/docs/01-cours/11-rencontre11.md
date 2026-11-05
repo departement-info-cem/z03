@@ -1,290 +1,206 @@
 ---
-title: Rencontre 11 - Tableaux
-description: Tableaux et parcourir un tableau avec une boucle
+title: Rencontre 11 - Boucles
+description: Boucles while, compteurs et manipulation du DOM
 ---
 
-# Rencontre 11 - Tableaux
+# Rencontre 11 - Boucles
 
-Parfois, on doit stocker plusieurs **données similaires**.
+Remarquez ce code plutôt répétitif :
 
-Exemple : stocker le nom et l'âge de 7 étudiant(e)s
+<center>![Répétition](../../static/img/cours16/repeating.png)</center>
 
-<center>![Variables répétitives](../../static/img/cours17/noArray.png)</center>
+La seule chose qui varie entre ces lignes de code est la **classe** des éléments HTML.
 
-⛔ Problème : ça fait beaucoup de variables, et elles sont toutes similaires.
+On pourrait rendre le code moins répétitif avec une **fonction avec paramètre**, mais il faudrait quand même
+appeler la fonction **6 fois** !
 
-## 🎰 Tableaux
+## ➰ Boucles while
 
-### 🥚 Créer un tableau
-
-Les **tableaux** permettent de ranger des données similaires.
-
-Syntaxe pour créer un tableau :
-
-<center>![Tableau](../../static/img/cours17/createArray.png)</center>
-
-D'autres exemples :
-
-```js showLineNumbers
-let nomsEtudiants = ["Madeleine", "Omar", "Conrad", "Marie-Gisèle", "Jean-Jérémie", "Sandra", "Bartolomé"];
-let ages = [17, 19, 20, 104, 21, 18, 22];
-```
-
-### 📬 Accéder aux données d'un tableau
+Les boucles permettent de **répéter** du code !
 
 Syntaxe :
 
-<center>![Tableau](../../static/img/cours17/accessData.png)</center>
-
-Exemple :
-
-```js
-let couleurs = ["Bleu", "Rouge", "Jaune", "Vert", "Violet"];
-```
-
-* Accéder à la donnée `"Bleu"` et la ranger dans une variable : 
-```js
-let a = couleurs[0]; // a contient "Bleu"
-```
-* Accéder à la donnée `"Violet"` :
-```js
-couleurs[4]
-```
-
-<center>![Tableau](../../static/img/cours17/index.png)</center>
-
-### 📝 Modifier les données d'un tableau
-
-Syntaxe :
-
-```js
-nomTableau[index] = nouvelle_valeur;
-```
-
-Exemple :
-
-```js
-let personnages = ["Mario", "Luigi", "Peach", "Bernard"];
-```
-
-Disons qu'on veut remplacer la donnée `"Bernard"` par `"Yoshi"` :
-
-```js
-personnages[3] = "Yoshi";
-```
-
-Résultat :
-
-<center>![Tableau](../../static/img/cours17/yoshi.png)</center>
-
-### 🐍 Obtenir la taille d'un tableau
-
-La **taille** d'un tableau correspond au **nombre de données** qu'il contient.
-
-Syntaxe : 
-
-```js
-nomTableau.length
-```
-
-Exemples :
-
 ```js showLineNumbers
-let ages = [17, 19, 20, 104, 21, 18, 22];
+while( ... condition ... ){
 
-let longueur = ages.length; // longueur contient 7
+    // Code à répéter
 
-let message = `Le tableau ages contient ${ages.length} éléments.`;
-// "Le tableau ages contient 7 éléments."
+}
 ```
 
-:::tip
+C'est un peu comme un `if`, sauf que le code à l'intérieur de la boucle va **s'exécuter à répétition tant que la condition reste `true`**.
 
-`length` permet également d'accéder facilement **à la dernière valeur d'un tableau**. Comme l'**index** d'un tableau **commence à `0`** et que le tableau contient **`length` éléments**, cela signifie que le **dernier index** est `length - 1` :
+<center>![Boucle while](../../static/img/cours16/while.png)</center>
 
-```js
-let derniereValeur = ages[ages.length - 1];
-// derniereValeur contient 22
-```
+<hr/>
 
-:::
+#### Exemple pas-à-pas
 
-### 🧰 Utiliser les données d'un tableau
+<center>![Boucle while](../../static/img/cours16/progress.png)</center>
+
+### 💡 Quelques exemples
 
 #### Exemple 1
 
-```js showLineNumbers
-let prix = [4.5, 3.99, 7.2, 8.4];
-let quantites = [2, 3, 4, 3];
+Cette boucle fera **9 itérations**. (9 répétitions) On se sert de la variable `i` pour ajouter du **contenu textuel** :
 
-let valeurTotaleArticle1 = prix[0] * quantites[0];
-//       ↑ contient 4.5 * 2, donc 9
-```
+<center>![Boucle while](../../static/img/cours16/while2.png)</center>
 
 #### Exemple 2
 
-```js showLineNumbers
-let couleurs = ["Bleu", "Rouge", "Violet", "Rose"];
-let elementMessage = document.querySelector(".message");
+Cette boucle fera **4 itérations**. À chaque itération, on incrémente la variable `valeur` avec la valeur de `i`.
 
-elementMessage.textContent = `Mes couleurs préférées sont ${couleurs[0]} et ${couleurs[2]}`;
-// "Mes couleurs préférées sont Bleu et Violet"
-```
+<center>![Boucle while](../../static/img/cours16/while1.png)</center>
 
-### 💧 Ajouter un élément à la fin d'un tableau
+La valeur finale est : `10 + 1 + 2 + 3 + 4`, donc `20`.
 
-Syntaxe :
+#### Exemple 3
 
-```js
-monTableau.push( ... valeur ... );
-```
+Cette boucle fera **3 itérations**. À chaque itération, la classe `image` est ajoutée à un élément HTML.
 
-Exemple :
+<center>![Boucle while](../../static/img/cours16/whileEx.png)</center>
+<center>![Boucle while](../../static/img/cours16/bobWhile.png)</center>
 
-```js
-let couleurs = ["Bleu", "Rouge", "Jaune", "Vert"];
+### 🔨 Construire une boucle
 
-couleurs.push("Violet");
-// couleurs vaut ["Bleu", "Rouge", "Jaune", "Vert", "Violet"]
-// couleurs.length vaut maintenant 5
-```
+Commencez par analyser du **code répétitif** pour **trouver les différences**.
 
-<center>![Tableau](../../static/img/cours17/push.png)</center>
+<center>![Répétitions](../../static/img/cours16/buildLoop1.png)</center>
 
-### ❌ Retirer le dernier élément d'un tableau
+La seule chose qui varie dans ces 3 lignes de code, c'est le **numéro** à la fin de la **classe**.
 
-Syntaxe :
+On a besoin d'une boucle où la variable `i` vaudra `1`, puis `2`, puis `3`.
 
-```js
-monTableau.pop();
-```
+Squelette de la boucle :
 
-Exemple :
+<center>![Boucle while](../../static/img/cours16/skeleton.png)</center>
 
-```js
-let notes = [68, 71 93, 78];
+* `i` commencera à `1`. (Grâce à `let i = 1;`)
+* `i` va augmenter de `1` à chaque itération. (Grâce à `i += 1;`)
+* `i` va s'arrêter à `3`. (Grâce à `i < 4`)
 
-notes.pop();
-// contient maintenant [68, 71, 93]
-```
+Il reste à intégrer le code et se servir de la variable `i` :
 
-<center>![Tableau](../../static/img/cours17/pop.png)</center>
+<center>![Boucle while](../../static/img/cours16/whileEx.png)</center>
 
-### 🚮 Retirer un ou plusieurs éléments consécutifs n'importe où dans un tableau
+<hr/>
 
-Syntaxe :
+En résumé :
 
-<center>![Tableau](../../static/img/cours17/splice.png)</center>
+<center>![Boucle while](../../static/img/cours16/buildLoop2.png)</center>
 
-Exemple :
+:::tip
 
-```js
-let couleurs = ["Bleu", "Rouge", "Jaune", "Vert", "Orange", "Violet"];
-
-couleurs.splice(0, 2);
-// couleurs contient maintenant ["Jaune", "Vert", "Orange", "Violet"]
-```
-
-L'élément à **l'index `0`** est le premier à être retiré et est inclus dans le nombre total d'éléments à retirer.
-
-Autre exemple :
-
-```js
-let couleurs = ["Bleu", "Rouge", "Jaune", "Vert", "Orange", "Violet"];
-
-couleurs.splice(2,1);
-// couleurs contient maintenant ["Bleu", "Rouge", "Vert", "Orange", "Violet"]
-```
-
-`"Jaune"` était à l'index `2` et seulement 1 élément a été retiré.
-
-## ➰ Parcourir un tableau
-
-Tentons de calculer la **somme de tous les éléments** d'un tableau :
-
-<center>![Somme d'un tableau sans boucle](../../static/img/cours17/sumNoLoop.png)</center>
-
-Bonne nouvelle : les **boucles** et les **tableaux** sont **meilleurs amis** 🧽⭐
-
-<center>![Bob et Patrick](../../static/img/cours17/bestFriends.png)</center>
-
-Les boucles sont **très utiles pour accéder à tous les éléments d'un tableau séquentiellement**.
-
-### 🔨 Construire une boucle pour parcourir un tableau
-
-Dans de nombreuses situations, il faut **parcourir un tableau en entier** :
-
-* Afficher tous les éléments
-* Calculer la somme ou la moyenne de plusieurs nombres
-* Trouver le maximum ou le minimum parmi plusieurs nombres
-* Trier les éléments d'un tableau en ordre croissant ou décroissant
-* etc.
-
-Une **boucle** servant à **parcourir un tableau** ressemblera à ceci :
-
-<center>![Boucle pour tableau](../../static/img/cours17/loopForArray.png)</center>
-
-* `monTableau` est le nom de votre variable qui contient un tableau.
-* L'objectif est de parcourir `monTableau[0]`, `monTableau[1]`, `monTableau[2]`, etc. jusqu'à la fin du tableau.
-
-On aura toujours besoin d'une variable `i` qui commence à `0` (au début du tableau) et  qui se rend jusqu'à `length - 1`, qui correspond à la **fin du tableau**.
-
-Par exemple, avec ce tableau :
-
-```js
-let lettres = ["a", "b", "c"];
-```
-
-On aura besoin d'une boucle qui parcourir les index `0`, puis `1`, puis `2`. 
-
-C'est à dire qui parcourt tous les index, de `0` à `lettres.length - 1`.
-
-### 🎲 Quelques exemples
-
-#### Exemple 1 : Tout afficher
-
-Afficher toutes les données d'un tableau dans la **console**.
-
-💡 Il faut s'assurer, à chaque itération, d'afficher la valeur de `monTableau[i]` dans la **console**.
-
-<center>![Boucle pour tableau](../../static/img/cours17/console.png)</center>
-
-:::info
-
-Pourquoi on met `i < lettres.length` plutôt que `i < 5` ? Car `lettres.length` vaut `5` ! Pas besoin de compter les **index** du tableau manuellement.
+S'il y avait eu 3 images supplémentaires avec les classes `bob4`, `bob5` et `bob6`, il suffirait de remplacer la condition de la boucle par `i < 7`, tout simplement !
 
 :::
 
+### 🌌 Boucles infinies
+
+:::danger
+
+⛔ Attention ! Les boucles peuvent **figer la page Web** si elles s'exécutent à l'infini.
+
+```js showLineNumbers
+let i = 1;
+
+while(i < 4){
+    console.log("Oups ! Boucle infinie.");
+}
+```
+
+Ici, on a oublié **d'incrémenter la valeur de `i`** dans la boucle, donc `i` vaudra toujours `1` et la condition `i < 4` sera **toujours `true`** !
+
+:::
+
+### 🧩 Exemples avancés
+
+#### Exemple 1
+
+On peut très bien intégrer des blocs `if` (et d'autres types de blocs) dans des boucles `while` :
+
+<center>![Boucle while](../../static/img/cours16/whileIf.png)</center>
+
+#### Exemple 2
+
+Les **conditions** de nos boucles peuvent être aussi sophistiquées que nécessaire :
+
+<center>![Boucle while](../../static/img/cours16/whileAnd.png)</center>
+
+* À chaque itération, `x` augmente de `1` et `y` diminue de `2`.
+* À cause de la **condition**, dès que `x` atteindra `5` ou plus OU dès que `y` atteindra `5` ou moins, la boucle s’**arrêtera**.
+* Comme `y` diminue plus rapidement que `x` augmente, la boucle s’arrête alors que `x` respecte encore la condition, mais `y` vaut `4` et ne respecte plus la condition.
+
+## 🏁 Pour aller plus loin — Boucles do while (facultatif)
+
+Cette forme de boucle est **facultative** dans Z03. La boucle `while` suffit pour les exercices essentiels de cette rencontre. Vous pouvez lire cette section par curiosité, mais vous n'avez pas à utiliser `do...while` pour les évaluations.
+
+Syntaxe :
+
+```js showLineNumbers
+do{
+
+    // Code à répéter
+
+}while( ... condition ...);
+```
+
+* Très similaire à une boucle `while`, mais la **condition** est vérifiée **APRÈS chaque itération**. (Plutôt qu’avant) Cela signifie qu’il y aura forcément **au moins une itération**.
+* Avec une boucle `while`, si la condition était `false` initialement, elle n’effectuerait tout simplement **aucune itération**.
+
+<center>![Boucle do while](../../static/img/cours16/doWhile.png)</center>
+
+## 🪳 Débogueur (Optionnel)
+
+<details>
+    <summary>🥷 Jutsu secret 🤫</summary>
+
+    ‼️ 📢Cette section est complètement optionnelle au cours. ‼️
+
+    Parfois, il est difficile de voir ou comprendre ce qui se passe avec notre code. Un outil très intéressant est le débogueur. Il permet d'ouvrir une vue sur l'exécution de notre code et faciliter la découverte d'éventuel problème. 🔎🪳
+
+
+    On le retrouve juste à côté de l'onglet de la console de 🔥🦊FireFox. 
+
+    On y retrouve notre script.js! 🎉
+    <center>![Débogueur](../../static/img/cours11/debogueur.png)</center>
+    
+    <hr/>
+    
+
+    Pour l'utiliser, il suffit d'insérer un point d'arrêt (breakpoint) à la ligne que l'on veut explorer. Lors de l'exécution, notre outil de débogage va s'arrêter à ce point.
+
+    ![Insérer un point d'arrêt](../../static/img/cours11/insererPointArret.gif)
+
+    
 <hr/>
 
-#### Exemple 2 : Calculer la somme
+Nous pouvons ensuite utiliser les quatres boutons suivant pour avancer l'exécution des lignes de code.
+![Opérateurs de pas à pas](../../static/img/cours11/operateursPasAPas.png)
 
-Calculer la **somme** des éléments d'un tableau.
+<br/>
+Explorons en détail ces boutons! 🔬
+<table>
+    <tr>
+        <th>![Reprendre (F8)](../../static/img/cours11/reprendreF8.png)<br/>Reprendre (F8)</th>
+        <td>Ce bouton permet de reprendre l'exécution du script après un arrêt sur un point d'arrêt (breakpoint).</td>
+    </tr>
+    <tr>
+        <th>![Passer la fonction (F10)](../../static/img/cours11/passerFonctionF10.png)<br/>Passer la fonction (F10)</th>
+        <td>Passer la fonction permet d'exécuter le code jusqu'à la prochaine ligne. Soit, avancer d'un pas l'exécution.</td>
+    </tr>
+    <tr>
+        <th>![Entrer la fonction (F11)](../../static/img/cours11/entrerFonctionF11.png)<br/>Entrer la fonction (F11)</th>
+        <td>Entrer la fonction nous permet d'aller voir l'exécution interne de la fonction pour en examiner le contenu. Ceci est pratique lorsque nous avons une chaîne d'appel de fonction.</td>
+    </tr>
+    <tr>
+        <th>![Sortir de la fonction (Shift + F11)](../../static/img/cours11/sortirFonctionShiftF11.png)<br/>Sortir de la fonction (Shift + F11)</th>
+        <td>Sortir de la fonction nous permet de revenir là où la fonction a été appelée. Ceci est pratique lorsque la fonction est très longue et que l'on veut continuer notre observation.</td>
+    </tr>
+</table>
 
-💡 Nous aurons besoin d'une variable `total` pour stocker la **somme**. Sa valeur initiale sera `0`.
+<center>Voilà un léger survol du débogueur!</center>
 
-<center>![Boucle pour tableau](../../static/img/cours17/sum.png)</center>
+<center>![Thumbs up kid meme](../../static/img/cours11/thumbsUpKid.gif)</center>
 
-La boucle fera **4 itérations** et la variable `total` accumulera les valeurs `0 + 10 + 20 + 30 + 40`.
-
-<center>![Boucle pour tableau](../../static/img/cours17/sumLoop.png)</center>
-
-<hr/>
-
-#### Exemple 3 : Trouver une valeur
-
-Chercher le mot `"chat"` dans un tableau et afficher un message dans la **console** s'il y a lieu.
-
-<center>![Boucle pour tableau](../../static/img/cours17/findValue.png)</center>
-
-<hr/>
-
-#### Exemple 4 : Augmenter toutes les valeurs
-
-**Augmenter de 5** toutes les valeurs dans le tableau.
-
-<center>![Boucle pour tableau](../../static/img/cours17/incrementAllValues.png)</center>
-
-Résultat :
-
-<center>![Boucle pour tableau](../../static/img/cours17/result.png)</center>
+</details>

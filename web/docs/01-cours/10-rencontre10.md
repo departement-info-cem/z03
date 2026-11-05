@@ -1,204 +1,302 @@
 ---
-title: Rencontre 10 - Boucles
-description: Boucles while et boucles do while
+title: Rencontre 10 - Paramètres et retours
+description: Fonctions avec paramètres et avec valeur de retour
 ---
 
-# Rencontre 10 - Boucles
+# Rencontre 10 - Paramètres et retours
 
-Remarquez ce code plutôt répétitif :
+Certaines fonctions **n'ont pas de paramètres** :
 
-<center>![Répétition](../../static/img/cours16/repeating.png)</center>
+<center>![0 paramètre](../../static/img/cours10/noParam.png)</center>
 
-La seule chose qui varie entre ces lignes de code est la **classe** des éléments HTML.
+Certaines fonctions **ont un ou plusieurs paramètres** :
 
-On pourrait rendre le code moins répétitif avec une **fonction avec paramètre**, mais il faudrait quand même
-appeler la fonction **6 fois** !
+<center>![1 paramètre](../../static/img/cours10/yesParam.png)</center>
 
-## ➰ Boucles while
+💡 Dans la **déclaration** d'une fonction, les noms entre les parenthèses sont des **paramètres**. Lorsqu'on **appelle** cette fonction, les valeurs qu'on lui fournit sont des **arguments**.
 
-Les boucles permettent de **répéter** du code !
+Quand on appelle `alert(...)` et `console.log(...)`, il **faut** mettre du texte (ou une variable qui contient du texte) dans les **parenthèses**. Quand on fait ça on « **envoie un paramètre** » à la fonction. Cette fonction va ensuite **utiliser** le **paramètre** pour faire quelque chose avec.
 
-Syntaxe :
+## 🥚 Créer une fonction avec un paramètre
+
+Ci-dessous, j'ai une fonction simple, sans paramètre :
 
 ```js showLineNumbers
-while( ... condition ... ){
+function alerteEtConsole(){
 
-    // Code à répéter
+    alert("Allo");
+    console.log("Allo");
 
 }
 ```
 
-C'est un peu comme un `if`, sauf que le code à l'intérieur de la boucle va **s'exécuter à répétition tant que la condition reste `true`**.
+Toutefois, au lieu d'afficher `"Allo"` dans une **alerte** et dans la **console**, j'aimerais pouvoir **choisir le texte affiché** quand j'appelle la fonction...
 
-<center>![Boucle while](../../static/img/cours16/while.png)</center>
+Je vais **ajouter un paramètre à la fonction** :
 
-<hr/>
+<center>![1 paramètre](../../static/img/cours10/alertConsole.png)</center>
 
-#### Exemple pas-à-pas
+💡 J'ai ajouté un **paramètre** et je l'ai nommé `message`. J'ai **utilisé** ce paramètre à deux endroits dans la fonction.
 
-<center>![Boucle while](../../static/img/cours16/progress.png)</center>
+Disons que j'appelle la fonction comme ceci :
 
-### 💡 Quelques exemples
+<center>![1 paramètre](../../static/img/cours10/callWithParam.png)</center>
 
-#### Exemple 1
+Alors le texte `"Cliquez pour gagner 1000$ 🤑"` sera 🔌 *plugué* (propagé) à tous les endroits dans la fonction où nous avons utilisé le paramètre `message`. (C'est-à-dire dans `alert(message)` et dans `console.log(message)`)
 
-Cette boucle fera **9 itérations**. (9 répétitions) On se sert de la variable `i` pour ajouter du **contenu textuel** :
+Que se passera-t-il ? Le message `"Cliquez pour gagner 1000$ 🤑"` sera affiché dans la **console** et dans une **alerte** :
 
-<center>![Boucle while](../../static/img/cours16/while2.png)</center>
-
-#### Exemple 2
-
-Cette boucle fera **4 itérations**. À chaque itération, on incrémente la variable `valeur` avec la valeur de `i`.
-
-<center>![Boucle while](../../static/img/cours16/while1.png)</center>
-
-La valeur finale est : `10 + 1 + 2 + 3 + 4`, donc `20`.
-
-#### Exemple 3
-
-Cette boucle fera **3 itérations**. À chaque itération, la classe `image` est ajoutée à un élément HTML.
-
-<center>![Boucle while](../../static/img/cours16/whileEx.png)</center>
-<center>![Boucle while](../../static/img/cours16/bobWhile.png)</center>
-
-### 🔨 Construire une boucle
-
-Commencez par analyser du **code répétitif** pour **trouver les différences**.
-
-<center>![Répétitions](../../static/img/cours16/buildLoop1.png)</center>
-
-La seule chose qui varie dans ces 3 lignes de code, c'est le **numéro** à la fin de la **classe**.
-
-On a besoin d'une boucle où la variable `i` vaudra `1`, puis `2`, puis `3`.
-
-Squelette de la boucle :
-
-<center>![Boucle while](../../static/img/cours16/skeleton.png)</center>
-
-* `i` commencera à `1`. (Grâce à `let i = 1;`)
-* `i` va augmenter de `1` à chaque itération. (Grâce à `i += 1;`)
-* `i` va s'arrêter à `3`. (Grâce à `i < 4`)
-
-Il reste à intégrer le code et se servir de la variable `i` :
-
-<center>![Boucle while](../../static/img/cours16/whileEx.png)</center>
+<center>![1 paramètre](../../static/img/cours10/alertConsoleMoney.png)</center>
 
 <hr/>
 
-En résumé :
+<center>![Gif avec un paramètre](../../static/img/cours10/paramPropagation.gif)</center>
 
-<center>![Boucle while](../../static/img/cours16/buildLoop2.png)</center>
+:::warning
+
+Gardez à l'esprit qu'un **paramètre**, c'est un **contrat** : nous **devons** fournir un **paramètre** à la fonction pour pouvoir l'utiliser, car elle en a besoin pour que son code fonctionne bien.
+
+:::
+
+## 🧩 Exemple avec deux paramètres
+
+```js showLineNumbers
+function salutations(nom, heure){
+
+    alert(`Bonjour ${nom}, il est actuellement ${heure} !`);
+
+}
+```
+
+On peut voir que la fonction `salutations()` possède **deux paramètres** : `nom` et `heure`.
+
+⛔ N'oubliez pas : chaque **paramètre** est un **contrat** ! C'est comme si la fonction nous disait : « tu **dois** me fournir un `nom` et une `heure` pour que je puisse bien fonctionner ! »
+
+<center>![2 paramètres](../../static/img/cours10/twoParams.png)</center>
+
+## ⚡ La puissance des paramètres
+
+Quel est l'avantage d'utiliser les paramètres ? Commençons par regarder trois fonctions **sans paramètre** :
+
+```js showLineNumbers
+function texteEtBordureRouge(){
+
+    document.querySelector(".texte").style.color = "red";
+    document.querySelector(".texte").style.borderColor = "red";
+
+}
+
+function texteEtBordureBleu(){
+
+    document.querySelector(".texte").style.color = "blue";
+    document.querySelector(".texte").style.borderColor = "blue";
+
+}
+
+function texteEtBordureVert(){
+
+    document.querySelector(".texte").style.color = "green";
+    document.querySelector(".texte").style.borderColor = "green";
+
+}
+```
+
+⛔ Ces trois fonctions font **presque la même chose** et sont **très répétitives** ! 😬
+
+<hr/>
+
+À l'aide d'un **paramètre**, nous pourrions **remplacer ces trois fonctions par une seule** ! 🧠
+
+```js showLineNumbers
+function texteEtBordure(couleurChoisie){
+
+    document.querySelector(".texte").style.color = couleurChoisie;
+    document.querySelector(".texte").style.borderColor = couleurChoisie;
+
+}
+```
+
+Et voilà ! On a une fonction qui fera le travail, **peu importe la couleur** :
+
+* `texteEtBordure("pink");` permettrait de rendre le texte et la bordure roses.
+* `texteEtBordure("crimson");` permettrait de rendre le texte et la bordure cramoisis.
+* etc.
 
 :::tip
 
-S'il y avait eu 3 images supplémentaires avec les classes `bob4`, `bob5` et `bob6`, il suffirait de remplacer la condition de la boucle par `i < 7`, tout simplement !
-
-:::
-
-### 🌌 Boucles infinies
-
-:::danger
-
-⛔ Attention ! Les boucles peuvent **figer la page Web** si elles s'exécutent à l'infini.
+On pourrait même en profiter pour ajouter un **deuxième paramètre**, qui permettrait de **choisir l'élément HTML**. (Plutôt que de toujours modifier l'élément avec la classe `.texte`)
 
 ```js showLineNumbers
-let i = 1;
+function texteEtBordure(classe, couleurChoisie){
 
-while(i < 4){
-    console.log("Oups ! Boucle infinie.");
+    document.querySelector(classe).style.color = couleurChoisie;
+    document.querySelector(classe).style.borderColor = couleurChoisie;
+
 }
 ```
 
-Ici, on a oublié **d'incrémenter la valeur de `i`** dans la boucle, donc `i` vaudra toujours `1` et la condition `i < 4` sera **toujours `true`** !
+Et voilà, il ne reste plus qu'à **appeler la fonction en lui fournissant deux paramètres** :
+
+* `texteEtBordure(".description", "crimson")` : rendra l'élément `.description` cramoisi.
+* `texteEtBordure(".texte", "pink")` : rendra l'élément `.texte` rose.
+* etc.
 
 :::
 
-### 🧩 Exemples avancés
+## 🎫 Valeurs et variables
 
-#### Exemple 1
+Lorsqu'on passe des **paramètres** à une fonction, on peut le faire en utilisant directement des **valeurs** (`6`, `"salut"`, `true`, etc.) ou en utilisant des **variables**.
 
-On peut très bien intégrer des blocs `if` (et d'autres types de blocs) dans des boucles `while` :
-
-<center>![Boucle while](../../static/img/cours16/whileIf.png)</center>
-
-#### Exemple 2
-
-Les **conditions** de nos boucles peuvent être aussi sophistiquées que nécessaire :
-
-<center>![Boucle while](../../static/img/cours16/whileAnd.png)</center>
-
-* À chaque itération, `x` augmente de `1` et `y` diminue de `2`.
-* À cause de la **condition**, dès que `x` atteindra `5` ou plus OU dès que `y` atteindra `5` ou moins, la boucle s’**arrêtera**.
-* Comme `y` diminue plus rapidement que `x` augmente, la boucle s’arrête alors que `x` respecte encore la condition, mais `y` vaut `4` et ne respecte plus la condition.
-
-## 🏁 Boucles do while
-
-Syntaxe :
+Disons qu'on a la fonction suivante :
 
 ```js showLineNumbers
-do{
+function colorierTexte(couleur){
 
-    // Code à répéter
+    document.querySelector(".paragraphe2").style.color = couleur;
 
-}while( ... condition ...);
+}
 ```
 
-* Très similaire à une boucle `while`, mais la **condition** est vérifiée **APRÈS chaque itération**. (Plutôt qu’avant) Cela signifie qu’il y aura forcément **au moins une itération**.
-* Avec une boucle `while`, si la condition était `false` initialement, elle n’effectuerait tout simplement **aucune itération**.
+Les deux manières de **passer un paramètre** qui suivent sont toutes deux valides.
 
-<center>![Boucle do while](../../static/img/cours16/doWhile.png)</center>
+* Écrire directement la valeur :
 
-## 🪳 Débogueur (Optionnel)
+```js
+colorierTexte("blue");
+```
 
-<details>
-    <summary>🥷 Jutsu secret 🤫</summary>
+* Utiliser une variable :
 
-    ‼️ 📢Cette section est complètement optionnelle au cours. ‼️
+```js
+let teinte = "red";
+colorierTexte(teinte); // On a passé "red" via une variable
+```
 
-    Parfois, il est difficile de voir ou comprendre ce qui se passe avec notre code. Un outil très intéressant est le débogueur. Il permet d'ouvrir une vue sur l'exécution de notre code et faciliter la découverte d'éventuel problème. 🔎🪳
+## 📬 Retourner une valeur
 
+Voici un exemple de fonction **avec une valeur de retour** :
 
-    On le retrouve juste à côté de l'onglet de la console de 🔥🦊FireFox. 
+```js showLineNumbers
+function valeurPi(){
 
-    On y retrouve notre script.js! 🎉
-    <center>![Débogueur](../../static/img/cours11/debogueur.png)</center>
-    
-    <hr/>
-    
+    let pi = 3.14159265359;
+    return pi;
 
-    Pour l'utiliser, il suffit d'insérer un point d'arrêt (breakpoint) à la ligne que l'on veut explorer. Lors de l'exécution, notre outil de débogage va s'arrêter à ce point.
+}
+```
 
-    ![Insérer un point d'arrêt](../../static/img/cours11/insererPointArret.gif)
+Grâce au **mot clé `return`**, on peut dire que « la fonction `valeurPi()` retournera la valeur `3.14159265359` ».
 
-    
+## 📞 Appeler une fonction avec retour
+
+Voici ce qui se passe lorsqu'on appelle une **fonction avec valeur de retour** comme `valeurPi()` :
+
+<center>![Valeur de retour](../../static/img/cours11/return.png)</center>
+
 <hr/>
 
-Nous pouvons ensuite utiliser les quatres boutons suivant pour avancer l'exécution des lignes de code.
-![Opérateurs de pas à pas](../../static/img/cours11/operateursPasAPas.png)
+<center>![Animation de return](../../static/img/cours11/returnGif.gif)</center>
 
-<br/>
-Explorons en détail ces boutons! 🔬
-<table>
-    <tr>
-        <th>![Reprendre (F8)](../../static/img/cours11/reprendreF8.png)<br/>Reprendre (F8)</th>
-        <td>Ce bouton permet de reprendre l'exécution du script après un arrêt sur un point d'arrêt (breakpoint).</td>
-    </tr>
-    <tr>
-        <th>![Passer la fonction (F10)](../../static/img/cours11/passerFonctionF10.png)<br/>Passer la fonction (F10)</th>
-        <td>Passer la fonction permet d'exécuter le code jusqu'à la prochaine ligne. Soit, avancer d'un pas l'exécution.</td>
-    </tr>
-    <tr>
-        <th>![Entrer la fonction (F11)](../../static/img/cours11/entrerFonctionF11.png)<br/>Entrer la fonction (F11)</th>
-        <td>Entrer la fonction nous permet d'aller voir l'exécution interne de la fonction pour en examiner le contenu. Ceci est pratique lorsque nous avons une chaîne d'appel de fonction.</td>
-    </tr>
-    <tr>
-        <th>![Sortir de la fonction (Shift + F11)](../../static/img/cours11/sortirFonctionShiftF11.png)<br/>Sortir de la fonction (Shift + F11)</th>
-        <td>Sortir de la fonction nous permet de revenir là où la fonction a été appelée. Ceci est pratique lorsque la fonction est très longue et que l'on veut continuer notre observation.</td>
-    </tr>
-</table>
+### 💡 Exemple un peu plus utile
 
-<center>Voilà un léger survol du débogueur!</center>
+La fonction `Math.random()` existe par défaut. (Pas besoin de la créer, comme `alert()` et `console.log()` !)
 
-<center>![Thumbs up kid meme](../../static/img/cours11/thumbsUpKid.gif)</center>
+`Math.random()` retourne **un nombre aléatoire entre `0` et `0.99999...`**. Très utile pour simuler le **hasard** ! 🎲
 
-</details>
+<center>![Valeur aléatoire](../../static/img/cours11/random.png)</center>
+
+Exemple : on a **25% de chances de gagner 100$** et **75% de chances de perdre 50$** :
+
+```js showLineNumbers
+function jouer(){
+
+    let nombreAleatoire = Math.random();
+
+    if(nombreAleatoire < 0.25){
+
+        gArgent += 100;
+
+    }
+    else{
+
+        gArgent -= 50;
+
+    }
+
+}
+```
+
+* Dans la variable `nombreAleatoire`, il y aura une valeur entre `0` et `0.9999...`. On ne sait pas d'avance quelle sera la valeur ! La valeur changera à chaque fois que nous appellerons la fonction `jouer()`.
+* Avec ce `if` ... `else`, on a 25% de chances d'exécuter le `if` et 75% de chances d'exécuter le `else`.
+
+<center>![Probabilité illustrée](../../static/img/cours11/odds.png)</center>
+
+## 🛑 Point de non-retour
+
+:::warning
+
+⛔ Notez que dès que l'instruction `return` est exécutée, **on met fin** à la fonction !
+
+<center>![Fonction avortée](../../static/img/cours11/noReturn.png)</center>
+
+:::
+
+## 📜 Exemples variés
+
+Voici une fonction qui retourne `true` si trois variables globales sont **identiques**, et `false` sinon :
+
+```js showLineNumbers
+function tousEgaux(){
+
+    if(gNombre1 == gNombre2 && gNombre1 == gNombre3){
+        return true;
+    }
+    return false;
+
+}
+```
+
+:::tip
+
+Pas besoin de mettre `return false` dans un bloc `else` ! Ce bout de code sera seulement atteint si le bloc `if` n'a pas été exécuté de toute façon !
+
+:::
+
+Voici une fonction qui reçoit deux **paramètres** (deux nombres nommés `x` et `y`) et qui **retourne le plus grand des deux** :
+
+```js showLineNumbers
+function maximum(x, y){
+
+    if(x > y){
+        return x;
+    }
+    return y;
+
+}
+```
+
+```js
+let nombre = maximum(2, 4); // nombre contient 4
+```
+
+<hr/>
+
+<center>![Animation de return](../../static/img/cours11/paramReturnGif.gif)</center>
+
+<hr/>
+
+Voici une fonction qui reçoit un **paramètre** (une chaîne de caractères nommée `nom`) et qui **retourne une chaîne de caractères qui correspond à un message de salutations** :
+
+```js showLineNumbers
+function saluer(nom){
+
+    return `Salut ${nom}, comment tu vas ?`;
+
+}
+```
+
+```js
+alert(saluer("Simone"));
+```
+
+<center>![Alerte](../../static/img/cours11/alert.png)</center>

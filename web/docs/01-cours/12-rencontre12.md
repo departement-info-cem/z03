@@ -1,302 +1,290 @@
 ---
-title: Rencontre 12 - Paramètres et retours
-description: Fonctions avec paramètres et avec valeur de retour
+title: Rencontre 12 - Tableaux
+description: Tableaux et parcourir un tableau avec une boucle
 ---
 
-# Rencontre 12 - Paramètres et retours
+# Rencontre 12 - Tableaux
 
-Certaines fonctions **n'ont pas de paramètres** :
+Parfois, on doit stocker plusieurs **données similaires**.
 
-<center>![0 paramètre](../../static/img/cours10/noParam.png)</center>
+Exemple : stocker le nom et l'âge de 7 étudiant(e)s
 
-Certaines fonctions **ont un ou plusieurs paramètres** :
+<center>![Variables répétitives](../../static/img/cours17/noArray.png)</center>
 
-<center>![1 paramètre](../../static/img/cours10/yesParam.png)</center>
+⛔ Problème : ça fait beaucoup de variables, et elles sont toutes similaires.
 
-💡 Lorsqu'une **fonction** contient une ou plusieurs **données** dans ses **parenthèses** lorsqu'on l'**appelle**, on dit que c'est une **fonction avec paramètre(s)**.
+## 🎰 Tableaux
 
-Quand on appelle `alert(...)` et `console.log(...)`, il **faut** mettre du texte (ou une variable qui contient du texte) dans les **parenthèses**. Quand on fait ça on « **envoie un paramètre** » à la fonction. Cette fonction va ensuite **utiliser** le **paramètre** pour faire quelque chose avec.
+### 🥚 Créer un tableau
 
-## 🥚 Créer une fonction avec un paramètre
+Les **tableaux** permettent de ranger des données similaires.
 
-Ci-dessous, j'ai une fonction simple, sans paramètre :
+Syntaxe pour créer un tableau :
 
-```js showLineNumbers
-function alerteEtConsole(){
+<center>![Tableau](../../static/img/cours17/createArray.png)</center>
 
-    alert("Allo");
-    console.log("Allo");
-
-}
-```
-
-Toutefois, au lieu d'afficher `"Allo"` dans une **alerte** et dans la **console**, j'aimerais pouvoir **choisir le texte affiché** quand j'appelle la fonction...
-
-Je vais **ajouter un paramètre à la fonction** :
-
-<center>![1 paramètre](../../static/img/cours10/alertConsole.png)</center>
-
-💡 J'ai ajouté un **paramètre** et je l'ai nommé `message`. J'ai **utilisé** ce paramètre à deux endroits dans la fonction.
-
-Disons que j'appelle la fonction comme ceci :
-
-<center>![1 paramètre](../../static/img/cours10/callWithParam.png)</center>
-
-Alors le texte `"Cliquez pour gagner 1000$ 🤑"` sera 🔌 *plugué* (propagé) à tous les endroits dans la fonction où nous avons utilisé le paramètre `message`. (C'est-à-dire dans `alert(message)` et dans `console.log(message)`)
-
-Que se passera-t-il ? Le message `"Cliquez pour gagner 1000$ 🤑"` sera affiché dans la **console** et dans une **alerte** :
-
-<center>![1 paramètre](../../static/img/cours10/alertConsoleMoney.png)</center>
-
-<hr/>
-
-<center>![Gif avec un paramètre](../../static/img/cours10/paramPropagation.gif)</center>
-
-:::warning
-
-Gardez à l'esprit qu'un **paramètre**, c'est un **contrat** : nous **devons** fournir un **paramètre** à la fonction pour pouvoir l'utiliser, car elle en a besoin pour que son code fonctionne bien.
-
-:::
-
-## 🧩 Exemple avec deux paramètres
+D'autres exemples :
 
 ```js showLineNumbers
-function salutations(nom, heure){
-
-    alert(`Bonjour ${nom}, il est actuellement ${heure} !`);
-
-}
+let nomsEtudiants = ["Madeleine", "Omar", "Conrad", "Marie-Gisèle", "Jean-Jérémie", "Sandra", "Bartolomé"];
+let ages = [17, 19, 20, 104, 21, 18, 22];
 ```
 
-On peut voir que la fonction `salutations()` possède **deux paramètres** : `nom` et `heure`.
+### 📬 Accéder aux données d'un tableau
 
-⛔ N'oubliez pas : chaque **paramètre** est un **contrat** ! C'est comme si la fonction nous disait : « tu **dois** me fournir un `nom` et une `heure` pour que je puisse bien fonctionner ! »
+Syntaxe :
 
-<center>![2 paramètres](../../static/img/cours10/twoParams.png)</center>
+<center>![Tableau](../../static/img/cours17/accessData.png)</center>
 
-## ⚡ La puissance des paramètres
-
-Quel est l'avantage d'utiliser les paramètres ? Commençons par regarder trois fonctions **sans paramètre** :
-
-```js showLineNumbers
-function texteEtBordureRouge(){
-
-    document.querySelector(".texte").style.color = "red";
-    document.querySelector(".texte").style.borderColor = "red";
-
-}
-
-function texteEtBordureBleu(){
-
-    document.querySelector(".texte").style.color = "blue";
-    document.querySelector(".texte").style.borderColor = "blue";
-
-}
-
-function texteEtBordureVert(){
-
-    document.querySelector(".texte").style.color = "green";
-    document.querySelector(".texte").style.borderColor = "green";
-
-}
-```
-
-⛔ Ces trois fonctions font **presque la même chose** et sont **très répétitives** ! 😬
-
-<hr/>
-
-À l'aide d'un **paramètre**, nous pourrions **remplacer ces trois fonctions par une seule** ! 🧠
-
-```js showLineNumbers
-function texteEtBordure(couleurChoisie){
-
-    document.querySelector(".texte").style.color = couleurChoisie;
-    document.querySelector(".texte").style.borderColor = couleurChoisie;
-
-}
-```
-
-Et voilà ! On a une fonction qui fera le travail, **peu importe la couleur** :
-
-* `textureEtBordure("pink");` permettrait de rendre le texte et la bordure roses.
-* `textureEtBordure("crimson");` permettrait de rendre le texte et la bordure cramoisis.
-* etc.
-
-:::tip
-
-On pourrait même en profiter pour ajouter un **deuxième paramètre**, qui permettrait de **choisir l'élément HTML**. (Plutôt que de toujours modifier l'élément avec la classe `.texte`)
-
-```js showLineNumbers
-function texteEtBordure(classe, couleurChoisie){
-
-    document.querySelector(classe).style.color = couleurChoisie;
-    document.querySelector(classe).style.borderColor = couleurChoisie;
-
-}
-```
-
-Et voilà, il ne reste plus qu'à **appeler la fonction en lui fournissant deux paramètres** :
-
-* `texteEtBordure(".description", "crimson")` : rendra l'élément `.description` cramoisi.
-* `texteEtBordure(".texte", "pink")` : rendra l'élément `.texte` rose.
-* etc.
-
-:::
-
-## 🎫 Valeurs et variables
-
-Lorsqu'on passe des **paramètres** à une fonction, on peut le faire en utilisant directement des **valeurs** (`6`, `"salut"`, `true`, etc.) ou en utilisant des **variables**.
-
-Disons qu'on a la fonction suivante :
-
-```js showLineNumbers
-function colorierTexte(couleur){
-
-    document.querySelector(".paragraphe2").style.color = couleur;
-
-}
-```
-
-Les deux manières de **passer un paramètre** qui suivent sont toutes deux valides.
-
-* Écrire directement la valeur :
+Exemple :
 
 ```js
-colorierTexte("blue");
+let couleurs = ["Bleu", "Rouge", "Jaune", "Vert", "Violet"];
 ```
 
-* Utiliser une variable :
+* Accéder à la donnée `"Bleu"` et la ranger dans une variable : 
+```js
+let a = couleurs[0]; // a contient "Bleu"
+```
+* Accéder à la donnée `"Violet"` :
+```js
+couleurs[4]
+```
+
+<center>![Tableau](../../static/img/cours17/index.png)</center>
+
+### 📝 Modifier les données d'un tableau
+
+Syntaxe :
 
 ```js
-let teinte = "red";
-colorierTexte(teinte); // On a passé "red" via une variable
+nomTableau[index] = nouvelle_valeur;
 ```
 
-## 📬 Retourner une valeur
+Exemple :
 
-Voici un exemple de fonction **avec une valeur de retour** :
-
-```js showLineNumbers
-function valeurPi(){
-
-    let pi = 3.14159265359;
-    return pi;
-
-}
+```js
+let personnages = ["Mario", "Luigi", "Peach", "Bernard"];
 ```
 
-Grâce au **mot clé `return`**, on peut dire que « la fonction `valeurPi()` retournera la valeur `3.14159265359` ».
+Disons qu'on veut remplacer la donnée `"Bernard"` par `"Yoshi"` :
 
-## 📞 Appeler une fonction avec retour
-
-Voici ce qui se passe lorsqu'on appelle une **fonction avec valeur de retour** comme `valeurPi()` :
-
-<center>![Valeur de retour](../../static/img/cours11/return.png)</center>
-
-<hr/>
-
-<center>![Animation de return](../../static/img/cours11/returnGif.gif)</center>
-
-### 💡 Exemple un peu plus utile
-
-La fonction `Math.random()` existe par défaut. (Pas besoin de la créer, comme `alert()` et `console.log()` !)
-
-`Math.random()` retourne **un nombre aléatoire entre `0` et `0.99999...`**. Très utile pour simuler le **hasard** ! 🎲
-
-<center>![Valeur aléatoire](../../static/img/cours11/random.png)</center>
-
-Exemple : on a **25% de chances de gagner 100$** et **75% de chances de perdre 50$** :
-
-```js showLineNumbers
-function jouer(){
-
-    let nombreAleatoire = Math.random();
-
-    if(nombreAleatoire < 0.25){
-
-        gArgent += 100;
-
-    }
-    else{
-
-        gArgent -= 50;
-
-    }
-
-}
+```js
+personnages[3] = "Yoshi";
 ```
 
-* Dans la variable `nombreAleatoire`, il y aura une valeur entre `0` et `0.9999...`. On ne sait pas d'avance quelle sera la valeur ! La valeur changera à chaque fois que nous appellerons la fonction `jouer()`.
-* Avec ce `if` ... `else`, on a 25% de chances d'exécuter le `if` et 75% de chances d'exécuter le `else`.
+Résultat :
 
-<center>![Probabilité illustrée](../../static/img/cours11/odds.png)</center>
+<center>![Tableau](../../static/img/cours17/yoshi.png)</center>
 
-## 🛑 Point de non-retour
+### 🐍 Obtenir la taille d'un tableau
 
-:::warning
+La **taille** d'un tableau correspond au **nombre de données** qu'il contient.
 
-⛔ Notez que dès que l'instruction `return` est exécutée, **on met fin** à la fonction !
+Syntaxe : 
 
-<center>![Fonction avortée](../../static/img/cours11/noReturn.png)</center>
+```js
+nomTableau.length
+```
 
-:::
-
-## 📜 Exemples variés
-
-Voici une fonction qui retourne `true` si trois variables globales sont **identiques**, et `false` sinon :
+Exemples :
 
 ```js showLineNumbers
-function tousEgaux(){
+let ages = [17, 19, 20, 104, 21, 18, 22];
 
-    if(gNombre1 == gNombre2 && gNombre1 == gNombre3){
-        return true;
-    }
-    return false;
+let longueur = ages.length; // longueur contient 7
 
-}
+let message = `Le tableau ages contient ${ages.length} éléments.`;
+// "Le tableau ages contient 7 éléments."
 ```
 
 :::tip
 
-Pas besoin de mettre `return false` dans un bloc `else` ! Ce bout de code sera seulement atteint si le bloc `if` n'a pas été exécuté de toute façon !
+`length` permet également d'accéder facilement **à la dernière valeur d'un tableau**. Comme l'**index** d'un tableau **commence à `0`** et que le tableau contient **`length` éléments**, cela signifie que le **dernier index** est `length - 1` :
+
+```js
+let derniereValeur = ages[ages.length - 1];
+// derniereValeur contient 22
+```
 
 :::
 
-Voici une fonction qui reçoit deux **paramètres** (deux nombres nommés `x` et `y`) et qui **retourne le plus grand des deux** :
+### 🧰 Utiliser les données d'un tableau
+
+#### Exemple 1
 
 ```js showLineNumbers
-function maximum(x, y){
+let prix = [4.5, 3.99, 7.2, 8.4];
+let quantites = [2, 3, 4, 3];
 
-    if(x > y){
-        return x;
-    }
-    return y;
-
-}
+let valeurTotaleArticle1 = prix[0] * quantites[0];
+//       ↑ contient 4.5 * 2, donc 9
 ```
+
+#### Exemple 2
+
+```js showLineNumbers
+let couleurs = ["Bleu", "Rouge", "Violet", "Rose"];
+let elementMessage = document.querySelector(".message");
+
+elementMessage.textContent = `Mes couleurs préférées sont ${couleurs[0]} et ${couleurs[2]}`;
+// "Mes couleurs préférées sont Bleu et Violet"
+```
+
+### 💧 Ajouter un élément à la fin d'un tableau
+
+Syntaxe :
 
 ```js
-let nombre = maximum(2, 4); // nombre contient 4
+monTableau.push( ... valeur ... );
 ```
+
+Exemple :
+
+```js
+let couleurs = ["Bleu", "Rouge", "Jaune", "Vert"];
+
+couleurs.push("Violet");
+// couleurs vaut ["Bleu", "Rouge", "Jaune", "Vert", "Violet"]
+// couleurs.length vaut maintenant 5
+```
+
+<center>![Tableau](../../static/img/cours17/push.png)</center>
+
+### ❌ Retirer le dernier élément d'un tableau
+
+Syntaxe :
+
+```js
+monTableau.pop();
+```
+
+Exemple :
+
+```js
+let notes = [68, 71, 93, 78];
+
+notes.pop();
+// contient maintenant [68, 71, 93]
+```
+
+<center>![Tableau](../../static/img/cours17/pop.png)</center>
+
+### 🚮 Retirer un ou plusieurs éléments consécutifs n'importe où dans un tableau
+
+Syntaxe :
+
+<center>![Tableau](../../static/img/cours17/splice.png)</center>
+
+Exemple :
+
+```js
+let couleurs = ["Bleu", "Rouge", "Jaune", "Vert", "Orange", "Violet"];
+
+couleurs.splice(0, 2);
+// couleurs contient maintenant ["Jaune", "Vert", "Orange", "Violet"]
+```
+
+L'élément à **l'index `0`** est le premier à être retiré et est inclus dans le nombre total d'éléments à retirer.
+
+Autre exemple :
+
+```js
+let couleurs = ["Bleu", "Rouge", "Jaune", "Vert", "Orange", "Violet"];
+
+couleurs.splice(2,1);
+// couleurs contient maintenant ["Bleu", "Rouge", "Vert", "Orange", "Violet"]
+```
+
+`"Jaune"` était à l'index `2` et seulement 1 élément a été retiré.
+
+## ➰ Parcourir un tableau
+
+Tentons de calculer la **somme de tous les éléments** d'un tableau :
+
+<center>![Somme d'un tableau sans boucle](../../static/img/cours17/sumNoLoop.png)</center>
+
+Bonne nouvelle : les **boucles** et les **tableaux** sont **meilleurs amis** 🧽⭐
+
+<center>![Bob et Patrick](../../static/img/cours17/bestFriends.png)</center>
+
+Les boucles sont **très utiles pour accéder à tous les éléments d'un tableau séquentiellement**.
+
+### 🔨 Construire une boucle pour parcourir un tableau
+
+Dans de nombreuses situations, il faut **parcourir un tableau en entier** :
+
+* Afficher tous les éléments
+* Calculer la somme ou la moyenne de plusieurs nombres
+* Trouver le maximum ou le minimum parmi plusieurs nombres
+* Trier les éléments d'un tableau en ordre croissant ou décroissant
+* etc.
+
+Une **boucle** servant à **parcourir un tableau** ressemblera à ceci :
+
+<center>![Boucle pour tableau](../../static/img/cours17/loopForArray.png)</center>
+
+* `monTableau` est le nom de votre variable qui contient un tableau.
+* L'objectif est de parcourir `monTableau[0]`, `monTableau[1]`, `monTableau[2]`, etc. jusqu'à la fin du tableau.
+
+On aura toujours besoin d'une variable `i` qui commence à `0` (au début du tableau) et  qui se rend jusqu'à `length - 1`, qui correspond à la **fin du tableau**.
+
+Par exemple, avec ce tableau :
+
+```js
+let lettres = ["a", "b", "c"];
+```
+
+On aura besoin d'une boucle qui parcourra les index `0`, puis `1`, puis `2`. 
+
+C'est à dire qui parcourt tous les index, de `0` à `lettres.length - 1`.
+
+### 🎲 Quelques exemples
+
+#### Exemple 1 : Tout afficher
+
+Afficher toutes les données d'un tableau dans la **console**.
+
+💡 Il faut s'assurer, à chaque itération, d'afficher la valeur de `monTableau[i]` dans la **console**.
+
+<center>![Boucle pour tableau](../../static/img/cours17/console.png)</center>
+
+:::info
+
+Pourquoi on met `i < lettres.length` plutôt que `i < 5` ? Car `lettres.length` vaut `5` ! Pas besoin de compter les **index** du tableau manuellement.
+
+:::
 
 <hr/>
 
-<center>![Animation de return](../../static/img/cours11/paramReturnGif.gif)</center>
+#### Exemple 2 : Calculer la somme
+
+Calculer la **somme** des éléments d'un tableau.
+
+💡 Nous aurons besoin d'une variable `total` pour stocker la **somme**. Sa valeur initiale sera `0`.
+
+<center>![Boucle pour tableau](../../static/img/cours17/sum.png)</center>
+
+La boucle fera **4 itérations** et la variable `total` accumulera les valeurs `0 + 10 + 20 + 30 + 40`.
+
+<center>![Boucle pour tableau](../../static/img/cours17/sumLoop.png)</center>
 
 <hr/>
 
-Voici une fonction qui reçoit un **paramètre** (une chaîne de caractères nommée `nom`) et qui **retourne une chaîne de caractères qui correspond à un message de salutations** :
+#### Exemple 3 : Trouver une valeur
 
-```js showLineNumbers
-function saluer(nom){
+Chercher le mot `"chat"` dans un tableau et afficher un message dans la **console** s'il y a lieu.
 
-    return `Salut ${nom}, comment tu vas ?`;
+<center>![Boucle pour tableau](../../static/img/cours17/findValue.png)</center>
 
-}
-```
+<hr/>
 
-```js
-alert(saluer("Simone"));
-```
+#### Exemple 4 : Augmenter toutes les valeurs
 
-<center>![Alerte](../../static/img/cours11/alert.png)</center>
+**Augmenter de 5** toutes les valeurs dans le tableau.
+
+<center>![Boucle pour tableau](../../static/img/cours17/incrementAllValues.png)</center>
+
+Résultat :
+
+<center>![Boucle pour tableau](../../static/img/cours17/result.png)</center>

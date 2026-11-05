@@ -96,6 +96,12 @@ const navbarItems = [
     sidebarId: "dansAutobus",
     label: "Dans l'autobus",
   },
+  {
+    type: "docSidebar",
+    sidebarId: "aideMemoires",
+    label: "Aide-mémoire",
+    position: "left",
+  },
 ];
 
 navbarItems.splice(2, 0, {
